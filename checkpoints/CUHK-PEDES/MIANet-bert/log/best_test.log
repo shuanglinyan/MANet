@@ -1,0 +1,123 @@
+Testing Epoch: 1
+similarity_glo:
+t2i: top1: 0.18%, top5: 1.56%, top10: 3.04%, map: 0.59%
+Testing Epoch: 1
+similarity_loc:
+t2i: top1: 1.64%, top5: 4.99%, top10: 8.11%, map: 1.74%
+Testing Epoch: 2
+similarity_glo:
+t2i: top1: 22.47%, top5: 45.29%, top10: 57.65%, map: 20.02%
+Testing Epoch: 2
+similarity_all:
+t2i: top1: 23.26%, top5: 46.93%, top10: 58.85%, map: 21.22%
+Testing Epoch: 3
+similarity_glo:
+t2i: top1: 37.25%, top5: 61.53%, top10: 71.67%, map: 32.47%
+Testing Epoch: 3
+similarity_all:
+t2i: top1: 39.17%, top5: 62.18%, top10: 72.66%, map: 33.90%
+Testing Epoch: 4
+similarity_glo:
+t2i: top1: 43.81%, top5: 67.06%, top10: 76.46%, map: 37.88%
+Testing Epoch: 4
+similarity_all:
+t2i: top1: 44.75%, top5: 67.85%, top10: 76.77%, map: 39.14%
+Testing Epoch: 5
+similarity_glo:
+t2i: top1: 47.64%, top5: 70.37%, top10: 79.65%, map: 41.13%
+Testing Epoch: 5
+similarity_loc:
+t2i: top1: 47.77%, top5: 69.92%, top10: 78.83%, map: 40.83%
+Testing Epoch: 5
+similarity_all:
+t2i: top1: 49.51%, top5: 71.56%, top10: 80.20%, map: 42.64%
+Testing Epoch: 6
+similarity_glo:
+t2i: top1: 51.36%, top5: 72.27%, top10: 80.47%, map: 43.66%
+Testing Epoch: 6
+similarity_all:
+t2i: top1: 51.80%, top5: 73.42%, top10: 81.01%, map: 44.73%
+Testing Epoch: 7
+similarity_glo:
+t2i: top1: 52.10%, top5: 75.00%, top10: 82.76%, map: 45.02%
+Testing Epoch: 7
+similarity_all:
+t2i: top1: 53.91%, top5: 75.23%, top10: 83.14%, map: 46.64%
+Testing Epoch: 8
+similarity_all:
+t2i: top1: 54.56%, top5: 75.89%, top10: 83.59%, map: 47.20%
+Testing Epoch: 9
+similarity_glo:
+t2i: top1: 54.82%, top5: 77.16%, top10: 83.89%, map: 46.91%
+Testing Epoch: 9
+similarity_all:
+t2i: top1: 56.60%, top5: 77.66%, top10: 85.01%, map: 48.64%
+Testing Epoch: 10
+similarity_all:
+t2i: top1: 57.31%, top5: 78.22%, top10: 85.51%, map: 49.25%
+Testing Epoch: 11
+similarity_all:
+t2i: top1: 57.33%, top5: 78.09%, top10: 85.14%, map: 49.50%
+Testing Epoch: 12
+similarity_glo:
+t2i: top1: 57.70%, top5: 77.81%, top10: 85.62%, map: 49.32%
+Testing Epoch: 12
+similarity_all:
+t2i: top1: 59.05%, top5: 78.05%, top10: 86.11%, map: 50.60%
+Testing Epoch: 13
+similarity_all:
+t2i: top1: 59.31%, top5: 80.07%, top10: 86.40%, map: 51.11%
+Testing Epoch: 14
+similarity_all:
+t2i: top1: 60.01%, top5: 79.58%, top10: 86.78%, map: 51.43%
+Testing Epoch: 16
+similarity_all:
+t2i: top1: 60.45%, top5: 80.73%, top10: 86.73%, map: 52.32%
+Testing Epoch: 17
+similarity_all:
+t2i: top1: 60.88%, top5: 79.91%, top10: 86.47%, map: 52.44%
+Testing Epoch: 18
+similarity_all:
+t2i: top1: 61.26%, top5: 80.70%, top10: 87.17%, map: 52.45%
+Testing Epoch: 19
+similarity_all:
+t2i: top1: 61.52%, top5: 80.52%, top10: 87.26%, map: 52.66%
+Testing Epoch: 21
+similarity_all:
+t2i: top1: 61.57%, top5: 80.56%, top10: 87.33%, map: 53.15%
+Testing Epoch: 22
+similarity_all:
+t2i: top1: 62.13%, top5: 81.06%, top10: 87.30%, map: 53.39%
+Testing Epoch: 29
+similarity_all:
+t2i: top1: 62.17%, top5: 81.03%, top10: 87.56%, map: 53.64%
+Testing Epoch: 30
+similarity_all:
+t2i: top1: 62.18%, top5: 80.99%, top10: 87.57%, map: 53.46%
+Testing Epoch: 31
+similarity_glo:
+t2i: top1: 63.06%, top5: 81.81%, top10: 87.93%, map: 54.26%
+Testing Epoch: 31
+similarity_all:
+t2i: top1: 64.18%, top5: 82.55%, top10: 88.43%, map: 55.97%
+Testing Epoch: 32
+similarity_all:
+t2i: top1: 64.86%, top5: 82.91%, top10: 88.92%, map: 56.37%
+Testing Epoch: 38
+similarity_all:
+t2i: top1: 64.94%, top5: 83.04%, top10: 88.87%, map: 56.73%
+Testing Epoch: 39
+similarity_all:
+t2i: top1: 65.24%, top5: 82.88%, top10: 88.86%, map: 56.73%
+Testing Epoch: 41
+similarity_all:
+t2i: top1: 65.38%, top5: 82.59%, top10: 88.94%, map: 56.77%
+Testing Epoch: 45
+similarity_all:
+t2i: top1: 65.46%, top5: 82.99%, top10: 88.79%, map: 56.78%
+Testing Epoch: 52
+similarity_all:
+t2i: top1: 65.63%, top5: 83.14%, top10: 88.73%, map: 56.74%
+Testing Epoch: 53
+similarity_all:
+t2i: top1: 65.64%, top5: 83.01%, top10: 88.78%, map: 56.76%

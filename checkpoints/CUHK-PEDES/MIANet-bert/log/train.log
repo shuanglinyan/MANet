@@ -1,0 +1,2067 @@
+Namespace(GPU_id='0', adam_alpha=0.9, adam_beta=0.999, batch_size=64, caption_length_max=100, class_num=11000, cr_beta=0.1, dataroot='./dataset/CUHK-PEDES/', dataset='CUHK-PEDES', dataset_root='/opt/data/private/Datasets/CUHK-PEDES', device=device(type='cuda', index=0), epoch=70, epoch_begin=5, epoch_decay=[20, 40], epsilon=1e-08, feature_length=512, lr=0.001, margin=0.2, mode='train', model_name='MIANet-bert', num_clusters=6, save_path='./checkpoints/CUHK-PEDES/MIANet-bert', seed=0, vocab_size=5000, wd=4e-05)
+Model name '/opt/data/private/Checkpoints/bert-base-uncased/bert-base-uncased-vocab.txt' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc). Assuming '/opt/data/private/Checkpoints/bert-base-uncased/bert-base-uncased-vocab.txt' is a path or url to a directory containing tokenizer files.
+Didn't find file /opt/data/private/Checkpoints/bert-base-uncased/added_tokens.json. We won't load it.
+Didn't find file /opt/data/private/Checkpoints/bert-base-uncased/special_tokens_map.json. We won't load it.
+Didn't find file /opt/data/private/Checkpoints/bert-base-uncased/tokenizer_config.json. We won't load it.
+loading file /opt/data/private/Checkpoints/bert-base-uncased/bert-base-uncased-vocab.txt
+loading file None
+loading file None
+loading file None
+loading configuration file /opt/data/private/Checkpoints/bert-base-uncased/bert_config.json
+Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+loading weights file /opt/data/private/Checkpoints/bert-base-uncased/pytorch_model.bin
+lr:1e-05
+lr:1.0000000000000002e-06
+Epoch: 1/70, iteration: 50, loss: 72.23, ranking_loss: 34.83, id_loss: 37.40
+Epoch: 1/70, iteration: 100, loss: 71.58, ranking_loss: 33.78, id_loss: 37.80
+Epoch: 1/70, iteration: 150, loss: 70.76, ranking_loss: 32.74, id_loss: 38.02
+Epoch: 1/70, iteration: 200, loss: 68.66, ranking_loss: 30.41, id_loss: 38.25
+Epoch: 1/70, iteration: 250, loss: 67.09, ranking_loss: 29.06, id_loss: 38.02
+Epoch: 1/70, iteration: 300, loss: 65.82, ranking_loss: 28.30, id_loss: 37.52
+Epoch: 1/70, iteration: 350, loss: 67.48, ranking_loss: 29.27, id_loss: 38.20
+Epoch: 1/70, iteration: 400, loss: 65.53, ranking_loss: 27.80, id_loss: 37.72
+Epoch: 1/70, iteration: 450, loss: 65.30, ranking_loss: 28.16, id_loss: 37.15
+Epoch: 1/70, iteration: 500, loss: 66.64, ranking_loss: 29.03, id_loss: 37.62
+Epoch: 1/70, iteration: 550, loss: 64.83, ranking_loss: 27.25, id_loss: 37.58
+Epoch: 1/70, iteration: 600, loss: 65.01, ranking_loss: 27.34, id_loss: 37.67
+Epoch: 1/70, iteration: 650, loss: 65.55, ranking_loss: 28.24, id_loss: 37.31
+Epoch: 1/70, iteration: 700, loss: 65.01, ranking_loss: 27.68, id_loss: 37.33
+Epoch: 1/70, iteration: 750, loss: 64.20, ranking_loss: 26.99, id_loss: 37.21
+Epoch: 1/70, iteration: 800, loss: 63.71, ranking_loss: 26.76, id_loss: 36.95
+Epoch: 1/70, iteration: 850, loss: 64.80, ranking_loss: 27.56, id_loss: 37.24
+Epoch: 1/70, iteration: 900, loss: 62.36, ranking_loss: 25.26, id_loss: 37.10
+Epoch: 1/70, iteration: 950, loss: 64.56, ranking_loss: 27.32, id_loss: 37.24
+Epoch: 1/70, iteration: 1000, loss: 65.93, ranking_loss: 28.76, id_loss: 37.17
+Epoch: 1/70, iteration: 1050, loss: 63.58, ranking_loss: 26.47, id_loss: 37.12
+Epoch: 1/70, loss: 66.71, ranking_loss: 29.22, id_loss: 37.48
+MIANet-bert
+Testing Epoch: 1
+similarity_glo:--t2i: top1: 0.18%, top5: 1.56%, top10: 3.04%, map: 0.59%
+similarity_loc:--t2i: top1: 1.64%, top5: 4.99%, top10: 8.11%, map: 1.74%
+similarity_all:--t2i: top1: 0.84%, top5: 3.61%, top10: 6.51%, map: 1.21%
+lr:0.00010900000000000002
+lr:1.0900000000000002e-05
+Epoch: 2/70, iteration: 50, loss: 63.58, ranking_loss: 27.24, id_loss: 36.34
+Epoch: 2/70, iteration: 100, loss: 61.48, ranking_loss: 25.40, id_loss: 36.08
+Epoch: 2/70, iteration: 150, loss: 61.77, ranking_loss: 26.24, id_loss: 35.53
+Epoch: 2/70, iteration: 200, loss: 59.38, ranking_loss: 24.16, id_loss: 35.22
+Epoch: 2/70, iteration: 250, loss: 58.82, ranking_loss: 23.95, id_loss: 34.88
+Epoch: 2/70, iteration: 300, loss: 57.96, ranking_loss: 23.51, id_loss: 34.44
+Epoch: 2/70, iteration: 350, loss: 57.26, ranking_loss: 22.92, id_loss: 34.34
+Epoch: 2/70, iteration: 400, loss: 55.63, ranking_loss: 22.11, id_loss: 33.52
+Epoch: 2/70, iteration: 450, loss: 55.52, ranking_loss: 21.91, id_loss: 33.61
+Epoch: 2/70, iteration: 500, loss: 55.32, ranking_loss: 21.88, id_loss: 33.44
+Epoch: 2/70, iteration: 550, loss: 52.54, ranking_loss: 20.16, id_loss: 32.38
+Epoch: 2/70, iteration: 600, loss: 54.10, ranking_loss: 22.23, id_loss: 31.87
+Epoch: 2/70, iteration: 650, loss: 52.88, ranking_loss: 21.76, id_loss: 31.12
+Epoch: 2/70, iteration: 700, loss: 53.22, ranking_loss: 20.77, id_loss: 32.45
+Epoch: 2/70, iteration: 750, loss: 51.22, ranking_loss: 19.89, id_loss: 31.33
+Epoch: 2/70, iteration: 800, loss: 47.77, ranking_loss: 17.64, id_loss: 30.13
+Epoch: 2/70, iteration: 850, loss: 47.73, ranking_loss: 18.24, id_loss: 29.49
+Epoch: 2/70, iteration: 900, loss: 48.34, ranking_loss: 18.69, id_loss: 29.65
+Epoch: 2/70, iteration: 950, loss: 45.47, ranking_loss: 17.53, id_loss: 27.95
+Epoch: 2/70, iteration: 1000, loss: 47.58, ranking_loss: 19.78, id_loss: 27.80
+Epoch: 2/70, iteration: 1050, loss: 46.19, ranking_loss: 18.89, id_loss: 27.31
+Epoch: 2/70, loss: 54.29, ranking_loss: 21.76, id_loss: 32.53
+MIANet-bert
+Testing Epoch: 2
+similarity_glo:--t2i: top1: 22.47%, top5: 45.29%, top10: 57.65%, map: 20.02%
+similarity_loc:--t2i: top1: 21.65%, top5: 43.66%, top10: 55.41%, map: 19.44%
+similarity_all:--t2i: top1: 23.26%, top5: 46.93%, top10: 58.85%, map: 21.22%
+lr:0.00020800000000000001
+lr:2.0800000000000004e-05
+Epoch: 3/70, iteration: 50, loss: 43.58, ranking_loss: 17.37, id_loss: 26.21
+Epoch: 3/70, iteration: 100, loss: 42.75, ranking_loss: 16.88, id_loss: 25.86
+Epoch: 3/70, iteration: 150, loss: 42.25, ranking_loss: 16.02, id_loss: 26.23
+Epoch: 3/70, iteration: 200, loss: 40.27, ranking_loss: 15.77, id_loss: 24.49
+Epoch: 3/70, iteration: 250, loss: 39.39, ranking_loss: 15.73, id_loss: 23.65
+Epoch: 3/70, iteration: 300, loss: 38.69, ranking_loss: 14.41, id_loss: 24.28
+Epoch: 3/70, iteration: 350, loss: 37.62, ranking_loss: 14.49, id_loss: 23.13
+Epoch: 3/70, iteration: 400, loss: 38.01, ranking_loss: 15.18, id_loss: 22.83
+Epoch: 3/70, iteration: 450, loss: 36.09, ranking_loss: 12.92, id_loss: 23.17
+Epoch: 3/70, iteration: 500, loss: 35.49, ranking_loss: 12.96, id_loss: 22.53
+Epoch: 3/70, iteration: 550, loss: 36.33, ranking_loss: 14.70, id_loss: 21.63
+Epoch: 3/70, iteration: 600, loss: 31.93, ranking_loss: 10.87, id_loss: 21.06
+Epoch: 3/70, iteration: 650, loss: 33.79, ranking_loss: 12.80, id_loss: 20.98
+Epoch: 3/70, iteration: 700, loss: 33.56, ranking_loss: 13.05, id_loss: 20.51
+Epoch: 3/70, iteration: 750, loss: 34.42, ranking_loss: 14.08, id_loss: 20.34
+Epoch: 3/70, iteration: 800, loss: 33.88, ranking_loss: 13.48, id_loss: 20.40
+Epoch: 3/70, iteration: 850, loss: 33.97, ranking_loss: 13.60, id_loss: 20.37
+Epoch: 3/70, iteration: 900, loss: 30.02, ranking_loss: 11.35, id_loss: 18.67
+Epoch: 3/70, iteration: 950, loss: 33.67, ranking_loss: 14.93, id_loss: 18.74
+Epoch: 3/70, iteration: 1000, loss: 29.60, ranking_loss: 12.00, id_loss: 17.60
+Epoch: 3/70, iteration: 1050, loss: 27.46, ranking_loss: 9.37, id_loss: 18.09
+Epoch: 3/70, loss: 36.94, ranking_loss: 14.85, id_loss: 22.10
+MIANet-bert
+Testing Epoch: 3
+similarity_glo:--t2i: top1: 37.25%, top5: 61.53%, top10: 71.67%, map: 32.47%
+similarity_loc:--t2i: top1: 36.06%, top5: 59.89%, top10: 70.26%, map: 31.74%
+similarity_all:--t2i: top1: 39.17%, top5: 62.18%, top10: 72.66%, map: 33.90%
+lr:0.000307
+lr:3.07e-05
+Epoch: 4/70, iteration: 50, loss: 29.05, ranking_loss: 13.19, id_loss: 15.86
+Epoch: 4/70, iteration: 100, loss: 29.35, ranking_loss: 12.54, id_loss: 16.81
+Epoch: 4/70, iteration: 150, loss: 29.09, ranking_loss: 12.78, id_loss: 16.31
+Epoch: 4/70, iteration: 200, loss: 27.14, ranking_loss: 11.84, id_loss: 15.31
+Epoch: 4/70, iteration: 250, loss: 26.10, ranking_loss: 10.79, id_loss: 15.31
+Epoch: 4/70, iteration: 300, loss: 31.45, ranking_loss: 14.15, id_loss: 17.29
+Epoch: 4/70, iteration: 350, loss: 27.25, ranking_loss: 11.77, id_loss: 15.48
+Epoch: 4/70, iteration: 400, loss: 29.29, ranking_loss: 13.13, id_loss: 16.16
+Epoch: 4/70, iteration: 450, loss: 27.46, ranking_loss: 12.24, id_loss: 15.22
+Epoch: 4/70, iteration: 500, loss: 26.35, ranking_loss: 11.86, id_loss: 14.49
+Epoch: 4/70, iteration: 550, loss: 29.85, ranking_loss: 14.60, id_loss: 15.25
+Epoch: 4/70, iteration: 600, loss: 25.46, ranking_loss: 10.69, id_loss: 14.77
+Epoch: 4/70, iteration: 650, loss: 22.77, ranking_loss: 9.01, id_loss: 13.76
+Epoch: 4/70, iteration: 700, loss: 24.17, ranking_loss: 9.98, id_loss: 14.18
+Epoch: 4/70, iteration: 750, loss: 25.37, ranking_loss: 11.38, id_loss: 14.00
+Epoch: 4/70, iteration: 800, loss: 25.48, ranking_loss: 10.98, id_loss: 14.49
+Epoch: 4/70, iteration: 850, loss: 25.98, ranking_loss: 12.39, id_loss: 13.58
+Epoch: 4/70, iteration: 900, loss: 23.46, ranking_loss: 10.49, id_loss: 12.97
+Epoch: 4/70, iteration: 950, loss: 23.66, ranking_loss: 10.92, id_loss: 12.75
+Epoch: 4/70, iteration: 1000, loss: 24.58, ranking_loss: 11.47, id_loss: 13.12
+Epoch: 4/70, iteration: 1050, loss: 21.49, ranking_loss: 8.90, id_loss: 12.59
+Epoch: 4/70, loss: 26.73, ranking_loss: 11.78, id_loss: 14.95
+MIANet-bert
+Testing Epoch: 4
+similarity_glo:--t2i: top1: 43.81%, top5: 67.06%, top10: 76.46%, map: 37.88%
+similarity_loc:--t2i: top1: 43.11%, top5: 66.20%, top10: 75.45%, map: 37.47%
+similarity_all:--t2i: top1: 44.75%, top5: 67.85%, top10: 76.77%, map: 39.14%
+lr:0.00040600000000000006
+lr:4.0600000000000004e-05
+Epoch: 5/70, iteration: 50, loss: 22.34, ranking_loss: 10.82, id_loss: 11.53
+Epoch: 5/70, iteration: 100, loss: 21.23, ranking_loss: 9.99, id_loss: 11.24
+Epoch: 5/70, iteration: 150, loss: 22.58, ranking_loss: 10.26, id_loss: 12.32
+Epoch: 5/70, iteration: 200, loss: 23.84, ranking_loss: 12.02, id_loss: 11.82
+Epoch: 5/70, iteration: 250, loss: 24.33, ranking_loss: 11.44, id_loss: 12.89
+Epoch: 5/70, iteration: 300, loss: 24.67, ranking_loss: 12.12, id_loss: 12.55
+Epoch: 5/70, iteration: 350, loss: 20.72, ranking_loss: 8.95, id_loss: 11.78
+Epoch: 5/70, iteration: 400, loss: 24.20, ranking_loss: 11.73, id_loss: 12.47
+Epoch: 5/70, iteration: 450, loss: 20.76, ranking_loss: 10.17, id_loss: 10.58
+Epoch: 5/70, iteration: 500, loss: 23.94, ranking_loss: 11.93, id_loss: 12.01
+Epoch: 5/70, iteration: 550, loss: 21.74, ranking_loss: 10.90, id_loss: 10.85
+Epoch: 5/70, iteration: 600, loss: 21.35, ranking_loss: 10.19, id_loss: 11.16
+Epoch: 5/70, iteration: 650, loss: 22.39, ranking_loss: 10.75, id_loss: 11.64
+Epoch: 5/70, iteration: 700, loss: 22.00, ranking_loss: 10.79, id_loss: 11.21
+Epoch: 5/70, iteration: 750, loss: 20.48, ranking_loss: 9.95, id_loss: 10.53
+Epoch: 5/70, iteration: 800, loss: 22.70, ranking_loss: 11.66, id_loss: 11.04
+Epoch: 5/70, iteration: 850, loss: 19.34, ranking_loss: 9.24, id_loss: 10.10
+Epoch: 5/70, iteration: 900, loss: 22.13, ranking_loss: 11.17, id_loss: 10.96
+Epoch: 5/70, iteration: 950, loss: 18.32, ranking_loss: 8.43, id_loss: 9.89
+Epoch: 5/70, iteration: 1000, loss: 19.35, ranking_loss: 9.09, id_loss: 10.26
+Epoch: 5/70, iteration: 1050, loss: 19.41, ranking_loss: 10.40, id_loss: 9.01
+Epoch: 5/70, loss: 21.16, ranking_loss: 10.06, id_loss: 11.09
+MIANet-bert
+Testing Epoch: 5
+similarity_glo:--t2i: top1: 47.64%, top5: 70.37%, top10: 79.65%, map: 41.13%
+similarity_loc:--t2i: top1: 47.77%, top5: 69.92%, top10: 78.83%, map: 40.83%
+similarity_all:--t2i: top1: 49.51%, top5: 71.56%, top10: 80.20%, map: 42.64%
+lr:0.000505
+lr:5.05e-05
+Epoch: 6/70, iteration: 50, loss: 18.17, ranking_loss: 9.92, id_loss: 8.25
+Epoch: 6/70, iteration: 100, loss: 15.55, ranking_loss: 7.09, id_loss: 8.46
+Epoch: 6/70, iteration: 150, loss: 19.65, ranking_loss: 10.71, id_loss: 8.94
+Epoch: 6/70, iteration: 200, loss: 17.50, ranking_loss: 8.82, id_loss: 8.68
+Epoch: 6/70, iteration: 250, loss: 17.88, ranking_loss: 8.70, id_loss: 9.18
+Epoch: 6/70, iteration: 300, loss: 19.50, ranking_loss: 9.54, id_loss: 9.96
+Epoch: 6/70, iteration: 350, loss: 19.16, ranking_loss: 10.40, id_loss: 8.76
+Epoch: 6/70, iteration: 400, loss: 17.14, ranking_loss: 7.57, id_loss: 9.56
+Epoch: 6/70, iteration: 450, loss: 22.91, ranking_loss: 11.94, id_loss: 10.97
+Epoch: 6/70, iteration: 500, loss: 17.63, ranking_loss: 9.03, id_loss: 8.60
+Epoch: 6/70, iteration: 550, loss: 17.27, ranking_loss: 8.61, id_loss: 8.65
+Epoch: 6/70, iteration: 600, loss: 16.80, ranking_loss: 8.05, id_loss: 8.74
+Epoch: 6/70, iteration: 650, loss: 19.31, ranking_loss: 11.02, id_loss: 8.28
+Epoch: 6/70, iteration: 700, loss: 18.19, ranking_loss: 9.04, id_loss: 9.15
+Epoch: 6/70, iteration: 750, loss: 17.73, ranking_loss: 8.80, id_loss: 8.93
+Epoch: 6/70, iteration: 800, loss: 18.39, ranking_loss: 8.81, id_loss: 9.58
+Epoch: 6/70, iteration: 850, loss: 16.90, ranking_loss: 9.59, id_loss: 7.31
+Epoch: 6/70, iteration: 900, loss: 20.32, ranking_loss: 10.31, id_loss: 10.01
+Epoch: 6/70, iteration: 950, loss: 14.43, ranking_loss: 6.62, id_loss: 7.81
+Epoch: 6/70, iteration: 1000, loss: 17.52, ranking_loss: 8.89, id_loss: 8.63
+Epoch: 6/70, iteration: 1050, loss: 18.70, ranking_loss: 9.95, id_loss: 8.75
+Epoch: 6/70, loss: 17.82, ranking_loss: 9.14, id_loss: 8.68
+MIANet-bert
+Testing Epoch: 6
+similarity_glo:--t2i: top1: 51.36%, top5: 72.27%, top10: 80.47%, map: 43.66%
+similarity_loc:--t2i: top1: 49.46%, top5: 71.73%, top10: 79.91%, map: 42.68%
+similarity_all:--t2i: top1: 51.80%, top5: 73.42%, top10: 81.01%, map: 44.73%
+lr:0.000604
+lr:6.04e-05
+Epoch: 7/70, iteration: 50, loss: 15.75, ranking_loss: 8.25, id_loss: 7.49
+Epoch: 7/70, iteration: 100, loss: 13.74, ranking_loss: 6.61, id_loss: 7.13
+Epoch: 7/70, iteration: 150, loss: 13.07, ranking_loss: 6.70, id_loss: 6.36
+Epoch: 7/70, iteration: 200, loss: 14.64, ranking_loss: 7.53, id_loss: 7.11
+Epoch: 7/70, iteration: 250, loss: 15.01, ranking_loss: 7.74, id_loss: 7.27
+Epoch: 7/70, iteration: 300, loss: 14.79, ranking_loss: 7.24, id_loss: 7.55
+Epoch: 7/70, iteration: 350, loss: 13.93, ranking_loss: 6.08, id_loss: 7.85
+Epoch: 7/70, iteration: 400, loss: 15.05, ranking_loss: 8.89, id_loss: 6.16
+Epoch: 7/70, iteration: 450, loss: 16.62, ranking_loss: 8.95, id_loss: 7.67
+Epoch: 7/70, iteration: 500, loss: 15.39, ranking_loss: 8.20, id_loss: 7.19
+Epoch: 7/70, iteration: 550, loss: 14.90, ranking_loss: 7.51, id_loss: 7.39
+Epoch: 7/70, iteration: 600, loss: 16.29, ranking_loss: 8.20, id_loss: 8.09
+Epoch: 7/70, iteration: 650, loss: 14.35, ranking_loss: 7.00, id_loss: 7.35
+Epoch: 7/70, iteration: 700, loss: 17.80, ranking_loss: 9.26, id_loss: 8.53
+Epoch: 7/70, iteration: 750, loss: 15.35, ranking_loss: 7.91, id_loss: 7.43
+Epoch: 7/70, iteration: 800, loss: 14.34, ranking_loss: 7.04, id_loss: 7.30
+Epoch: 7/70, iteration: 850, loss: 16.41, ranking_loss: 8.81, id_loss: 7.59
+Epoch: 7/70, iteration: 900, loss: 16.67, ranking_loss: 9.34, id_loss: 7.33
+Epoch: 7/70, iteration: 950, loss: 14.13, ranking_loss: 7.39, id_loss: 6.74
+Epoch: 7/70, iteration: 1000, loss: 13.87, ranking_loss: 6.97, id_loss: 6.90
+Epoch: 7/70, iteration: 1050, loss: 18.99, ranking_loss: 9.85, id_loss: 9.14
+Epoch: 7/70, loss: 15.70, ranking_loss: 8.16, id_loss: 7.54
+MIANet-bert
+Testing Epoch: 7
+similarity_glo:--t2i: top1: 52.10%, top5: 75.00%, top10: 82.76%, map: 45.02%
+similarity_loc:--t2i: top1: 51.95%, top5: 73.49%, top10: 81.77%, map: 44.75%
+similarity_all:--t2i: top1: 53.91%, top5: 75.23%, top10: 83.14%, map: 46.64%
+lr:0.000703
+lr:7.03e-05
+Epoch: 8/70, iteration: 50, loss: 11.97, ranking_loss: 7.01, id_loss: 4.96
+Epoch: 8/70, iteration: 100, loss: 14.22, ranking_loss: 8.41, id_loss: 5.81
+Epoch: 8/70, iteration: 150, loss: 14.95, ranking_loss: 8.98, id_loss: 5.97
+Epoch: 8/70, iteration: 200, loss: 16.66, ranking_loss: 8.87, id_loss: 7.80
+Epoch: 8/70, iteration: 250, loss: 12.41, ranking_loss: 6.62, id_loss: 5.79
+Epoch: 8/70, iteration: 300, loss: 14.04, ranking_loss: 7.09, id_loss: 6.95
+Epoch: 8/70, iteration: 350, loss: 13.14, ranking_loss: 6.22, id_loss: 6.92
+Epoch: 8/70, iteration: 400, loss: 14.44, ranking_loss: 7.47, id_loss: 6.97
+Epoch: 8/70, iteration: 450, loss: 18.51, ranking_loss: 10.58, id_loss: 7.93
+Epoch: 8/70, iteration: 500, loss: 16.59, ranking_loss: 8.88, id_loss: 7.71
+Epoch: 8/70, iteration: 550, loss: 16.26, ranking_loss: 9.54, id_loss: 6.73
+Epoch: 8/70, iteration: 600, loss: 13.71, ranking_loss: 6.23, id_loss: 7.48
+Epoch: 8/70, iteration: 650, loss: 15.83, ranking_loss: 7.23, id_loss: 8.59
+Epoch: 8/70, iteration: 700, loss: 14.26, ranking_loss: 7.13, id_loss: 7.14
+Epoch: 8/70, iteration: 750, loss: 13.89, ranking_loss: 7.17, id_loss: 6.71
+Epoch: 8/70, iteration: 800, loss: 15.88, ranking_loss: 8.32, id_loss: 7.56
+Epoch: 8/70, iteration: 850, loss: 9.82, ranking_loss: 3.71, id_loss: 6.11
+Epoch: 8/70, iteration: 900, loss: 13.81, ranking_loss: 5.37, id_loss: 8.44
+Epoch: 8/70, iteration: 950, loss: 15.04, ranking_loss: 7.21, id_loss: 7.82
+Epoch: 8/70, iteration: 1000, loss: 14.99, ranking_loss: 7.81, id_loss: 7.18
+Epoch: 8/70, iteration: 1050, loss: 15.72, ranking_loss: 7.57, id_loss: 8.14
+Epoch: 8/70, loss: 14.34, ranking_loss: 7.52, id_loss: 6.82
+MIANet-bert
+Testing Epoch: 8
+similarity_glo:--t2i: top1: 53.85%, top5: 75.47%, top10: 83.28%, map: 46.13%
+similarity_loc:--t2i: top1: 52.62%, top5: 73.91%, top10: 82.23%, map: 45.16%
+similarity_all:--t2i: top1: 54.56%, top5: 75.89%, top10: 83.59%, map: 47.20%
+lr:0.0008020000000000001
+lr:8.020000000000001e-05
+Epoch: 9/70, iteration: 50, loss: 11.40, ranking_loss: 7.08, id_loss: 4.32
+Epoch: 9/70, iteration: 100, loss: 10.78, ranking_loss: 6.14, id_loss: 4.64
+Epoch: 9/70, iteration: 150, loss: 11.07, ranking_loss: 5.70, id_loss: 5.37
+Epoch: 9/70, iteration: 200, loss: 12.46, ranking_loss: 7.27, id_loss: 5.20
+Epoch: 9/70, iteration: 250, loss: 13.50, ranking_loss: 8.21, id_loss: 5.29
+Epoch: 9/70, iteration: 300, loss: 13.72, ranking_loss: 7.40, id_loss: 6.32
+Epoch: 9/70, iteration: 350, loss: 12.39, ranking_loss: 6.81, id_loss: 5.58
+Epoch: 9/70, iteration: 400, loss: 16.29, ranking_loss: 9.56, id_loss: 6.73
+Epoch: 9/70, iteration: 450, loss: 12.43, ranking_loss: 6.12, id_loss: 6.31
+Epoch: 9/70, iteration: 500, loss: 13.48, ranking_loss: 5.82, id_loss: 7.66
+Epoch: 9/70, iteration: 550, loss: 16.14, ranking_loss: 8.98, id_loss: 7.15
+Epoch: 9/70, iteration: 600, loss: 13.21, ranking_loss: 6.54, id_loss: 6.67
+Epoch: 9/70, iteration: 650, loss: 11.62, ranking_loss: 5.90, id_loss: 5.71
+Epoch: 9/70, iteration: 700, loss: 13.82, ranking_loss: 8.01, id_loss: 5.81
+Epoch: 9/70, iteration: 750, loss: 16.87, ranking_loss: 8.86, id_loss: 8.01
+Epoch: 9/70, iteration: 800, loss: 13.13, ranking_loss: 7.49, id_loss: 5.64
+Epoch: 9/70, iteration: 850, loss: 14.89, ranking_loss: 8.21, id_loss: 6.68
+Epoch: 9/70, iteration: 900, loss: 13.48, ranking_loss: 6.55, id_loss: 6.93
+Epoch: 9/70, iteration: 950, loss: 14.88, ranking_loss: 7.81, id_loss: 7.07
+Epoch: 9/70, iteration: 1000, loss: 13.23, ranking_loss: 7.50, id_loss: 5.73
+Epoch: 9/70, iteration: 1050, loss: 12.74, ranking_loss: 5.95, id_loss: 6.79
+Epoch: 9/70, loss: 13.28, ranking_loss: 7.04, id_loss: 6.24
+MIANet-bert
+Testing Epoch: 9
+similarity_glo:--t2i: top1: 54.82%, top5: 77.16%, top10: 83.89%, map: 46.91%
+similarity_loc:--t2i: top1: 54.45%, top5: 76.23%, top10: 84.00%, map: 46.75%
+similarity_all:--t2i: top1: 56.60%, top5: 77.66%, top10: 85.01%, map: 48.64%
+lr:0.000901
+lr:9.010000000000001e-05
+Epoch: 10/70, iteration: 50, loss: 11.78, ranking_loss: 6.79, id_loss: 5.00
+Epoch: 10/70, iteration: 100, loss: 8.94, ranking_loss: 4.48, id_loss: 4.47
+Epoch: 10/70, iteration: 150, loss: 9.59, ranking_loss: 5.65, id_loss: 3.94
+Epoch: 10/70, iteration: 200, loss: 12.37, ranking_loss: 7.70, id_loss: 4.67
+Epoch: 10/70, iteration: 250, loss: 11.63, ranking_loss: 6.05, id_loss: 5.58
+Epoch: 10/70, iteration: 300, loss: 12.71, ranking_loss: 7.64, id_loss: 5.07
+Epoch: 10/70, iteration: 350, loss: 12.71, ranking_loss: 7.23, id_loss: 5.48
+Epoch: 10/70, iteration: 400, loss: 13.45, ranking_loss: 6.75, id_loss: 6.70
+Epoch: 10/70, iteration: 450, loss: 12.32, ranking_loss: 6.17, id_loss: 6.15
+Epoch: 10/70, iteration: 500, loss: 14.17, ranking_loss: 7.66, id_loss: 6.51
+Epoch: 10/70, iteration: 550, loss: 10.22, ranking_loss: 4.57, id_loss: 5.65
+Epoch: 10/70, iteration: 600, loss: 14.42, ranking_loss: 7.27, id_loss: 7.15
+Epoch: 10/70, iteration: 650, loss: 14.46, ranking_loss: 8.99, id_loss: 5.46
+Epoch: 10/70, iteration: 700, loss: 14.35, ranking_loss: 7.27, id_loss: 7.08
+Epoch: 10/70, iteration: 750, loss: 11.21, ranking_loss: 6.08, id_loss: 5.13
+Epoch: 10/70, iteration: 800, loss: 12.64, ranking_loss: 6.65, id_loss: 5.99
+Epoch: 10/70, iteration: 850, loss: 13.88, ranking_loss: 6.98, id_loss: 6.90
+Epoch: 10/70, iteration: 900, loss: 11.34, ranking_loss: 5.42, id_loss: 5.92
+Epoch: 10/70, iteration: 950, loss: 13.61, ranking_loss: 5.96, id_loss: 7.65
+Epoch: 10/70, iteration: 1000, loss: 13.67, ranking_loss: 7.16, id_loss: 6.50
+Epoch: 10/70, iteration: 1050, loss: 11.83, ranking_loss: 6.09, id_loss: 5.73
+Epoch: 10/70, loss: 12.33, ranking_loss: 6.63, id_loss: 5.70
+MIANet-bert
+Testing Epoch: 10
+similarity_glo:--t2i: top1: 55.91%, top5: 77.31%, top10: 84.78%, map: 47.45%
+similarity_loc:--t2i: top1: 54.89%, top5: 76.54%, top10: 84.13%, map: 47.28%
+similarity_all:--t2i: top1: 57.31%, top5: 78.22%, top10: 85.51%, map: 49.25%
+lr:0.001
+lr:0.0001
+Epoch: 11/70, iteration: 50, loss: 9.22, ranking_loss: 5.33, id_loss: 3.89
+Epoch: 11/70, iteration: 100, loss: 10.04, ranking_loss: 6.56, id_loss: 3.49
+Epoch: 11/70, iteration: 150, loss: 10.26, ranking_loss: 6.01, id_loss: 4.25
+Epoch: 11/70, iteration: 200, loss: 11.52, ranking_loss: 7.17, id_loss: 4.35
+Epoch: 11/70, iteration: 250, loss: 10.13, ranking_loss: 5.88, id_loss: 4.25
+Epoch: 11/70, iteration: 300, loss: 11.50, ranking_loss: 6.28, id_loss: 5.22
+Epoch: 11/70, iteration: 350, loss: 9.36, ranking_loss: 5.55, id_loss: 3.82
+Epoch: 11/70, iteration: 400, loss: 13.71, ranking_loss: 6.62, id_loss: 7.09
+Epoch: 11/70, iteration: 450, loss: 15.16, ranking_loss: 9.14, id_loss: 6.02
+Epoch: 11/70, iteration: 500, loss: 11.50, ranking_loss: 6.41, id_loss: 5.09
+Epoch: 11/70, iteration: 550, loss: 11.77, ranking_loss: 6.18, id_loss: 5.60
+Epoch: 11/70, iteration: 600, loss: 10.07, ranking_loss: 5.47, id_loss: 4.60
+Epoch: 11/70, iteration: 650, loss: 12.56, ranking_loss: 6.13, id_loss: 6.43
+Epoch: 11/70, iteration: 700, loss: 12.15, ranking_loss: 6.31, id_loss: 5.84
+Epoch: 11/70, iteration: 750, loss: 12.78, ranking_loss: 7.09, id_loss: 5.69
+Epoch: 11/70, iteration: 800, loss: 10.03, ranking_loss: 4.43, id_loss: 5.60
+Epoch: 11/70, iteration: 850, loss: 12.74, ranking_loss: 6.81, id_loss: 5.93
+Epoch: 11/70, iteration: 900, loss: 12.19, ranking_loss: 6.23, id_loss: 5.95
+Epoch: 11/70, iteration: 950, loss: 12.71, ranking_loss: 7.32, id_loss: 5.39
+Epoch: 11/70, iteration: 1000, loss: 11.81, ranking_loss: 6.85, id_loss: 4.96
+Epoch: 11/70, iteration: 1050, loss: 13.10, ranking_loss: 6.51, id_loss: 6.59
+Epoch: 11/70, loss: 11.59, ranking_loss: 6.32, id_loss: 5.26
+MIANet-bert
+Testing Epoch: 11
+similarity_glo:--t2i: top1: 56.14%, top5: 77.31%, top10: 84.19%, map: 47.92%
+similarity_loc:--t2i: top1: 54.91%, top5: 76.95%, top10: 83.89%, map: 47.46%
+similarity_all:--t2i: top1: 57.33%, top5: 78.09%, top10: 85.14%, map: 49.50%
+lr:0.001
+lr:0.0001
+Epoch: 12/70, iteration: 50, loss: 9.60, ranking_loss: 6.12, id_loss: 3.48
+Epoch: 12/70, iteration: 100, loss: 7.68, ranking_loss: 3.87, id_loss: 3.81
+Epoch: 12/70, iteration: 150, loss: 10.37, ranking_loss: 5.97, id_loss: 4.39
+Epoch: 12/70, iteration: 200, loss: 6.97, ranking_loss: 4.19, id_loss: 2.77
+Epoch: 12/70, iteration: 250, loss: 7.88, ranking_loss: 3.29, id_loss: 4.59
+Epoch: 12/70, iteration: 300, loss: 13.11, ranking_loss: 8.32, id_loss: 4.79
+Epoch: 12/70, iteration: 350, loss: 9.09, ranking_loss: 5.63, id_loss: 3.46
+Epoch: 12/70, iteration: 400, loss: 11.19, ranking_loss: 6.96, id_loss: 4.23
+Epoch: 12/70, iteration: 450, loss: 7.55, ranking_loss: 3.69, id_loss: 3.86
+Epoch: 12/70, iteration: 500, loss: 10.51, ranking_loss: 5.93, id_loss: 4.58
+Epoch: 12/70, iteration: 550, loss: 7.32, ranking_loss: 3.99, id_loss: 3.33
+Epoch: 12/70, iteration: 600, loss: 8.62, ranking_loss: 4.47, id_loss: 4.15
+Epoch: 12/70, iteration: 650, loss: 10.30, ranking_loss: 6.20, id_loss: 4.11
+Epoch: 12/70, iteration: 700, loss: 9.52, ranking_loss: 5.10, id_loss: 4.42
+Epoch: 12/70, iteration: 750, loss: 12.64, ranking_loss: 7.62, id_loss: 5.02
+Epoch: 12/70, iteration: 800, loss: 10.00, ranking_loss: 5.33, id_loss: 4.67
+Epoch: 12/70, iteration: 850, loss: 11.52, ranking_loss: 6.52, id_loss: 5.00
+Epoch: 12/70, iteration: 900, loss: 10.05, ranking_loss: 5.45, id_loss: 4.60
+Epoch: 12/70, iteration: 950, loss: 11.20, ranking_loss: 5.66, id_loss: 5.54
+Epoch: 12/70, iteration: 1000, loss: 10.55, ranking_loss: 5.58, id_loss: 4.98
+Epoch: 12/70, iteration: 1050, loss: 10.61, ranking_loss: 5.19, id_loss: 5.41
+Epoch: 12/70, loss: 10.14, ranking_loss: 5.87, id_loss: 4.28
+MIANet-bert
+Testing Epoch: 12
+similarity_glo:--t2i: top1: 57.70%, top5: 77.81%, top10: 85.62%, map: 49.32%
+similarity_loc:--t2i: top1: 56.04%, top5: 76.77%, top10: 84.49%, map: 48.32%
+similarity_all:--t2i: top1: 59.05%, top5: 78.05%, top10: 86.11%, map: 50.60%
+lr:0.001
+lr:0.0001
+Epoch: 13/70, iteration: 50, loss: 7.41, ranking_loss: 4.62, id_loss: 2.79
+Epoch: 13/70, iteration: 100, loss: 7.64, ranking_loss: 5.46, id_loss: 2.18
+Epoch: 13/70, iteration: 150, loss: 6.96, ranking_loss: 4.75, id_loss: 2.21
+Epoch: 13/70, iteration: 200, loss: 8.38, ranking_loss: 5.50, id_loss: 2.88
+Epoch: 13/70, iteration: 250, loss: 7.29, ranking_loss: 5.11, id_loss: 2.18
+Epoch: 13/70, iteration: 300, loss: 7.39, ranking_loss: 4.73, id_loss: 2.66
+Epoch: 13/70, iteration: 350, loss: 9.62, ranking_loss: 5.69, id_loss: 3.94
+Epoch: 13/70, iteration: 400, loss: 5.49, ranking_loss: 2.68, id_loss: 2.81
+Epoch: 13/70, iteration: 450, loss: 7.77, ranking_loss: 4.62, id_loss: 3.15
+Epoch: 13/70, iteration: 500, loss: 7.62, ranking_loss: 4.34, id_loss: 3.27
+Epoch: 13/70, iteration: 550, loss: 8.15, ranking_loss: 4.69, id_loss: 3.45
+Epoch: 13/70, iteration: 600, loss: 10.42, ranking_loss: 4.99, id_loss: 5.43
+Epoch: 13/70, iteration: 650, loss: 9.79, ranking_loss: 5.35, id_loss: 4.45
+Epoch: 13/70, iteration: 700, loss: 9.37, ranking_loss: 5.29, id_loss: 4.08
+Epoch: 13/70, iteration: 750, loss: 9.39, ranking_loss: 5.76, id_loss: 3.64
+Epoch: 13/70, iteration: 800, loss: 9.91, ranking_loss: 4.04, id_loss: 5.87
+Epoch: 13/70, iteration: 850, loss: 10.60, ranking_loss: 5.41, id_loss: 5.19
+Epoch: 13/70, iteration: 900, loss: 10.20, ranking_loss: 5.79, id_loss: 4.41
+Epoch: 13/70, iteration: 950, loss: 11.27, ranking_loss: 5.93, id_loss: 5.34
+Epoch: 13/70, iteration: 1000, loss: 8.92, ranking_loss: 5.12, id_loss: 3.80
+Epoch: 13/70, iteration: 1050, loss: 10.82, ranking_loss: 5.60, id_loss: 5.22
+Epoch: 13/70, loss: 8.95, ranking_loss: 5.37, id_loss: 3.58
+MIANet-bert
+Testing Epoch: 13
+similarity_glo:--t2i: top1: 57.68%, top5: 79.09%, top10: 85.92%, map: 49.47%
+similarity_loc:--t2i: top1: 57.59%, top5: 77.97%, top10: 85.07%, map: 49.20%
+similarity_all:--t2i: top1: 59.31%, top5: 80.07%, top10: 86.40%, map: 51.11%
+lr:0.001
+lr:0.0001
+Epoch: 14/70, iteration: 50, loss: 6.14, ranking_loss: 4.25, id_loss: 1.89
+Epoch: 14/70, iteration: 100, loss: 7.00, ranking_loss: 3.94, id_loss: 3.05
+Epoch: 14/70, iteration: 150, loss: 6.53, ranking_loss: 3.76, id_loss: 2.78
+Epoch: 14/70, iteration: 200, loss: 6.96, ranking_loss: 4.81, id_loss: 2.15
+Epoch: 14/70, iteration: 250, loss: 6.38, ranking_loss: 3.72, id_loss: 2.66
+Epoch: 14/70, iteration: 300, loss: 6.51, ranking_loss: 4.70, id_loss: 1.81
+Epoch: 14/70, iteration: 350, loss: 5.16, ranking_loss: 2.80, id_loss: 2.37
+Epoch: 14/70, iteration: 400, loss: 8.45, ranking_loss: 5.17, id_loss: 3.28
+Epoch: 14/70, iteration: 450, loss: 7.75, ranking_loss: 5.39, id_loss: 2.37
+Epoch: 14/70, iteration: 500, loss: 8.11, ranking_loss: 5.66, id_loss: 2.44
+Epoch: 14/70, iteration: 550, loss: 8.77, ranking_loss: 6.27, id_loss: 2.51
+Epoch: 14/70, iteration: 600, loss: 7.57, ranking_loss: 4.38, id_loss: 3.19
+Epoch: 14/70, iteration: 650, loss: 6.71, ranking_loss: 4.15, id_loss: 2.56
+Epoch: 14/70, iteration: 700, loss: 6.96, ranking_loss: 4.25, id_loss: 2.71
+Epoch: 14/70, iteration: 750, loss: 9.19, ranking_loss: 6.06, id_loss: 3.12
+Epoch: 14/70, iteration: 800, loss: 11.46, ranking_loss: 7.47, id_loss: 3.99
+Epoch: 14/70, iteration: 850, loss: 7.88, ranking_loss: 4.25, id_loss: 3.62
+Epoch: 14/70, iteration: 900, loss: 8.59, ranking_loss: 5.49, id_loss: 3.10
+Epoch: 14/70, iteration: 950, loss: 9.93, ranking_loss: 5.94, id_loss: 3.99
+Epoch: 14/70, iteration: 1000, loss: 8.56, ranking_loss: 5.78, id_loss: 2.78
+Epoch: 14/70, iteration: 1050, loss: 7.85, ranking_loss: 4.18, id_loss: 3.67
+Epoch: 14/70, loss: 8.08, ranking_loss: 4.99, id_loss: 3.09
+MIANet-bert
+Testing Epoch: 14
+similarity_glo:--t2i: top1: 58.90%, top5: 79.29%, top10: 86.13%, map: 50.08%
+similarity_loc:--t2i: top1: 56.92%, top5: 78.02%, top10: 85.46%, map: 49.14%
+similarity_all:--t2i: top1: 60.01%, top5: 79.58%, top10: 86.78%, map: 51.43%
+lr:0.001
+lr:0.0001
+Epoch: 15/70, iteration: 50, loss: 4.24, ranking_loss: 2.54, id_loss: 1.70
+Epoch: 15/70, iteration: 100, loss: 5.91, ranking_loss: 3.95, id_loss: 1.96
+Epoch: 15/70, iteration: 150, loss: 7.86, ranking_loss: 5.83, id_loss: 2.04
+Epoch: 15/70, iteration: 200, loss: 5.77, ranking_loss: 3.93, id_loss: 1.84
+Epoch: 15/70, iteration: 250, loss: 7.45, ranking_loss: 4.26, id_loss: 3.20
+Epoch: 15/70, iteration: 300, loss: 6.99, ranking_loss: 4.26, id_loss: 2.73
+Epoch: 15/70, iteration: 350, loss: 7.13, ranking_loss: 4.63, id_loss: 2.51
+Epoch: 15/70, iteration: 400, loss: 8.04, ranking_loss: 4.94, id_loss: 3.11
+Epoch: 15/70, iteration: 450, loss: 7.00, ranking_loss: 3.35, id_loss: 3.65
+Epoch: 15/70, iteration: 500, loss: 9.32, ranking_loss: 4.92, id_loss: 4.39
+Epoch: 15/70, iteration: 550, loss: 7.26, ranking_loss: 5.01, id_loss: 2.25
+Epoch: 15/70, iteration: 600, loss: 5.59, ranking_loss: 3.24, id_loss: 2.35
+Epoch: 15/70, iteration: 650, loss: 9.78, ranking_loss: 6.45, id_loss: 3.33
+Epoch: 15/70, iteration: 700, loss: 7.88, ranking_loss: 4.86, id_loss: 3.03
+Epoch: 15/70, iteration: 750, loss: 7.18, ranking_loss: 3.98, id_loss: 3.19
+Epoch: 15/70, iteration: 800, loss: 7.50, ranking_loss: 5.05, id_loss: 2.45
+Epoch: 15/70, iteration: 850, loss: 6.31, ranking_loss: 3.61, id_loss: 2.70
+Epoch: 15/70, iteration: 900, loss: 7.78, ranking_loss: 4.72, id_loss: 3.07
+Epoch: 15/70, iteration: 950, loss: 9.78, ranking_loss: 5.80, id_loss: 3.98
+Epoch: 15/70, iteration: 1000, loss: 7.44, ranking_loss: 3.78, id_loss: 3.66
+Epoch: 15/70, iteration: 1050, loss: 6.67, ranking_loss: 3.95, id_loss: 2.72
+Epoch: 15/70, loss: 7.37, ranking_loss: 4.68, id_loss: 2.69
+MIANet-bert
+Testing Epoch: 15
+similarity_glo:--t2i: top1: 58.80%, top5: 78.70%, top10: 85.75%, map: 50.25%
+similarity_loc:--t2i: top1: 57.39%, top5: 77.97%, top10: 85.07%, map: 49.46%
+similarity_all:--t2i: top1: 59.99%, top5: 79.47%, top10: 86.71%, map: 51.71%
+lr:0.001
+lr:0.0001
+Epoch: 16/70, iteration: 50, loss: 6.88, ranking_loss: 5.13, id_loss: 1.75
+Epoch: 16/70, iteration: 100, loss: 5.17, ranking_loss: 3.55, id_loss: 1.61
+Epoch: 16/70, iteration: 150, loss: 5.88, ranking_loss: 4.40, id_loss: 1.48
+Epoch: 16/70, iteration: 200, loss: 7.81, ranking_loss: 4.40, id_loss: 3.42
+Epoch: 16/70, iteration: 250, loss: 7.02, ranking_loss: 5.07, id_loss: 1.94
+Epoch: 16/70, iteration: 300, loss: 5.41, ranking_loss: 4.02, id_loss: 1.39
+Epoch: 16/70, iteration: 350, loss: 7.36, ranking_loss: 4.58, id_loss: 2.77
+Epoch: 16/70, iteration: 400, loss: 6.42, ranking_loss: 4.77, id_loss: 1.66
+Epoch: 16/70, iteration: 450, loss: 6.18, ranking_loss: 4.53, id_loss: 1.65
+Epoch: 16/70, iteration: 500, loss: 6.61, ranking_loss: 4.84, id_loss: 1.77
+Epoch: 16/70, iteration: 550, loss: 6.57, ranking_loss: 4.49, id_loss: 2.07
+Epoch: 16/70, iteration: 600, loss: 9.66, ranking_loss: 6.40, id_loss: 3.27
+Epoch: 16/70, iteration: 650, loss: 5.60, ranking_loss: 3.25, id_loss: 2.35
+Epoch: 16/70, iteration: 700, loss: 8.20, ranking_loss: 5.23, id_loss: 2.97
+Epoch: 16/70, iteration: 750, loss: 6.18, ranking_loss: 3.81, id_loss: 2.38
+Epoch: 16/70, iteration: 800, loss: 8.39, ranking_loss: 5.49, id_loss: 2.90
+Epoch: 16/70, iteration: 850, loss: 6.59, ranking_loss: 3.96, id_loss: 2.63
+Epoch: 16/70, iteration: 900, loss: 6.23, ranking_loss: 3.67, id_loss: 2.55
+Epoch: 16/70, iteration: 950, loss: 5.61, ranking_loss: 4.17, id_loss: 1.44
+Epoch: 16/70, iteration: 1000, loss: 9.01, ranking_loss: 6.01, id_loss: 3.01
+Epoch: 16/70, iteration: 1050, loss: 5.78, ranking_loss: 3.67, id_loss: 2.12
+Epoch: 16/70, loss: 6.82, ranking_loss: 4.45, id_loss: 2.37
+MIANet-bert
+Testing Epoch: 16
+similarity_glo:--t2i: top1: 59.29%, top5: 79.81%, top10: 86.55%, map: 50.86%
+similarity_loc:--t2i: top1: 58.24%, top5: 78.64%, top10: 85.53%, map: 50.10%
+similarity_all:--t2i: top1: 60.45%, top5: 80.73%, top10: 86.73%, map: 52.32%
+lr:0.001
+lr:0.0001
+Epoch: 17/70, iteration: 50, loss: 6.12, ranking_loss: 4.91, id_loss: 1.21
+Epoch: 17/70, iteration: 100, loss: 6.35, ranking_loss: 4.15, id_loss: 2.20
+Epoch: 17/70, iteration: 150, loss: 5.76, ranking_loss: 3.93, id_loss: 1.83
+Epoch: 17/70, iteration: 200, loss: 5.11, ranking_loss: 3.10, id_loss: 2.02
+Epoch: 17/70, iteration: 250, loss: 3.24, ranking_loss: 2.01, id_loss: 1.23
+Epoch: 17/70, iteration: 300, loss: 6.02, ranking_loss: 4.35, id_loss: 1.67
+Epoch: 17/70, iteration: 350, loss: 6.73, ranking_loss: 4.88, id_loss: 1.85
+Epoch: 17/70, iteration: 400, loss: 5.82, ranking_loss: 3.36, id_loss: 2.47
+Epoch: 17/70, iteration: 450, loss: 5.98, ranking_loss: 3.99, id_loss: 1.99
+Epoch: 17/70, iteration: 500, loss: 5.67, ranking_loss: 2.97, id_loss: 2.70
+Epoch: 17/70, iteration: 550, loss: 6.08, ranking_loss: 3.16, id_loss: 2.91
+Epoch: 17/70, iteration: 600, loss: 6.90, ranking_loss: 4.48, id_loss: 2.41
+Epoch: 17/70, iteration: 650, loss: 7.36, ranking_loss: 5.26, id_loss: 2.10
+Epoch: 17/70, iteration: 700, loss: 5.27, ranking_loss: 2.70, id_loss: 2.58
+Epoch: 17/70, iteration: 750, loss: 8.04, ranking_loss: 5.20, id_loss: 2.84
+Epoch: 17/70, iteration: 800, loss: 5.38, ranking_loss: 3.15, id_loss: 2.23
+Epoch: 17/70, iteration: 850, loss: 6.73, ranking_loss: 4.17, id_loss: 2.55
+Epoch: 17/70, iteration: 900, loss: 7.52, ranking_loss: 4.76, id_loss: 2.76
+Epoch: 17/70, iteration: 950, loss: 8.57, ranking_loss: 4.58, id_loss: 3.99
+Epoch: 17/70, iteration: 1000, loss: 9.87, ranking_loss: 6.95, id_loss: 2.93
+Epoch: 17/70, iteration: 1050, loss: 6.69, ranking_loss: 3.43, id_loss: 3.26
+Epoch: 17/70, loss: 6.36, ranking_loss: 4.21, id_loss: 2.15
+MIANet-bert
+Testing Epoch: 17
+similarity_glo:--t2i: top1: 59.99%, top5: 79.73%, top10: 86.18%, map: 51.16%
+similarity_loc:--t2i: top1: 58.85%, top5: 78.22%, top10: 85.01%, map: 50.25%
+similarity_all:--t2i: top1: 60.88%, top5: 79.91%, top10: 86.47%, map: 52.44%
+lr:0.001
+lr:0.0001
+Epoch: 18/70, iteration: 50, loss: 5.56, ranking_loss: 3.87, id_loss: 1.69
+Epoch: 18/70, iteration: 100, loss: 4.75, ranking_loss: 3.32, id_loss: 1.43
+Epoch: 18/70, iteration: 150, loss: 3.56, ranking_loss: 2.36, id_loss: 1.20
+Epoch: 18/70, iteration: 200, loss: 6.40, ranking_loss: 4.91, id_loss: 1.49
+Epoch: 18/70, iteration: 250, loss: 4.40, ranking_loss: 3.23, id_loss: 1.16
+Epoch: 18/70, iteration: 300, loss: 7.66, ranking_loss: 6.16, id_loss: 1.50
+Epoch: 18/70, iteration: 350, loss: 6.89, ranking_loss: 4.78, id_loss: 2.11
+Epoch: 18/70, iteration: 400, loss: 4.98, ranking_loss: 3.40, id_loss: 1.59
+Epoch: 18/70, iteration: 450, loss: 3.56, ranking_loss: 1.98, id_loss: 1.58
+Epoch: 18/70, iteration: 500, loss: 5.89, ranking_loss: 4.55, id_loss: 1.33
+Epoch: 18/70, iteration: 550, loss: 5.05, ranking_loss: 3.31, id_loss: 1.74
+Epoch: 18/70, iteration: 600, loss: 6.12, ranking_loss: 4.84, id_loss: 1.28
+Epoch: 18/70, iteration: 650, loss: 8.44, ranking_loss: 4.94, id_loss: 3.50
+Epoch: 18/70, iteration: 700, loss: 7.65, ranking_loss: 5.50, id_loss: 2.16
+Epoch: 18/70, iteration: 750, loss: 5.78, ranking_loss: 3.36, id_loss: 2.42
+Epoch: 18/70, iteration: 800, loss: 5.28, ranking_loss: 3.54, id_loss: 1.74
+Epoch: 18/70, iteration: 850, loss: 6.49, ranking_loss: 4.23, id_loss: 2.26
+Epoch: 18/70, iteration: 900, loss: 7.59, ranking_loss: 4.90, id_loss: 2.69
+Epoch: 18/70, iteration: 950, loss: 7.57, ranking_loss: 4.56, id_loss: 3.02
+Epoch: 18/70, iteration: 1000, loss: 8.15, ranking_loss: 5.35, id_loss: 2.80
+Epoch: 18/70, iteration: 1050, loss: 5.85, ranking_loss: 3.79, id_loss: 2.07
+Epoch: 18/70, loss: 5.86, ranking_loss: 3.94, id_loss: 1.92
+MIANet-bert
+Testing Epoch: 18
+similarity_glo:--t2i: top1: 59.75%, top5: 80.18%, top10: 86.74%, map: 50.64%
+similarity_loc:--t2i: top1: 58.19%, top5: 78.23%, top10: 85.69%, map: 50.07%
+similarity_all:--t2i: top1: 61.26%, top5: 80.70%, top10: 87.17%, map: 52.45%
+lr:0.001
+lr:0.0001
+Epoch: 19/70, iteration: 50, loss: 4.96, ranking_loss: 4.00, id_loss: 0.95
+Epoch: 19/70, iteration: 100, loss: 3.86, ranking_loss: 3.16, id_loss: 0.70
+Epoch: 19/70, iteration: 150, loss: 5.31, ranking_loss: 4.18, id_loss: 1.13
+Epoch: 19/70, iteration: 200, loss: 4.04, ranking_loss: 3.04, id_loss: 1.00
+Epoch: 19/70, iteration: 250, loss: 3.95, ranking_loss: 2.50, id_loss: 1.46
+Epoch: 19/70, iteration: 300, loss: 4.94, ranking_loss: 3.88, id_loss: 1.07
+Epoch: 19/70, iteration: 350, loss: 4.99, ranking_loss: 3.58, id_loss: 1.41
+Epoch: 19/70, iteration: 400, loss: 4.57, ranking_loss: 3.14, id_loss: 1.44
+Epoch: 19/70, iteration: 450, loss: 3.43, ranking_loss: 2.07, id_loss: 1.37
+Epoch: 19/70, iteration: 500, loss: 5.57, ranking_loss: 3.82, id_loss: 1.75
+Epoch: 19/70, iteration: 550, loss: 4.66, ranking_loss: 3.32, id_loss: 1.34
+Epoch: 19/70, iteration: 600, loss: 5.53, ranking_loss: 3.82, id_loss: 1.71
+Epoch: 19/70, iteration: 650, loss: 3.82, ranking_loss: 2.59, id_loss: 1.23
+Epoch: 19/70, iteration: 700, loss: 8.30, ranking_loss: 6.74, id_loss: 1.55
+Epoch: 19/70, iteration: 750, loss: 5.49, ranking_loss: 3.12, id_loss: 2.36
+Epoch: 19/70, iteration: 800, loss: 5.44, ranking_loss: 4.09, id_loss: 1.35
+Epoch: 19/70, iteration: 850, loss: 5.17, ranking_loss: 3.52, id_loss: 1.65
+Epoch: 19/70, iteration: 900, loss: 5.52, ranking_loss: 3.37, id_loss: 2.15
+Epoch: 19/70, iteration: 950, loss: 7.13, ranking_loss: 5.70, id_loss: 1.43
+Epoch: 19/70, iteration: 1000, loss: 6.12, ranking_loss: 4.26, id_loss: 1.86
+Epoch: 19/70, iteration: 1050, loss: 5.74, ranking_loss: 3.85, id_loss: 1.88
+Epoch: 19/70, loss: 5.58, ranking_loss: 3.79, id_loss: 1.80
+MIANet-bert
+Testing Epoch: 19
+similarity_glo:--t2i: top1: 60.17%, top5: 80.15%, top10: 87.00%, map: 51.14%
+similarity_loc:--t2i: top1: 58.50%, top5: 79.09%, top10: 85.71%, map: 50.26%
+similarity_all:--t2i: top1: 61.52%, top5: 80.52%, top10: 87.26%, map: 52.66%
+lr:0.001
+lr:0.0001
+Epoch: 20/70, iteration: 50, loss: 4.33, ranking_loss: 3.29, id_loss: 1.05
+Epoch: 20/70, iteration: 100, loss: 6.19, ranking_loss: 4.21, id_loss: 1.98
+Epoch: 20/70, iteration: 150, loss: 3.92, ranking_loss: 3.19, id_loss: 0.73
+Epoch: 20/70, iteration: 200, loss: 4.36, ranking_loss: 3.04, id_loss: 1.32
+Epoch: 20/70, iteration: 250, loss: 4.52, ranking_loss: 2.82, id_loss: 1.69
+Epoch: 20/70, iteration: 300, loss: 6.33, ranking_loss: 4.29, id_loss: 2.05
+Epoch: 20/70, iteration: 350, loss: 7.14, ranking_loss: 5.70, id_loss: 1.44
+Epoch: 20/70, iteration: 400, loss: 5.21, ranking_loss: 3.69, id_loss: 1.51
+Epoch: 20/70, iteration: 450, loss: 5.13, ranking_loss: 3.55, id_loss: 1.57
+Epoch: 20/70, iteration: 500, loss: 4.20, ranking_loss: 3.05, id_loss: 1.15
+Epoch: 20/70, iteration: 550, loss: 6.78, ranking_loss: 4.85, id_loss: 1.93
+Epoch: 20/70, iteration: 600, loss: 4.28, ranking_loss: 2.75, id_loss: 1.53
+Epoch: 20/70, iteration: 650, loss: 6.56, ranking_loss: 3.94, id_loss: 2.62
+Epoch: 20/70, iteration: 700, loss: 6.22, ranking_loss: 3.95, id_loss: 2.27
+Epoch: 20/70, iteration: 750, loss: 7.79, ranking_loss: 5.05, id_loss: 2.74
+Epoch: 20/70, iteration: 800, loss: 5.21, ranking_loss: 3.52, id_loss: 1.69
+Epoch: 20/70, iteration: 850, loss: 4.68, ranking_loss: 3.53, id_loss: 1.15
+Epoch: 20/70, iteration: 900, loss: 4.21, ranking_loss: 2.88, id_loss: 1.33
+Epoch: 20/70, iteration: 950, loss: 6.79, ranking_loss: 4.57, id_loss: 2.21
+Epoch: 20/70, iteration: 1000, loss: 5.63, ranking_loss: 3.35, id_loss: 2.28
+Epoch: 20/70, iteration: 1050, loss: 4.82, ranking_loss: 3.04, id_loss: 1.78
+Epoch: 20/70, loss: 5.26, ranking_loss: 3.60, id_loss: 1.66
+MIANet-bert
+Testing Epoch: 20
+similarity_glo:--t2i: top1: 59.75%, top5: 80.54%, top10: 86.61%, map: 51.22%
+similarity_loc:--t2i: top1: 58.51%, top5: 78.28%, top10: 85.51%, map: 50.41%
+similarity_all:--t2i: top1: 61.05%, top5: 80.64%, top10: 87.20%, map: 52.77%
+lr:0.001
+lr:0.0001
+Epoch: 21/70, iteration: 50, loss: 5.48, ranking_loss: 4.14, id_loss: 1.35
+Epoch: 21/70, iteration: 100, loss: 3.25, ranking_loss: 1.92, id_loss: 1.33
+Epoch: 21/70, iteration: 150, loss: 4.64, ranking_loss: 3.26, id_loss: 1.38
+Epoch: 21/70, iteration: 200, loss: 4.49, ranking_loss: 3.40, id_loss: 1.08
+Epoch: 21/70, iteration: 250, loss: 5.33, ranking_loss: 4.08, id_loss: 1.25
+Epoch: 21/70, iteration: 300, loss: 2.23, ranking_loss: 1.29, id_loss: 0.94
+Epoch: 21/70, iteration: 350, loss: 5.15, ranking_loss: 3.02, id_loss: 2.13
+Epoch: 21/70, iteration: 400, loss: 5.14, ranking_loss: 3.93, id_loss: 1.20
+Epoch: 21/70, iteration: 450, loss: 5.74, ranking_loss: 3.48, id_loss: 2.25
+Epoch: 21/70, iteration: 500, loss: 4.73, ranking_loss: 3.23, id_loss: 1.50
+Epoch: 21/70, iteration: 550, loss: 5.68, ranking_loss: 4.05, id_loss: 1.64
+Epoch: 21/70, iteration: 600, loss: 3.04, ranking_loss: 2.19, id_loss: 0.86
+Epoch: 21/70, iteration: 650, loss: 2.96, ranking_loss: 1.81, id_loss: 1.14
+Epoch: 21/70, iteration: 700, loss: 3.46, ranking_loss: 2.66, id_loss: 0.80
+Epoch: 21/70, iteration: 750, loss: 5.55, ranking_loss: 3.97, id_loss: 1.58
+Epoch: 21/70, iteration: 800, loss: 8.47, ranking_loss: 5.20, id_loss: 3.27
+Epoch: 21/70, iteration: 850, loss: 6.42, ranking_loss: 4.57, id_loss: 1.85
+Epoch: 21/70, iteration: 900, loss: 4.66, ranking_loss: 2.50, id_loss: 2.16
+Epoch: 21/70, iteration: 950, loss: 7.07, ranking_loss: 4.35, id_loss: 2.73
+Epoch: 21/70, iteration: 1000, loss: 5.52, ranking_loss: 4.25, id_loss: 1.27
+Epoch: 21/70, iteration: 1050, loss: 5.61, ranking_loss: 3.66, id_loss: 1.95
+Epoch: 21/70, loss: 5.05, ranking_loss: 3.48, id_loss: 1.57
+MIANet-bert
+Testing Epoch: 21
+similarity_glo:--t2i: top1: 60.17%, top5: 79.73%, top10: 86.09%, map: 51.31%
+similarity_loc:--t2i: top1: 58.92%, top5: 79.82%, top10: 86.31%, map: 50.86%
+similarity_all:--t2i: top1: 61.57%, top5: 80.56%, top10: 87.33%, map: 53.15%
+lr:0.001
+lr:0.0001
+Epoch: 22/70, iteration: 50, loss: 4.25, ranking_loss: 3.30, id_loss: 0.95
+Epoch: 22/70, iteration: 100, loss: 4.31, ranking_loss: 3.39, id_loss: 0.93
+Epoch: 22/70, iteration: 150, loss: 4.47, ranking_loss: 3.17, id_loss: 1.29
+Epoch: 22/70, iteration: 200, loss: 3.14, ranking_loss: 2.47, id_loss: 0.68
+Epoch: 22/70, iteration: 250, loss: 4.65, ranking_loss: 3.93, id_loss: 0.71
+Epoch: 22/70, iteration: 300, loss: 3.19, ranking_loss: 2.00, id_loss: 1.19
+Epoch: 22/70, iteration: 350, loss: 4.94, ranking_loss: 3.74, id_loss: 1.20
+Epoch: 22/70, iteration: 400, loss: 5.18, ranking_loss: 3.65, id_loss: 1.52
+Epoch: 22/70, iteration: 450, loss: 3.64, ranking_loss: 2.70, id_loss: 0.94
+Epoch: 22/70, iteration: 500, loss: 4.16, ranking_loss: 3.17, id_loss: 1.00
+Epoch: 22/70, iteration: 550, loss: 3.27, ranking_loss: 2.40, id_loss: 0.87
+Epoch: 22/70, iteration: 600, loss: 4.07, ranking_loss: 2.20, id_loss: 1.86
+Epoch: 22/70, iteration: 650, loss: 4.47, ranking_loss: 2.58, id_loss: 1.90
+Epoch: 22/70, iteration: 700, loss: 5.85, ranking_loss: 3.70, id_loss: 2.16
+Epoch: 22/70, iteration: 750, loss: 5.10, ranking_loss: 2.93, id_loss: 2.18
+Epoch: 22/70, iteration: 800, loss: 7.01, ranking_loss: 5.78, id_loss: 1.23
+Epoch: 22/70, iteration: 850, loss: 4.78, ranking_loss: 3.32, id_loss: 1.46
+Epoch: 22/70, iteration: 900, loss: 6.63, ranking_loss: 4.96, id_loss: 1.67
+Epoch: 22/70, iteration: 950, loss: 4.67, ranking_loss: 2.76, id_loss: 1.91
+Epoch: 22/70, iteration: 1000, loss: 5.85, ranking_loss: 3.92, id_loss: 1.93
+Epoch: 22/70, iteration: 1050, loss: 5.24, ranking_loss: 3.57, id_loss: 1.67
+Epoch: 22/70, loss: 4.74, ranking_loss: 3.28, id_loss: 1.46
+MIANet-bert
+Testing Epoch: 22
+similarity_glo:--t2i: top1: 60.43%, top5: 80.34%, top10: 86.92%, map: 51.60%
+similarity_loc:--t2i: top1: 59.62%, top5: 79.56%, top10: 86.32%, map: 51.15%
+similarity_all:--t2i: top1: 62.13%, top5: 81.06%, top10: 87.30%, map: 53.39%
+lr:0.001
+lr:0.0001
+Epoch: 23/70, iteration: 50, loss: 4.93, ranking_loss: 4.04, id_loss: 0.90
+Epoch: 23/70, iteration: 100, loss: 2.39, ranking_loss: 2.12, id_loss: 0.27
+Epoch: 23/70, iteration: 150, loss: 4.50, ranking_loss: 3.46, id_loss: 1.04
+Epoch: 23/70, iteration: 200, loss: 3.94, ranking_loss: 2.49, id_loss: 1.45
+Epoch: 23/70, iteration: 250, loss: 4.62, ranking_loss: 3.37, id_loss: 1.25
+Epoch: 23/70, iteration: 300, loss: 5.26, ranking_loss: 3.94, id_loss: 1.31
+Epoch: 23/70, iteration: 350, loss: 5.11, ranking_loss: 4.05, id_loss: 1.06
+Epoch: 23/70, iteration: 400, loss: 4.38, ranking_loss: 3.26, id_loss: 1.12
+Epoch: 23/70, iteration: 450, loss: 5.22, ranking_loss: 4.08, id_loss: 1.14
+Epoch: 23/70, iteration: 500, loss: 4.45, ranking_loss: 3.06, id_loss: 1.39
+Epoch: 23/70, iteration: 550, loss: 4.70, ranking_loss: 3.38, id_loss: 1.32
+Epoch: 23/70, iteration: 600, loss: 3.51, ranking_loss: 2.29, id_loss: 1.23
+Epoch: 23/70, iteration: 650, loss: 3.85, ranking_loss: 3.05, id_loss: 0.80
+Epoch: 23/70, iteration: 700, loss: 4.46, ranking_loss: 2.76, id_loss: 1.70
+Epoch: 23/70, iteration: 750, loss: 2.82, ranking_loss: 2.13, id_loss: 0.70
+Epoch: 23/70, iteration: 800, loss: 5.41, ranking_loss: 2.99, id_loss: 2.42
+Epoch: 23/70, iteration: 850, loss: 5.28, ranking_loss: 3.70, id_loss: 1.58
+Epoch: 23/70, iteration: 900, loss: 6.00, ranking_loss: 3.99, id_loss: 2.02
+Epoch: 23/70, iteration: 950, loss: 4.47, ranking_loss: 3.87, id_loss: 0.60
+Epoch: 23/70, iteration: 1000, loss: 5.93, ranking_loss: 4.00, id_loss: 1.93
+Epoch: 23/70, iteration: 1050, loss: 6.66, ranking_loss: 3.66, id_loss: 3.00
+Epoch: 23/70, loss: 4.57, ranking_loss: 3.17, id_loss: 1.40
+MIANet-bert
+Testing Epoch: 23
+similarity_glo:--t2i: top1: 59.81%, top5: 80.18%, top10: 86.79%, map: 51.48%
+similarity_loc:--t2i: top1: 59.10%, top5: 78.62%, top10: 85.92%, map: 51.10%
+similarity_all:--t2i: top1: 61.47%, top5: 80.86%, top10: 87.49%, map: 53.28%
+lr:0.001
+lr:0.0001
+Epoch: 24/70, iteration: 50, loss: 2.79, ranking_loss: 2.14, id_loss: 0.65
+Epoch: 24/70, iteration: 100, loss: 3.07, ranking_loss: 2.54, id_loss: 0.53
+Epoch: 24/70, iteration: 150, loss: 2.53, ranking_loss: 1.78, id_loss: 0.76
+Epoch: 24/70, iteration: 200, loss: 3.00, ranking_loss: 2.05, id_loss: 0.94
+Epoch: 24/70, iteration: 250, loss: 3.85, ranking_loss: 2.26, id_loss: 1.59
+Epoch: 24/70, iteration: 300, loss: 6.44, ranking_loss: 4.64, id_loss: 1.81
+Epoch: 24/70, iteration: 350, loss: 3.96, ranking_loss: 3.01, id_loss: 0.96
+Epoch: 24/70, iteration: 400, loss: 5.21, ranking_loss: 3.83, id_loss: 1.38
+Epoch: 24/70, iteration: 450, loss: 4.36, ranking_loss: 3.20, id_loss: 1.16
+Epoch: 24/70, iteration: 500, loss: 3.80, ranking_loss: 2.58, id_loss: 1.22
+Epoch: 24/70, iteration: 550, loss: 4.59, ranking_loss: 3.23, id_loss: 1.37
+Epoch: 24/70, iteration: 600, loss: 3.60, ranking_loss: 2.23, id_loss: 1.37
+Epoch: 24/70, iteration: 650, loss: 3.76, ranking_loss: 2.99, id_loss: 0.77
+Epoch: 24/70, iteration: 700, loss: 3.63, ranking_loss: 2.41, id_loss: 1.22
+Epoch: 24/70, iteration: 750, loss: 4.73, ranking_loss: 2.85, id_loss: 1.88
+Epoch: 24/70, iteration: 800, loss: 3.78, ranking_loss: 2.30, id_loss: 1.48
+Epoch: 24/70, iteration: 850, loss: 5.47, ranking_loss: 3.43, id_loss: 2.04
+Epoch: 24/70, iteration: 900, loss: 4.73, ranking_loss: 3.35, id_loss: 1.38
+Epoch: 24/70, iteration: 950, loss: 5.68, ranking_loss: 4.61, id_loss: 1.07
+Epoch: 24/70, iteration: 1000, loss: 6.02, ranking_loss: 4.61, id_loss: 1.41
+Epoch: 24/70, iteration: 1050, loss: 4.54, ranking_loss: 3.30, id_loss: 1.24
+Epoch: 24/70, loss: 4.41, ranking_loss: 3.07, id_loss: 1.34
+MIANet-bert
+Testing Epoch: 24
+similarity_glo:--t2i: top1: 60.69%, top5: 80.15%, top10: 86.74%, map: 51.50%
+similarity_loc:--t2i: top1: 58.90%, top5: 78.85%, top10: 86.24%, map: 50.62%
+similarity_all:--t2i: top1: 61.52%, top5: 80.52%, top10: 87.39%, map: 52.88%
+lr:0.001
+lr:0.0001
+Epoch: 25/70, iteration: 50, loss: 4.26, ranking_loss: 2.66, id_loss: 1.60
+Epoch: 25/70, iteration: 100, loss: 3.17, ranking_loss: 2.33, id_loss: 0.84
+Epoch: 25/70, iteration: 150, loss: 3.95, ranking_loss: 2.29, id_loss: 1.65
+Epoch: 25/70, iteration: 200, loss: 2.01, ranking_loss: 1.48, id_loss: 0.54
+Epoch: 25/70, iteration: 250, loss: 5.15, ranking_loss: 3.77, id_loss: 1.38
+Epoch: 25/70, iteration: 300, loss: 4.72, ranking_loss: 4.03, id_loss: 0.69
+Epoch: 25/70, iteration: 350, loss: 4.66, ranking_loss: 3.32, id_loss: 1.34
+Epoch: 25/70, iteration: 400, loss: 3.62, ranking_loss: 2.70, id_loss: 0.92
+Epoch: 25/70, iteration: 450, loss: 6.47, ranking_loss: 4.58, id_loss: 1.89
+Epoch: 25/70, iteration: 500, loss: 3.67, ranking_loss: 2.03, id_loss: 1.64
+Epoch: 25/70, iteration: 550, loss: 4.22, ranking_loss: 3.50, id_loss: 0.73
+Epoch: 25/70, iteration: 600, loss: 2.21, ranking_loss: 1.60, id_loss: 0.61
+Epoch: 25/70, iteration: 650, loss: 4.54, ranking_loss: 3.75, id_loss: 0.78
+Epoch: 25/70, iteration: 700, loss: 4.67, ranking_loss: 3.16, id_loss: 1.51
+Epoch: 25/70, iteration: 750, loss: 5.45, ranking_loss: 3.71, id_loss: 1.74
+Epoch: 25/70, iteration: 800, loss: 7.09, ranking_loss: 3.92, id_loss: 3.17
+Epoch: 25/70, iteration: 850, loss: 4.77, ranking_loss: 2.68, id_loss: 2.09
+Epoch: 25/70, iteration: 900, loss: 4.17, ranking_loss: 2.88, id_loss: 1.29
+Epoch: 25/70, iteration: 950, loss: 5.12, ranking_loss: 3.59, id_loss: 1.54
+Epoch: 25/70, iteration: 1000, loss: 4.75, ranking_loss: 3.16, id_loss: 1.59
+Epoch: 25/70, iteration: 1050, loss: 5.77, ranking_loss: 4.18, id_loss: 1.59
+Epoch: 25/70, loss: 4.27, ranking_loss: 2.99, id_loss: 1.28
+MIANet-bert
+Testing Epoch: 25
+similarity_glo:--t2i: top1: 60.56%, top5: 79.78%, top10: 86.60%, map: 51.41%
+similarity_loc:--t2i: top1: 59.19%, top5: 79.00%, top10: 85.71%, map: 51.04%
+similarity_all:--t2i: top1: 61.29%, top5: 80.96%, top10: 87.18%, map: 53.03%
+lr:0.001
+lr:0.0001
+Epoch: 26/70, iteration: 50, loss: 2.70, ranking_loss: 1.99, id_loss: 0.71
+Epoch: 26/70, iteration: 100, loss: 3.32, ranking_loss: 2.47, id_loss: 0.84
+Epoch: 26/70, iteration: 150, loss: 2.92, ranking_loss: 2.03, id_loss: 0.89
+Epoch: 26/70, iteration: 200, loss: 4.18, ranking_loss: 3.19, id_loss: 0.99
+Epoch: 26/70, iteration: 250, loss: 6.30, ranking_loss: 4.88, id_loss: 1.41
+Epoch: 26/70, iteration: 300, loss: 3.46, ranking_loss: 2.53, id_loss: 0.93
+Epoch: 26/70, iteration: 350, loss: 4.40, ranking_loss: 3.63, id_loss: 0.77
+Epoch: 26/70, iteration: 400, loss: 4.76, ranking_loss: 3.88, id_loss: 0.88
+Epoch: 26/70, iteration: 450, loss: 3.89, ranking_loss: 2.88, id_loss: 1.02
+Epoch: 26/70, iteration: 500, loss: 3.11, ranking_loss: 1.86, id_loss: 1.25
+Epoch: 26/70, iteration: 550, loss: 3.74, ranking_loss: 2.78, id_loss: 0.96
+Epoch: 26/70, iteration: 600, loss: 4.85, ranking_loss: 3.31, id_loss: 1.54
+Epoch: 26/70, iteration: 650, loss: 4.33, ranking_loss: 3.14, id_loss: 1.19
+Epoch: 26/70, iteration: 700, loss: 4.12, ranking_loss: 2.77, id_loss: 1.35
+Epoch: 26/70, iteration: 750, loss: 3.71, ranking_loss: 2.50, id_loss: 1.21
+Epoch: 26/70, iteration: 800, loss: 3.66, ranking_loss: 2.96, id_loss: 0.71
+Epoch: 26/70, iteration: 850, loss: 3.62, ranking_loss: 2.36, id_loss: 1.27
+Epoch: 26/70, iteration: 900, loss: 3.37, ranking_loss: 2.42, id_loss: 0.95
+Epoch: 26/70, iteration: 950, loss: 4.11, ranking_loss: 2.53, id_loss: 1.58
+Epoch: 26/70, iteration: 1000, loss: 5.07, ranking_loss: 3.27, id_loss: 1.79
+Epoch: 26/70, iteration: 1050, loss: 4.92, ranking_loss: 3.47, id_loss: 1.45
+Epoch: 26/70, loss: 4.15, ranking_loss: 2.91, id_loss: 1.24
+MIANet-bert
+Testing Epoch: 26
+similarity_glo:--t2i: top1: 60.90%, top5: 80.41%, top10: 87.05%, map: 51.73%
+similarity_loc:--t2i: top1: 58.87%, top5: 79.19%, top10: 86.05%, map: 50.97%
+similarity_all:--t2i: top1: 61.99%, top5: 81.09%, top10: 87.69%, map: 53.46%
+lr:0.001
+lr:0.0001
+Epoch: 27/70, iteration: 50, loss: 4.23, ranking_loss: 3.40, id_loss: 0.83
+Epoch: 27/70, iteration: 100, loss: 3.33, ranking_loss: 2.35, id_loss: 0.98
+Epoch: 27/70, iteration: 150, loss: 2.55, ranking_loss: 1.93, id_loss: 0.62
+Epoch: 27/70, iteration: 200, loss: 2.99, ranking_loss: 1.89, id_loss: 1.10
+Epoch: 27/70, iteration: 250, loss: 3.95, ranking_loss: 2.83, id_loss: 1.12
+Epoch: 27/70, iteration: 300, loss: 4.03, ranking_loss: 2.91, id_loss: 1.12
+Epoch: 27/70, iteration: 350, loss: 3.61, ranking_loss: 2.34, id_loss: 1.26
+Epoch: 27/70, iteration: 400, loss: 5.02, ranking_loss: 4.18, id_loss: 0.83
+Epoch: 27/70, iteration: 450, loss: 3.92, ranking_loss: 2.88, id_loss: 1.04
+Epoch: 27/70, iteration: 500, loss: 2.90, ranking_loss: 1.90, id_loss: 1.01
+Epoch: 27/70, iteration: 550, loss: 5.65, ranking_loss: 3.84, id_loss: 1.81
+Epoch: 27/70, iteration: 600, loss: 3.48, ranking_loss: 2.74, id_loss: 0.74
+Epoch: 27/70, iteration: 650, loss: 3.34, ranking_loss: 2.75, id_loss: 0.59
+Epoch: 27/70, iteration: 700, loss: 4.24, ranking_loss: 3.18, id_loss: 1.05
+Epoch: 27/70, iteration: 750, loss: 3.44, ranking_loss: 2.71, id_loss: 0.74
+Epoch: 27/70, iteration: 800, loss: 6.46, ranking_loss: 4.01, id_loss: 2.45
+Epoch: 27/70, iteration: 850, loss: 4.23, ranking_loss: 2.19, id_loss: 2.04
+Epoch: 27/70, iteration: 900, loss: 3.84, ranking_loss: 2.91, id_loss: 0.93
+Epoch: 27/70, iteration: 950, loss: 3.58, ranking_loss: 2.88, id_loss: 0.69
+Epoch: 27/70, iteration: 1000, loss: 6.50, ranking_loss: 3.86, id_loss: 2.64
+Epoch: 27/70, iteration: 1050, loss: 4.15, ranking_loss: 3.02, id_loss: 1.13
+Epoch: 27/70, loss: 4.02, ranking_loss: 2.81, id_loss: 1.21
+MIANet-bert
+Testing Epoch: 27
+similarity_glo:--t2i: top1: 60.90%, top5: 79.58%, top10: 86.01%, map: 51.71%
+similarity_loc:--t2i: top1: 58.76%, top5: 78.88%, top10: 85.72%, map: 50.64%
+similarity_all:--t2i: top1: 61.31%, top5: 80.23%, top10: 86.71%, map: 52.94%
+lr:0.001
+lr:0.0001
+Epoch: 28/70, iteration: 50, loss: 1.72, ranking_loss: 1.38, id_loss: 0.35
+Epoch: 28/70, iteration: 100, loss: 2.47, ranking_loss: 1.77, id_loss: 0.70
+Epoch: 28/70, iteration: 150, loss: 4.74, ranking_loss: 3.60, id_loss: 1.14
+Epoch: 28/70, iteration: 200, loss: 4.61, ranking_loss: 3.37, id_loss: 1.23
+Epoch: 28/70, iteration: 250, loss: 2.80, ranking_loss: 2.31, id_loss: 0.50
+Epoch: 28/70, iteration: 300, loss: 3.52, ranking_loss: 2.77, id_loss: 0.76
+Epoch: 28/70, iteration: 350, loss: 3.70, ranking_loss: 2.64, id_loss: 1.06
+Epoch: 28/70, iteration: 400, loss: 4.38, ranking_loss: 3.44, id_loss: 0.94
+Epoch: 28/70, iteration: 450, loss: 5.33, ranking_loss: 3.20, id_loss: 2.13
+Epoch: 28/70, iteration: 500, loss: 4.15, ranking_loss: 2.74, id_loss: 1.41
+Epoch: 28/70, iteration: 550, loss: 4.18, ranking_loss: 2.36, id_loss: 1.82
+Epoch: 28/70, iteration: 600, loss: 3.06, ranking_loss: 2.63, id_loss: 0.43
+Epoch: 28/70, iteration: 650, loss: 4.62, ranking_loss: 3.41, id_loss: 1.21
+Epoch: 28/70, iteration: 700, loss: 3.07, ranking_loss: 2.40, id_loss: 0.67
+Epoch: 28/70, iteration: 750, loss: 5.38, ranking_loss: 4.09, id_loss: 1.29
+Epoch: 28/70, iteration: 800, loss: 5.51, ranking_loss: 3.76, id_loss: 1.75
+Epoch: 28/70, iteration: 850, loss: 4.32, ranking_loss: 2.31, id_loss: 2.01
+Epoch: 28/70, iteration: 900, loss: 3.31, ranking_loss: 2.40, id_loss: 0.92
+Epoch: 28/70, iteration: 950, loss: 5.02, ranking_loss: 3.42, id_loss: 1.60
+Epoch: 28/70, iteration: 1000, loss: 4.05, ranking_loss: 2.93, id_loss: 1.12
+Epoch: 28/70, iteration: 1050, loss: 4.88, ranking_loss: 3.07, id_loss: 1.81
+Epoch: 28/70, loss: 3.78, ranking_loss: 2.67, id_loss: 1.11
+MIANet-bert
+Testing Epoch: 28
+similarity_glo:--t2i: top1: 60.72%, top5: 80.18%, top10: 86.66%, map: 51.87%
+similarity_loc:--t2i: top1: 59.16%, top5: 79.26%, top10: 85.96%, map: 50.95%
+similarity_all:--t2i: top1: 61.99%, top5: 81.03%, top10: 87.48%, map: 53.43%
+lr:0.001
+lr:0.0001
+Epoch: 29/70, iteration: 50, loss: 2.13, ranking_loss: 1.19, id_loss: 0.94
+Epoch: 29/70, iteration: 100, loss: 3.61, ranking_loss: 2.79, id_loss: 0.81
+Epoch: 29/70, iteration: 150, loss: 3.83, ranking_loss: 3.23, id_loss: 0.60
+Epoch: 29/70, iteration: 200, loss: 2.17, ranking_loss: 1.68, id_loss: 0.49
+Epoch: 29/70, iteration: 250, loss: 3.34, ranking_loss: 2.05, id_loss: 1.29
+Epoch: 29/70, iteration: 300, loss: 4.30, ranking_loss: 3.33, id_loss: 0.97
+Epoch: 29/70, iteration: 350, loss: 2.86, ranking_loss: 2.02, id_loss: 0.84
+Epoch: 29/70, iteration: 400, loss: 4.52, ranking_loss: 1.99, id_loss: 2.53
+Epoch: 29/70, iteration: 450, loss: 3.24, ranking_loss: 2.52, id_loss: 0.72
+Epoch: 29/70, iteration: 500, loss: 4.84, ranking_loss: 3.62, id_loss: 1.22
+Epoch: 29/70, iteration: 550, loss: 5.37, ranking_loss: 4.68, id_loss: 0.70
+Epoch: 29/70, iteration: 600, loss: 3.11, ranking_loss: 1.97, id_loss: 1.14
+Epoch: 29/70, iteration: 650, loss: 4.75, ranking_loss: 3.27, id_loss: 1.48
+Epoch: 29/70, iteration: 700, loss: 5.01, ranking_loss: 2.95, id_loss: 2.06
+Epoch: 29/70, iteration: 750, loss: 2.68, ranking_loss: 1.38, id_loss: 1.30
+Epoch: 29/70, iteration: 800, loss: 4.27, ranking_loss: 2.58, id_loss: 1.69
+Epoch: 29/70, iteration: 850, loss: 4.55, ranking_loss: 3.55, id_loss: 1.00
+Epoch: 29/70, iteration: 900, loss: 5.82, ranking_loss: 5.06, id_loss: 0.76
+Epoch: 29/70, iteration: 950, loss: 4.47, ranking_loss: 3.50, id_loss: 0.97
+Epoch: 29/70, iteration: 1000, loss: 3.97, ranking_loss: 2.59, id_loss: 1.38
+Epoch: 29/70, iteration: 1050, loss: 4.78, ranking_loss: 1.93, id_loss: 2.86
+Epoch: 29/70, loss: 3.82, ranking_loss: 2.68, id_loss: 1.14
+MIANet-bert
+Testing Epoch: 29
+similarity_glo:--t2i: top1: 60.72%, top5: 80.25%, top10: 86.87%, map: 52.06%
+similarity_loc:--t2i: top1: 59.44%, top5: 79.30%, top10: 85.74%, map: 51.17%
+similarity_all:--t2i: top1: 62.17%, top5: 81.03%, top10: 87.56%, map: 53.64%
+lr:0.001
+lr:0.0001
+Epoch: 30/70, iteration: 50, loss: 3.12, ranking_loss: 1.79, id_loss: 1.34
+Epoch: 30/70, iteration: 100, loss: 1.93, ranking_loss: 1.54, id_loss: 0.38
+Epoch: 30/70, iteration: 150, loss: 4.68, ranking_loss: 3.13, id_loss: 1.56
+Epoch: 30/70, iteration: 200, loss: 4.62, ranking_loss: 3.01, id_loss: 1.61
+Epoch: 30/70, iteration: 250, loss: 3.87, ranking_loss: 2.99, id_loss: 0.88
+Epoch: 30/70, iteration: 300, loss: 4.30, ranking_loss: 3.26, id_loss: 1.03
+Epoch: 30/70, iteration: 350, loss: 5.39, ranking_loss: 4.11, id_loss: 1.28
+Epoch: 30/70, iteration: 400, loss: 4.27, ranking_loss: 2.83, id_loss: 1.44
+Epoch: 30/70, iteration: 450, loss: 3.39, ranking_loss: 2.87, id_loss: 0.52
+Epoch: 30/70, iteration: 500, loss: 3.65, ranking_loss: 2.71, id_loss: 0.93
+Epoch: 30/70, iteration: 550, loss: 2.65, ranking_loss: 1.50, id_loss: 1.16
+Epoch: 30/70, iteration: 600, loss: 4.50, ranking_loss: 3.32, id_loss: 1.18
+Epoch: 30/70, iteration: 650, loss: 2.74, ranking_loss: 1.88, id_loss: 0.86
+Epoch: 30/70, iteration: 700, loss: 4.30, ranking_loss: 2.69, id_loss: 1.61
+Epoch: 30/70, iteration: 750, loss: 4.43, ranking_loss: 3.04, id_loss: 1.38
+Epoch: 30/70, iteration: 800, loss: 3.72, ranking_loss: 2.65, id_loss: 1.06
+Epoch: 30/70, iteration: 850, loss: 4.45, ranking_loss: 3.13, id_loss: 1.32
+Epoch: 30/70, iteration: 900, loss: 4.31, ranking_loss: 3.62, id_loss: 0.70
+Epoch: 30/70, iteration: 950, loss: 6.89, ranking_loss: 4.93, id_loss: 1.95
+Epoch: 30/70, iteration: 1000, loss: 5.89, ranking_loss: 3.68, id_loss: 2.21
+Epoch: 30/70, iteration: 1050, loss: 3.78, ranking_loss: 2.43, id_loss: 1.35
+Epoch: 30/70, loss: 3.74, ranking_loss: 2.63, id_loss: 1.11
+MIANet-bert
+Testing Epoch: 30
+similarity_glo:--t2i: top1: 60.06%, top5: 80.18%, top10: 86.66%, map: 51.67%
+similarity_loc:--t2i: top1: 59.15%, top5: 79.47%, top10: 86.40%, map: 51.23%
+similarity_all:--t2i: top1: 62.18%, top5: 80.99%, top10: 87.57%, map: 53.46%
+lr:0.0001
+lr:1e-05
+Epoch: 31/70, iteration: 50, loss: 1.68, ranking_loss: 1.13, id_loss: 0.55
+Epoch: 31/70, iteration: 100, loss: 2.17, ranking_loss: 1.71, id_loss: 0.45
+Epoch: 31/70, iteration: 150, loss: 2.88, ranking_loss: 2.33, id_loss: 0.55
+Epoch: 31/70, iteration: 200, loss: 2.93, ranking_loss: 2.46, id_loss: 0.47
+Epoch: 31/70, iteration: 250, loss: 2.24, ranking_loss: 1.26, id_loss: 0.98
+Epoch: 31/70, iteration: 300, loss: 3.74, ranking_loss: 3.08, id_loss: 0.65
+Epoch: 31/70, iteration: 350, loss: 1.78, ranking_loss: 1.71, id_loss: 0.06
+Epoch: 31/70, iteration: 400, loss: 2.34, ranking_loss: 2.11, id_loss: 0.23
+Epoch: 31/70, iteration: 450, loss: 2.29, ranking_loss: 2.16, id_loss: 0.13
+Epoch: 31/70, iteration: 500, loss: 2.18, ranking_loss: 1.76, id_loss: 0.43
+Epoch: 31/70, iteration: 550, loss: 1.98, ranking_loss: 1.64, id_loss: 0.33
+Epoch: 31/70, iteration: 600, loss: 1.40, ranking_loss: 0.71, id_loss: 0.69
+Epoch: 31/70, iteration: 650, loss: 3.06, ranking_loss: 2.92, id_loss: 0.14
+Epoch: 31/70, iteration: 700, loss: 2.19, ranking_loss: 1.82, id_loss: 0.37
+Epoch: 31/70, iteration: 750, loss: 2.57, ranking_loss: 1.55, id_loss: 1.02
+Epoch: 31/70, iteration: 800, loss: 2.59, ranking_loss: 1.80, id_loss: 0.79
+Epoch: 31/70, iteration: 850, loss: 2.41, ranking_loss: 1.95, id_loss: 0.46
+Epoch: 31/70, iteration: 900, loss: 2.38, ranking_loss: 2.12, id_loss: 0.26
+Epoch: 31/70, iteration: 950, loss: 1.99, ranking_loss: 1.48, id_loss: 0.50
+Epoch: 31/70, iteration: 1000, loss: 1.53, ranking_loss: 0.99, id_loss: 0.55
+Epoch: 31/70, iteration: 1050, loss: 2.96, ranking_loss: 2.57, id_loss: 0.40
+Epoch: 31/70, loss: 2.39, ranking_loss: 1.88, id_loss: 0.51
+MIANet-bert
+Testing Epoch: 31
+similarity_glo:--t2i: top1: 63.06%, top5: 81.81%, top10: 87.93%, map: 54.26%
+similarity_loc:--t2i: top1: 62.10%, top5: 81.16%, top10: 87.59%, map: 54.07%
+similarity_all:--t2i: top1: 64.18%, top5: 82.55%, top10: 88.43%, map: 55.97%
+lr:0.0001
+lr:1e-05
+Epoch: 32/70, iteration: 50, loss: 1.88, ranking_loss: 1.55, id_loss: 0.33
+Epoch: 32/70, iteration: 100, loss: 1.59, ranking_loss: 1.48, id_loss: 0.12
+Epoch: 32/70, iteration: 150, loss: 0.59, ranking_loss: 0.36, id_loss: 0.23
+Epoch: 32/70, iteration: 200, loss: 1.94, ranking_loss: 1.69, id_loss: 0.25
+Epoch: 32/70, iteration: 250, loss: 1.59, ranking_loss: 1.36, id_loss: 0.23
+Epoch: 32/70, iteration: 300, loss: 1.37, ranking_loss: 1.25, id_loss: 0.13
+Epoch: 32/70, iteration: 350, loss: 2.88, ranking_loss: 2.56, id_loss: 0.32
+Epoch: 32/70, iteration: 400, loss: 2.01, ranking_loss: 1.77, id_loss: 0.24
+Epoch: 32/70, iteration: 450, loss: 0.93, ranking_loss: 0.68, id_loss: 0.25
+Epoch: 32/70, iteration: 500, loss: 0.78, ranking_loss: 0.74, id_loss: 0.04
+Epoch: 32/70, iteration: 550, loss: 2.55, ranking_loss: 2.21, id_loss: 0.34
+Epoch: 32/70, iteration: 600, loss: 1.14, ranking_loss: 1.00, id_loss: 0.14
+Epoch: 32/70, iteration: 650, loss: 1.84, ranking_loss: 1.22, id_loss: 0.62
+Epoch: 32/70, iteration: 700, loss: 1.77, ranking_loss: 1.66, id_loss: 0.11
+Epoch: 32/70, iteration: 750, loss: 1.16, ranking_loss: 0.95, id_loss: 0.21
+Epoch: 32/70, iteration: 800, loss: 1.72, ranking_loss: 1.61, id_loss: 0.11
+Epoch: 32/70, iteration: 850, loss: 1.94, ranking_loss: 1.65, id_loss: 0.29
+Epoch: 32/70, iteration: 900, loss: 1.31, ranking_loss: 1.19, id_loss: 0.12
+Epoch: 32/70, iteration: 950, loss: 1.41, ranking_loss: 1.13, id_loss: 0.27
+Epoch: 32/70, iteration: 1000, loss: 2.54, ranking_loss: 1.62, id_loss: 0.92
+Epoch: 32/70, iteration: 1050, loss: 2.68, ranking_loss: 2.34, id_loss: 0.34
+Epoch: 32/70, loss: 1.79, ranking_loss: 1.53, id_loss: 0.25
+MIANet-bert
+Testing Epoch: 32
+similarity_glo:--t2i: top1: 63.45%, top5: 82.16%, top10: 88.30%, map: 54.85%
+similarity_loc:--t2i: top1: 62.54%, top5: 81.35%, top10: 87.95%, map: 54.38%
+similarity_all:--t2i: top1: 64.86%, top5: 82.91%, top10: 88.92%, map: 56.37%
+lr:0.0001
+lr:1e-05
+Epoch: 33/70, iteration: 50, loss: 1.83, ranking_loss: 1.69, id_loss: 0.14
+Epoch: 33/70, iteration: 100, loss: 1.56, ranking_loss: 1.46, id_loss: 0.10
+Epoch: 33/70, iteration: 150, loss: 0.82, ranking_loss: 0.68, id_loss: 0.15
+Epoch: 33/70, iteration: 200, loss: 1.06, ranking_loss: 0.91, id_loss: 0.15
+Epoch: 33/70, iteration: 250, loss: 1.87, ranking_loss: 1.47, id_loss: 0.40
+Epoch: 33/70, iteration: 300, loss: 1.34, ranking_loss: 1.30, id_loss: 0.04
+Epoch: 33/70, iteration: 350, loss: 0.50, ranking_loss: 0.42, id_loss: 0.08
+Epoch: 33/70, iteration: 400, loss: 2.07, ranking_loss: 1.74, id_loss: 0.33
+Epoch: 33/70, iteration: 450, loss: 1.39, ranking_loss: 1.01, id_loss: 0.37
+Epoch: 33/70, iteration: 500, loss: 1.21, ranking_loss: 1.11, id_loss: 0.10
+Epoch: 33/70, iteration: 550, loss: 2.21, ranking_loss: 2.12, id_loss: 0.09
+Epoch: 33/70, iteration: 600, loss: 2.04, ranking_loss: 2.00, id_loss: 0.04
+Epoch: 33/70, iteration: 650, loss: 1.28, ranking_loss: 1.18, id_loss: 0.10
+Epoch: 33/70, iteration: 700, loss: 2.83, ranking_loss: 2.31, id_loss: 0.52
+Epoch: 33/70, iteration: 750, loss: 0.93, ranking_loss: 0.70, id_loss: 0.23
+Epoch: 33/70, iteration: 800, loss: 1.28, ranking_loss: 1.13, id_loss: 0.16
+Epoch: 33/70, iteration: 850, loss: 1.53, ranking_loss: 1.08, id_loss: 0.45
+Epoch: 33/70, iteration: 900, loss: 0.55, ranking_loss: 0.45, id_loss: 0.10
+Epoch: 33/70, iteration: 950, loss: 1.96, ranking_loss: 1.44, id_loss: 0.52
+Epoch: 33/70, iteration: 1000, loss: 1.68, ranking_loss: 1.60, id_loss: 0.08
+Epoch: 33/70, iteration: 1050, loss: 1.93, ranking_loss: 1.77, id_loss: 0.16
+Epoch: 33/70, loss: 1.61, ranking_loss: 1.41, id_loss: 0.20
+MIANet-bert
+Testing Epoch: 33
+similarity_glo:--t2i: top1: 63.17%, top5: 82.52%, top10: 88.27%, map: 54.83%
+similarity_loc:--t2i: top1: 62.43%, top5: 81.24%, top10: 87.87%, map: 54.52%
+similarity_all:--t2i: top1: 64.73%, top5: 82.78%, top10: 88.71%, map: 56.48%
+lr:0.0001
+lr:1e-05
+Epoch: 34/70, iteration: 50, loss: 1.94, ranking_loss: 1.76, id_loss: 0.18
+Epoch: 34/70, iteration: 100, loss: 0.78, ranking_loss: 0.57, id_loss: 0.21
+Epoch: 34/70, iteration: 150, loss: 0.98, ranking_loss: 0.83, id_loss: 0.15
+Epoch: 34/70, iteration: 200, loss: 1.33, ranking_loss: 1.23, id_loss: 0.10
+Epoch: 34/70, iteration: 250, loss: 2.00, ranking_loss: 1.60, id_loss: 0.40
+Epoch: 34/70, iteration: 300, loss: 1.86, ranking_loss: 1.57, id_loss: 0.29
+Epoch: 34/70, iteration: 350, loss: 1.67, ranking_loss: 1.58, id_loss: 0.09
+Epoch: 34/70, iteration: 400, loss: 1.13, ranking_loss: 0.90, id_loss: 0.23
+Epoch: 34/70, iteration: 450, loss: 1.77, ranking_loss: 1.61, id_loss: 0.16
+Epoch: 34/70, iteration: 500, loss: 1.51, ranking_loss: 1.26, id_loss: 0.26
+Epoch: 34/70, iteration: 550, loss: 2.26, ranking_loss: 2.05, id_loss: 0.21
+Epoch: 34/70, iteration: 600, loss: 1.01, ranking_loss: 0.75, id_loss: 0.26
+Epoch: 34/70, iteration: 650, loss: 1.60, ranking_loss: 1.57, id_loss: 0.03
+Epoch: 34/70, iteration: 700, loss: 0.79, ranking_loss: 0.55, id_loss: 0.24
+Epoch: 34/70, iteration: 750, loss: 2.16, ranking_loss: 1.96, id_loss: 0.20
+Epoch: 34/70, iteration: 800, loss: 1.79, ranking_loss: 1.61, id_loss: 0.18
+Epoch: 34/70, iteration: 850, loss: 1.16, ranking_loss: 0.85, id_loss: 0.32
+Epoch: 34/70, iteration: 900, loss: 2.09, ranking_loss: 1.77, id_loss: 0.32
+Epoch: 34/70, iteration: 950, loss: 1.29, ranking_loss: 1.28, id_loss: 0.01
+Epoch: 34/70, iteration: 1000, loss: 2.00, ranking_loss: 1.53, id_loss: 0.46
+Epoch: 34/70, iteration: 1050, loss: 1.41, ranking_loss: 1.30, id_loss: 0.11
+Epoch: 34/70, loss: 1.49, ranking_loss: 1.32, id_loss: 0.18
+MIANet-bert
+Testing Epoch: 34
+similarity_glo:--t2i: top1: 63.48%, top5: 82.67%, top10: 88.45%, map: 55.08%
+similarity_loc:--t2i: top1: 62.44%, top5: 81.43%, top10: 87.74%, map: 54.56%
+similarity_all:--t2i: top1: 64.72%, top5: 83.12%, top10: 89.00%, map: 56.56%
+lr:0.0001
+lr:1e-05
+Epoch: 35/70, iteration: 50, loss: 1.34, ranking_loss: 1.26, id_loss: 0.07
+Epoch: 35/70, iteration: 100, loss: 1.33, ranking_loss: 1.26, id_loss: 0.08
+Epoch: 35/70, iteration: 150, loss: 1.45, ranking_loss: 1.30, id_loss: 0.14
+Epoch: 35/70, iteration: 200, loss: 1.59, ranking_loss: 1.20, id_loss: 0.39
+Epoch: 35/70, iteration: 250, loss: 0.35, ranking_loss: 0.31, id_loss: 0.05
+Epoch: 35/70, iteration: 300, loss: 1.14, ranking_loss: 1.12, id_loss: 0.02
+Epoch: 35/70, iteration: 350, loss: 0.83, ranking_loss: 0.71, id_loss: 0.12
+Epoch: 35/70, iteration: 400, loss: 1.44, ranking_loss: 1.39, id_loss: 0.05
+Epoch: 35/70, iteration: 450, loss: 0.87, ranking_loss: 0.83, id_loss: 0.04
+Epoch: 35/70, iteration: 500, loss: 1.32, ranking_loss: 1.14, id_loss: 0.18
+Epoch: 35/70, iteration: 550, loss: 1.02, ranking_loss: 0.78, id_loss: 0.24
+Epoch: 35/70, iteration: 600, loss: 2.33, ranking_loss: 2.12, id_loss: 0.21
+Epoch: 35/70, iteration: 650, loss: 0.70, ranking_loss: 0.63, id_loss: 0.07
+Epoch: 35/70, iteration: 700, loss: 0.80, ranking_loss: 0.62, id_loss: 0.18
+Epoch: 35/70, iteration: 750, loss: 1.32, ranking_loss: 1.22, id_loss: 0.09
+Epoch: 35/70, iteration: 800, loss: 1.21, ranking_loss: 1.15, id_loss: 0.06
+Epoch: 35/70, iteration: 850, loss: 1.11, ranking_loss: 1.01, id_loss: 0.10
+Epoch: 35/70, iteration: 900, loss: 1.03, ranking_loss: 1.02, id_loss: 0.01
+Epoch: 35/70, iteration: 950, loss: 1.07, ranking_loss: 0.70, id_loss: 0.38
+Epoch: 35/70, iteration: 1000, loss: 1.30, ranking_loss: 1.23, id_loss: 0.07
+Epoch: 35/70, iteration: 1050, loss: 1.54, ranking_loss: 1.38, id_loss: 0.16
+Epoch: 35/70, loss: 1.39, ranking_loss: 1.22, id_loss: 0.17
+MIANet-bert
+Testing Epoch: 35
+similarity_glo:--t2i: top1: 63.86%, top5: 82.78%, top10: 88.47%, map: 55.21%
+similarity_loc:--t2i: top1: 62.93%, top5: 81.71%, top10: 87.72%, map: 54.67%
+similarity_all:--t2i: top1: 64.85%, top5: 83.15%, top10: 89.04%, map: 56.64%
+lr:0.0001
+lr:1e-05
+Epoch: 36/70, iteration: 50, loss: 1.15, ranking_loss: 0.99, id_loss: 0.15
+Epoch: 36/70, iteration: 100, loss: 1.57, ranking_loss: 1.52, id_loss: 0.05
+Epoch: 36/70, iteration: 150, loss: 1.62, ranking_loss: 1.55, id_loss: 0.07
+Epoch: 36/70, iteration: 200, loss: 1.58, ranking_loss: 1.38, id_loss: 0.19
+Epoch: 36/70, iteration: 250, loss: 1.10, ranking_loss: 0.98, id_loss: 0.11
+Epoch: 36/70, iteration: 300, loss: 1.38, ranking_loss: 1.11, id_loss: 0.27
+Epoch: 36/70, iteration: 350, loss: 2.97, ranking_loss: 2.77, id_loss: 0.20
+Epoch: 36/70, iteration: 400, loss: 1.23, ranking_loss: 1.19, id_loss: 0.04
+Epoch: 36/70, iteration: 450, loss: 1.13, ranking_loss: 0.85, id_loss: 0.28
+Epoch: 36/70, iteration: 500, loss: 1.37, ranking_loss: 1.26, id_loss: 0.11
+Epoch: 36/70, iteration: 550, loss: 1.30, ranking_loss: 1.08, id_loss: 0.22
+Epoch: 36/70, iteration: 600, loss: 0.95, ranking_loss: 0.73, id_loss: 0.22
+Epoch: 36/70, iteration: 650, loss: 1.48, ranking_loss: 1.10, id_loss: 0.38
+Epoch: 36/70, iteration: 700, loss: 1.47, ranking_loss: 1.36, id_loss: 0.10
+Epoch: 36/70, iteration: 750, loss: 0.94, ranking_loss: 0.93, id_loss: 0.01
+Epoch: 36/70, iteration: 800, loss: 0.58, ranking_loss: 0.36, id_loss: 0.22
+Epoch: 36/70, iteration: 850, loss: 0.53, ranking_loss: 0.48, id_loss: 0.05
+Epoch: 36/70, iteration: 900, loss: 1.50, ranking_loss: 1.40, id_loss: 0.09
+Epoch: 36/70, iteration: 950, loss: 1.52, ranking_loss: 1.26, id_loss: 0.26
+Epoch: 36/70, iteration: 1000, loss: 2.34, ranking_loss: 2.01, id_loss: 0.33
+Epoch: 36/70, iteration: 1050, loss: 1.01, ranking_loss: 0.91, id_loss: 0.10
+Epoch: 36/70, loss: 1.33, ranking_loss: 1.17, id_loss: 0.16
+MIANet-bert
+Testing Epoch: 36
+similarity_glo:--t2i: top1: 63.82%, top5: 82.68%, top10: 88.66%, map: 55.20%
+similarity_loc:--t2i: top1: 62.82%, top5: 81.56%, top10: 87.74%, map: 54.68%
+similarity_all:--t2i: top1: 64.55%, top5: 83.17%, top10: 88.94%, map: 56.49%
+lr:0.0001
+lr:1e-05
+Epoch: 37/70, iteration: 50, loss: 1.09, ranking_loss: 0.70, id_loss: 0.39
+Epoch: 37/70, iteration: 100, loss: 0.62, ranking_loss: 0.46, id_loss: 0.17
+Epoch: 37/70, iteration: 150, loss: 1.62, ranking_loss: 1.58, id_loss: 0.03
+Epoch: 37/70, iteration: 200, loss: 0.65, ranking_loss: 0.51, id_loss: 0.14
+Epoch: 37/70, iteration: 250, loss: 2.83, ranking_loss: 2.35, id_loss: 0.49
+Epoch: 37/70, iteration: 300, loss: 1.31, ranking_loss: 1.13, id_loss: 0.19
+Epoch: 37/70, iteration: 350, loss: 0.70, ranking_loss: 0.61, id_loss: 0.10
+Epoch: 37/70, iteration: 400, loss: 1.59, ranking_loss: 1.26, id_loss: 0.33
+Epoch: 37/70, iteration: 450, loss: 1.06, ranking_loss: 0.88, id_loss: 0.19
+Epoch: 37/70, iteration: 500, loss: 1.55, ranking_loss: 1.35, id_loss: 0.20
+Epoch: 37/70, iteration: 550, loss: 0.80, ranking_loss: 0.70, id_loss: 0.10
+Epoch: 37/70, iteration: 600, loss: 1.39, ranking_loss: 1.33, id_loss: 0.06
+Epoch: 37/70, iteration: 650, loss: 1.30, ranking_loss: 1.24, id_loss: 0.07
+Epoch: 37/70, iteration: 700, loss: 1.03, ranking_loss: 0.92, id_loss: 0.12
+Epoch: 37/70, iteration: 750, loss: 1.74, ranking_loss: 1.30, id_loss: 0.44
+Epoch: 37/70, iteration: 800, loss: 1.26, ranking_loss: 1.00, id_loss: 0.27
+Epoch: 37/70, iteration: 850, loss: 2.56, ranking_loss: 2.37, id_loss: 0.19
+Epoch: 37/70, iteration: 900, loss: 0.74, ranking_loss: 0.66, id_loss: 0.08
+Epoch: 37/70, iteration: 950, loss: 1.10, ranking_loss: 0.72, id_loss: 0.38
+Epoch: 37/70, iteration: 1000, loss: 2.23, ranking_loss: 2.16, id_loss: 0.07
+Epoch: 37/70, iteration: 1050, loss: 0.82, ranking_loss: 0.52, id_loss: 0.30
+Epoch: 37/70, loss: 1.29, ranking_loss: 1.13, id_loss: 0.16
+MIANet-bert
+Testing Epoch: 37
+similarity_glo:--t2i: top1: 63.82%, top5: 82.65%, top10: 88.65%, map: 55.34%
+similarity_loc:--t2i: top1: 62.96%, top5: 81.60%, top10: 87.56%, map: 54.72%
+similarity_all:--t2i: top1: 64.86%, top5: 83.04%, top10: 89.00%, map: 56.67%
+lr:0.0001
+lr:1e-05
+Epoch: 38/70, iteration: 50, loss: 0.55, ranking_loss: 0.54, id_loss: 0.00
+Epoch: 38/70, iteration: 100, loss: 1.28, ranking_loss: 1.16, id_loss: 0.13
+Epoch: 38/70, iteration: 150, loss: 0.96, ranking_loss: 0.91, id_loss: 0.05
+Epoch: 38/70, iteration: 200, loss: 3.20, ranking_loss: 3.19, id_loss: 0.01
+Epoch: 38/70, iteration: 250, loss: 0.59, ranking_loss: 0.46, id_loss: 0.13
+Epoch: 38/70, iteration: 300, loss: 1.05, ranking_loss: 0.89, id_loss: 0.16
+Epoch: 38/70, iteration: 350, loss: 0.60, ranking_loss: 0.50, id_loss: 0.10
+Epoch: 38/70, iteration: 400, loss: 1.98, ranking_loss: 1.92, id_loss: 0.05
+Epoch: 38/70, iteration: 450, loss: 1.04, ranking_loss: 0.88, id_loss: 0.16
+Epoch: 38/70, iteration: 500, loss: 1.04, ranking_loss: 1.01, id_loss: 0.03
+Epoch: 38/70, iteration: 550, loss: 1.30, ranking_loss: 1.09, id_loss: 0.21
+Epoch: 38/70, iteration: 600, loss: 1.22, ranking_loss: 1.13, id_loss: 0.09
+Epoch: 38/70, iteration: 650, loss: 0.35, ranking_loss: 0.35, id_loss: 0.00
+Epoch: 38/70, iteration: 700, loss: 1.84, ranking_loss: 1.00, id_loss: 0.84
+Epoch: 38/70, iteration: 750, loss: 1.89, ranking_loss: 1.67, id_loss: 0.21
+Epoch: 38/70, iteration: 800, loss: 1.53, ranking_loss: 1.14, id_loss: 0.39
+Epoch: 38/70, iteration: 850, loss: 1.60, ranking_loss: 1.52, id_loss: 0.08
+Epoch: 38/70, iteration: 900, loss: 0.58, ranking_loss: 0.50, id_loss: 0.08
+Epoch: 38/70, iteration: 950, loss: 1.86, ranking_loss: 1.60, id_loss: 0.26
+Epoch: 38/70, iteration: 1000, loss: 1.00, ranking_loss: 0.77, id_loss: 0.22
+Epoch: 38/70, iteration: 1050, loss: 0.69, ranking_loss: 0.56, id_loss: 0.14
+Epoch: 38/70, loss: 1.26, ranking_loss: 1.10, id_loss: 0.16
+MIANet-bert
+Testing Epoch: 38
+similarity_glo:--t2i: top1: 64.12%, top5: 82.55%, top10: 88.34%, map: 55.44%
+similarity_loc:--t2i: top1: 62.62%, top5: 81.50%, top10: 88.04%, map: 54.84%
+similarity_all:--t2i: top1: 64.94%, top5: 83.04%, top10: 88.87%, map: 56.73%
+lr:0.0001
+lr:1e-05
+Epoch: 39/70, iteration: 50, loss: 0.92, ranking_loss: 0.92, id_loss: 0.00
+Epoch: 39/70, iteration: 100, loss: 1.92, ranking_loss: 1.91, id_loss: 0.00
+Epoch: 39/70, iteration: 150, loss: 1.85, ranking_loss: 1.81, id_loss: 0.04
+Epoch: 39/70, iteration: 200, loss: 1.12, ranking_loss: 1.12, id_loss: 0.00
+Epoch: 39/70, iteration: 250, loss: 1.66, ranking_loss: 1.34, id_loss: 0.32
+Epoch: 39/70, iteration: 300, loss: 0.66, ranking_loss: 0.52, id_loss: 0.14
+Epoch: 39/70, iteration: 350, loss: 0.91, ranking_loss: 0.85, id_loss: 0.06
+Epoch: 39/70, iteration: 400, loss: 0.88, ranking_loss: 0.81, id_loss: 0.07
+Epoch: 39/70, iteration: 450, loss: 1.55, ranking_loss: 1.37, id_loss: 0.18
+Epoch: 39/70, iteration: 500, loss: 1.25, ranking_loss: 0.98, id_loss: 0.26
+Epoch: 39/70, iteration: 550, loss: 0.94, ranking_loss: 0.93, id_loss: 0.01
+Epoch: 39/70, iteration: 600, loss: 1.68, ranking_loss: 1.39, id_loss: 0.29
+Epoch: 39/70, iteration: 650, loss: 1.09, ranking_loss: 0.95, id_loss: 0.13
+Epoch: 39/70, iteration: 700, loss: 1.88, ranking_loss: 1.71, id_loss: 0.17
+Epoch: 39/70, iteration: 750, loss: 0.61, ranking_loss: 0.60, id_loss: 0.02
+Epoch: 39/70, iteration: 800, loss: 1.11, ranking_loss: 0.79, id_loss: 0.32
+Epoch: 39/70, iteration: 850, loss: 0.86, ranking_loss: 0.59, id_loss: 0.28
+Epoch: 39/70, iteration: 900, loss: 1.47, ranking_loss: 1.20, id_loss: 0.27
+Epoch: 39/70, iteration: 950, loss: 1.50, ranking_loss: 1.32, id_loss: 0.17
+Epoch: 39/70, iteration: 1000, loss: 1.78, ranking_loss: 1.47, id_loss: 0.31
+Epoch: 39/70, iteration: 1050, loss: 0.61, ranking_loss: 0.60, id_loss: 0.01
+Epoch: 39/70, loss: 1.21, ranking_loss: 1.06, id_loss: 0.16
+MIANet-bert
+Testing Epoch: 39
+similarity_glo:--t2i: top1: 63.94%, top5: 82.57%, top10: 88.42%, map: 55.23%
+similarity_loc:--t2i: top1: 62.87%, top5: 81.50%, top10: 87.59%, map: 54.75%
+similarity_all:--t2i: top1: 65.24%, top5: 82.88%, top10: 88.86%, map: 56.73%
+lr:0.0001
+lr:1e-05
+Epoch: 40/70, iteration: 50, loss: 1.14, ranking_loss: 0.66, id_loss: 0.47
+Epoch: 40/70, iteration: 100, loss: 0.67, ranking_loss: 0.59, id_loss: 0.08
+Epoch: 40/70, iteration: 150, loss: 1.33, ranking_loss: 1.08, id_loss: 0.25
+Epoch: 40/70, iteration: 200, loss: 1.51, ranking_loss: 1.34, id_loss: 0.17
+Epoch: 40/70, iteration: 250, loss: 1.10, ranking_loss: 0.96, id_loss: 0.14
+Epoch: 40/70, iteration: 300, loss: 0.66, ranking_loss: 0.58, id_loss: 0.08
+Epoch: 40/70, iteration: 350, loss: 0.80, ranking_loss: 0.80, id_loss: 0.00
+Epoch: 40/70, iteration: 400, loss: 1.63, ranking_loss: 1.55, id_loss: 0.08
+Epoch: 40/70, iteration: 450, loss: 0.50, ranking_loss: 0.34, id_loss: 0.15
+Epoch: 40/70, iteration: 500, loss: 0.74, ranking_loss: 0.68, id_loss: 0.06
+Epoch: 40/70, iteration: 550, loss: 1.52, ranking_loss: 1.32, id_loss: 0.20
+Epoch: 40/70, iteration: 600, loss: 1.90, ranking_loss: 1.48, id_loss: 0.42
+Epoch: 40/70, iteration: 650, loss: 1.12, ranking_loss: 0.90, id_loss: 0.22
+Epoch: 40/70, iteration: 700, loss: 0.58, ranking_loss: 0.56, id_loss: 0.02
+Epoch: 40/70, iteration: 750, loss: 0.69, ranking_loss: 0.64, id_loss: 0.05
+Epoch: 40/70, iteration: 800, loss: 0.50, ranking_loss: 0.41, id_loss: 0.09
+Epoch: 40/70, iteration: 850, loss: 0.82, ranking_loss: 0.81, id_loss: 0.02
+Epoch: 40/70, iteration: 900, loss: 2.89, ranking_loss: 2.67, id_loss: 0.22
+Epoch: 40/70, iteration: 950, loss: 1.77, ranking_loss: 1.61, id_loss: 0.15
+Epoch: 40/70, iteration: 1000, loss: 1.18, ranking_loss: 0.67, id_loss: 0.51
+Epoch: 40/70, iteration: 1050, loss: 1.20, ranking_loss: 0.85, id_loss: 0.36
+Epoch: 40/70, loss: 1.16, ranking_loss: 1.00, id_loss: 0.16
+MIANet-bert
+Testing Epoch: 40
+similarity_glo:--t2i: top1: 63.95%, top5: 82.59%, top10: 88.60%, map: 55.30%
+similarity_loc:--t2i: top1: 63.09%, top5: 81.48%, top10: 87.75%, map: 54.74%
+similarity_all:--t2i: top1: 65.20%, top5: 83.11%, top10: 88.69%, map: 56.68%
+lr:0.0001
+lr:1e-05
+Epoch: 41/70, iteration: 50, loss: 1.46, ranking_loss: 1.44, id_loss: 0.02
+Epoch: 41/70, iteration: 100, loss: 1.15, ranking_loss: 0.90, id_loss: 0.24
+Epoch: 41/70, iteration: 150, loss: 1.03, ranking_loss: 0.95, id_loss: 0.08
+Epoch: 41/70, iteration: 200, loss: 1.33, ranking_loss: 1.07, id_loss: 0.26
+Epoch: 41/70, iteration: 250, loss: 0.67, ranking_loss: 0.64, id_loss: 0.03
+Epoch: 41/70, iteration: 300, loss: 0.98, ranking_loss: 0.95, id_loss: 0.03
+Epoch: 41/70, iteration: 350, loss: 1.19, ranking_loss: 1.19, id_loss: 0.00
+Epoch: 41/70, iteration: 400, loss: 2.68, ranking_loss: 2.33, id_loss: 0.35
+Epoch: 41/70, iteration: 450, loss: 1.76, ranking_loss: 1.31, id_loss: 0.45
+Epoch: 41/70, iteration: 500, loss: 0.46, ranking_loss: 0.43, id_loss: 0.03
+Epoch: 41/70, iteration: 550, loss: 1.07, ranking_loss: 0.82, id_loss: 0.24
+Epoch: 41/70, iteration: 600, loss: 0.83, ranking_loss: 0.55, id_loss: 0.28
+Epoch: 41/70, iteration: 650, loss: 1.20, ranking_loss: 0.99, id_loss: 0.21
+Epoch: 41/70, iteration: 700, loss: 1.58, ranking_loss: 1.44, id_loss: 0.14
+Epoch: 41/70, iteration: 750, loss: 0.75, ranking_loss: 0.64, id_loss: 0.10
+Epoch: 41/70, iteration: 800, loss: 1.71, ranking_loss: 1.53, id_loss: 0.18
+Epoch: 41/70, iteration: 850, loss: 0.92, ranking_loss: 0.91, id_loss: 0.00
+Epoch: 41/70, iteration: 900, loss: 1.33, ranking_loss: 1.23, id_loss: 0.10
+Epoch: 41/70, iteration: 950, loss: 1.22, ranking_loss: 0.93, id_loss: 0.28
+Epoch: 41/70, iteration: 1000, loss: 2.68, ranking_loss: 2.44, id_loss: 0.23
+Epoch: 41/70, iteration: 1050, loss: 2.17, ranking_loss: 2.00, id_loss: 0.17
+Epoch: 41/70, loss: 1.15, ranking_loss: 1.00, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 41
+similarity_glo:--t2i: top1: 63.89%, top5: 82.52%, top10: 88.40%, map: 55.27%
+similarity_loc:--t2i: top1: 62.67%, top5: 81.38%, top10: 87.48%, map: 54.63%
+similarity_all:--t2i: top1: 65.38%, top5: 82.59%, top10: 88.94%, map: 56.77%
+lr:0.0001
+lr:1e-05
+Epoch: 42/70, iteration: 50, loss: 0.96, ranking_loss: 0.94, id_loss: 0.02
+Epoch: 42/70, iteration: 100, loss: 0.58, ranking_loss: 0.56, id_loss: 0.01
+Epoch: 42/70, iteration: 150, loss: 0.53, ranking_loss: 0.33, id_loss: 0.20
+Epoch: 42/70, iteration: 200, loss: 0.84, ranking_loss: 0.68, id_loss: 0.16
+Epoch: 42/70, iteration: 250, loss: 2.06, ranking_loss: 1.88, id_loss: 0.18
+Epoch: 42/70, iteration: 300, loss: 0.77, ranking_loss: 0.51, id_loss: 0.26
+Epoch: 42/70, iteration: 350, loss: 1.45, ranking_loss: 1.20, id_loss: 0.25
+Epoch: 42/70, iteration: 400, loss: 0.46, ranking_loss: 0.29, id_loss: 0.17
+Epoch: 42/70, iteration: 450, loss: 1.00, ranking_loss: 0.85, id_loss: 0.16
+Epoch: 42/70, iteration: 500, loss: 0.36, ranking_loss: 0.16, id_loss: 0.20
+Epoch: 42/70, iteration: 550, loss: 0.60, ranking_loss: 0.34, id_loss: 0.26
+Epoch: 42/70, iteration: 600, loss: 1.56, ranking_loss: 1.24, id_loss: 0.32
+Epoch: 42/70, iteration: 650, loss: 1.83, ranking_loss: 1.77, id_loss: 0.07
+Epoch: 42/70, iteration: 700, loss: 1.62, ranking_loss: 1.53, id_loss: 0.10
+Epoch: 42/70, iteration: 750, loss: 0.85, ranking_loss: 0.78, id_loss: 0.07
+Epoch: 42/70, iteration: 800, loss: 1.35, ranking_loss: 1.09, id_loss: 0.25
+Epoch: 42/70, iteration: 850, loss: 1.30, ranking_loss: 0.88, id_loss: 0.42
+Epoch: 42/70, iteration: 900, loss: 1.05, ranking_loss: 0.94, id_loss: 0.10
+Epoch: 42/70, iteration: 950, loss: 0.70, ranking_loss: 0.53, id_loss: 0.17
+Epoch: 42/70, iteration: 1000, loss: 0.70, ranking_loss: 0.68, id_loss: 0.02
+Epoch: 42/70, iteration: 1050, loss: 0.95, ranking_loss: 0.79, id_loss: 0.16
+Epoch: 42/70, loss: 1.13, ranking_loss: 0.98, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 42
+similarity_glo:--t2i: top1: 63.79%, top5: 82.50%, top10: 88.50%, map: 55.20%
+similarity_loc:--t2i: top1: 63.17%, top5: 81.19%, top10: 87.56%, map: 54.63%
+similarity_all:--t2i: top1: 65.11%, top5: 82.81%, top10: 88.66%, map: 56.63%
+lr:0.0001
+lr:1e-05
+Epoch: 43/70, iteration: 50, loss: 1.23, ranking_loss: 0.94, id_loss: 0.29
+Epoch: 43/70, iteration: 100, loss: 0.71, ranking_loss: 0.59, id_loss: 0.12
+Epoch: 43/70, iteration: 150, loss: 0.84, ranking_loss: 0.58, id_loss: 0.26
+Epoch: 43/70, iteration: 200, loss: 1.55, ranking_loss: 1.22, id_loss: 0.33
+Epoch: 43/70, iteration: 250, loss: 1.06, ranking_loss: 0.95, id_loss: 0.10
+Epoch: 43/70, iteration: 300, loss: 0.95, ranking_loss: 0.71, id_loss: 0.24
+Epoch: 43/70, iteration: 350, loss: 0.97, ranking_loss: 0.87, id_loss: 0.09
+Epoch: 43/70, iteration: 400, loss: 1.00, ranking_loss: 0.95, id_loss: 0.05
+Epoch: 43/70, iteration: 450, loss: 0.75, ranking_loss: 0.58, id_loss: 0.17
+Epoch: 43/70, iteration: 500, loss: 1.07, ranking_loss: 0.91, id_loss: 0.16
+Epoch: 43/70, iteration: 550, loss: 0.86, ranking_loss: 0.80, id_loss: 0.06
+Epoch: 43/70, iteration: 600, loss: 1.14, ranking_loss: 1.07, id_loss: 0.07
+Epoch: 43/70, iteration: 650, loss: 1.55, ranking_loss: 1.36, id_loss: 0.20
+Epoch: 43/70, iteration: 700, loss: 1.98, ranking_loss: 1.69, id_loss: 0.29
+Epoch: 43/70, iteration: 750, loss: 1.73, ranking_loss: 1.65, id_loss: 0.08
+Epoch: 43/70, iteration: 800, loss: 0.97, ranking_loss: 0.71, id_loss: 0.25
+Epoch: 43/70, iteration: 850, loss: 0.59, ranking_loss: 0.54, id_loss: 0.04
+Epoch: 43/70, iteration: 900, loss: 1.50, ranking_loss: 1.36, id_loss: 0.14
+Epoch: 43/70, iteration: 950, loss: 1.45, ranking_loss: 1.33, id_loss: 0.12
+Epoch: 43/70, iteration: 1000, loss: 3.34, ranking_loss: 3.19, id_loss: 0.15
+Epoch: 43/70, iteration: 1050, loss: 0.74, ranking_loss: 0.59, id_loss: 0.15
+Epoch: 43/70, loss: 1.13, ranking_loss: 0.97, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 43
+similarity_glo:--t2i: top1: 63.99%, top5: 82.62%, top10: 88.26%, map: 55.36%
+similarity_loc:--t2i: top1: 62.72%, top5: 81.17%, top10: 87.80%, map: 54.60%
+similarity_all:--t2i: top1: 65.07%, top5: 83.06%, top10: 88.79%, map: 56.63%
+lr:0.0001
+lr:1e-05
+Epoch: 44/70, iteration: 50, loss: 1.05, ranking_loss: 0.99, id_loss: 0.06
+Epoch: 44/70, iteration: 100, loss: 1.62, ranking_loss: 1.27, id_loss: 0.35
+Epoch: 44/70, iteration: 150, loss: 0.37, ranking_loss: 0.32, id_loss: 0.05
+Epoch: 44/70, iteration: 200, loss: 0.84, ranking_loss: 0.65, id_loss: 0.20
+Epoch: 44/70, iteration: 250, loss: 1.08, ranking_loss: 0.82, id_loss: 0.26
+Epoch: 44/70, iteration: 300, loss: 0.37, ranking_loss: 0.31, id_loss: 0.07
+Epoch: 44/70, iteration: 350, loss: 1.54, ranking_loss: 1.39, id_loss: 0.15
+Epoch: 44/70, iteration: 400, loss: 0.92, ranking_loss: 0.66, id_loss: 0.26
+Epoch: 44/70, iteration: 450, loss: 0.46, ranking_loss: 0.31, id_loss: 0.15
+Epoch: 44/70, iteration: 500, loss: 1.43, ranking_loss: 1.23, id_loss: 0.20
+Epoch: 44/70, iteration: 550, loss: 0.59, ranking_loss: 0.49, id_loss: 0.10
+Epoch: 44/70, iteration: 600, loss: 0.48, ranking_loss: 0.47, id_loss: 0.00
+Epoch: 44/70, iteration: 650, loss: 1.59, ranking_loss: 1.33, id_loss: 0.26
+Epoch: 44/70, iteration: 700, loss: 0.54, ranking_loss: 0.53, id_loss: 0.02
+Epoch: 44/70, iteration: 750, loss: 0.70, ranking_loss: 0.58, id_loss: 0.12
+Epoch: 44/70, iteration: 800, loss: 0.77, ranking_loss: 0.62, id_loss: 0.15
+Epoch: 44/70, iteration: 850, loss: 1.91, ranking_loss: 1.55, id_loss: 0.36
+Epoch: 44/70, iteration: 900, loss: 1.70, ranking_loss: 1.62, id_loss: 0.08
+Epoch: 44/70, iteration: 950, loss: 0.98, ranking_loss: 0.84, id_loss: 0.15
+Epoch: 44/70, iteration: 1000, loss: 1.43, ranking_loss: 1.19, id_loss: 0.25
+Epoch: 44/70, iteration: 1050, loss: 0.89, ranking_loss: 0.73, id_loss: 0.15
+Epoch: 44/70, loss: 1.09, ranking_loss: 0.94, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 44
+similarity_glo:--t2i: top1: 63.82%, top5: 82.31%, top10: 88.22%, map: 55.13%
+similarity_loc:--t2i: top1: 62.95%, top5: 81.42%, top10: 87.36%, map: 54.53%
+similarity_all:--t2i: top1: 65.09%, top5: 82.94%, top10: 88.63%, map: 56.58%
+lr:0.0001
+lr:1e-05
+Epoch: 45/70, iteration: 50, loss: 2.02, ranking_loss: 1.75, id_loss: 0.27
+Epoch: 45/70, iteration: 100, loss: 0.56, ranking_loss: 0.43, id_loss: 0.13
+Epoch: 45/70, iteration: 150, loss: 0.45, ranking_loss: 0.37, id_loss: 0.08
+Epoch: 45/70, iteration: 200, loss: 1.94, ranking_loss: 1.88, id_loss: 0.06
+Epoch: 45/70, iteration: 250, loss: 0.48, ranking_loss: 0.38, id_loss: 0.10
+Epoch: 45/70, iteration: 300, loss: 0.54, ranking_loss: 0.32, id_loss: 0.22
+Epoch: 45/70, iteration: 350, loss: 0.94, ranking_loss: 0.83, id_loss: 0.11
+Epoch: 45/70, iteration: 400, loss: 0.84, ranking_loss: 0.62, id_loss: 0.22
+Epoch: 45/70, iteration: 450, loss: 1.05, ranking_loss: 0.75, id_loss: 0.30
+Epoch: 45/70, iteration: 500, loss: 1.74, ranking_loss: 1.57, id_loss: 0.17
+Epoch: 45/70, iteration: 550, loss: 0.99, ranking_loss: 0.96, id_loss: 0.02
+Epoch: 45/70, iteration: 600, loss: 1.12, ranking_loss: 0.93, id_loss: 0.19
+Epoch: 45/70, iteration: 650, loss: 1.85, ranking_loss: 1.78, id_loss: 0.06
+Epoch: 45/70, iteration: 700, loss: 0.87, ranking_loss: 0.73, id_loss: 0.14
+Epoch: 45/70, iteration: 750, loss: 1.06, ranking_loss: 1.01, id_loss: 0.05
+Epoch: 45/70, iteration: 800, loss: 0.50, ranking_loss: 0.50, id_loss: 0.01
+Epoch: 45/70, iteration: 850, loss: 0.65, ranking_loss: 0.64, id_loss: 0.00
+Epoch: 45/70, iteration: 900, loss: 0.44, ranking_loss: 0.25, id_loss: 0.19
+Epoch: 45/70, iteration: 950, loss: 1.16, ranking_loss: 1.09, id_loss: 0.07
+Epoch: 45/70, iteration: 1000, loss: 0.55, ranking_loss: 0.46, id_loss: 0.09
+Epoch: 45/70, iteration: 1050, loss: 1.10, ranking_loss: 0.92, id_loss: 0.17
+Epoch: 45/70, loss: 1.05, ranking_loss: 0.90, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 45
+similarity_glo:--t2i: top1: 64.07%, top5: 82.41%, top10: 88.16%, map: 55.45%
+similarity_loc:--t2i: top1: 62.90%, top5: 81.08%, top10: 87.74%, map: 54.70%
+similarity_all:--t2i: top1: 65.46%, top5: 82.99%, top10: 88.79%, map: 56.78%
+lr:0.0001
+lr:1e-05
+Epoch: 46/70, iteration: 50, loss: 0.93, ranking_loss: 0.87, id_loss: 0.06
+Epoch: 46/70, iteration: 100, loss: 1.29, ranking_loss: 1.04, id_loss: 0.25
+Epoch: 46/70, iteration: 150, loss: 0.46, ranking_loss: 0.44, id_loss: 0.02
+Epoch: 46/70, iteration: 200, loss: 1.54, ranking_loss: 1.28, id_loss: 0.26
+Epoch: 46/70, iteration: 250, loss: 0.81, ranking_loss: 0.56, id_loss: 0.25
+Epoch: 46/70, iteration: 300, loss: 1.35, ranking_loss: 1.21, id_loss: 0.14
+Epoch: 46/70, iteration: 350, loss: 0.67, ranking_loss: 0.56, id_loss: 0.10
+Epoch: 46/70, iteration: 400, loss: 1.09, ranking_loss: 1.06, id_loss: 0.02
+Epoch: 46/70, iteration: 450, loss: 0.42, ranking_loss: 0.35, id_loss: 0.08
+Epoch: 46/70, iteration: 500, loss: 0.71, ranking_loss: 0.56, id_loss: 0.15
+Epoch: 46/70, iteration: 550, loss: 0.88, ranking_loss: 0.67, id_loss: 0.21
+Epoch: 46/70, iteration: 600, loss: 1.60, ranking_loss: 1.60, id_loss: 0.01
+Epoch: 46/70, iteration: 650, loss: 0.91, ranking_loss: 0.66, id_loss: 0.24
+Epoch: 46/70, iteration: 700, loss: 1.80, ranking_loss: 1.40, id_loss: 0.40
+Epoch: 46/70, iteration: 750, loss: 0.89, ranking_loss: 0.63, id_loss: 0.25
+Epoch: 46/70, iteration: 800, loss: 1.50, ranking_loss: 1.49, id_loss: 0.00
+Epoch: 46/70, iteration: 850, loss: 0.39, ranking_loss: 0.39, id_loss: 0.00
+Epoch: 46/70, iteration: 900, loss: 1.24, ranking_loss: 1.16, id_loss: 0.08
+Epoch: 46/70, iteration: 950, loss: 0.88, ranking_loss: 0.74, id_loss: 0.14
+Epoch: 46/70, iteration: 1000, loss: 0.89, ranking_loss: 0.89, id_loss: 0.00
+Epoch: 46/70, iteration: 1050, loss: 0.64, ranking_loss: 0.36, id_loss: 0.28
+Epoch: 46/70, loss: 1.04, ranking_loss: 0.89, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 46
+similarity_glo:--t2i: top1: 63.48%, top5: 82.24%, top10: 88.29%, map: 55.11%
+similarity_loc:--t2i: top1: 62.90%, top5: 81.34%, top10: 87.59%, map: 54.51%
+similarity_all:--t2i: top1: 64.99%, top5: 83.02%, top10: 88.68%, map: 56.55%
+lr:0.0001
+lr:1e-05
+Epoch: 47/70, iteration: 50, loss: 0.52, ranking_loss: 0.52, id_loss: 0.00
+Epoch: 47/70, iteration: 100, loss: 0.82, ranking_loss: 0.59, id_loss: 0.23
+Epoch: 47/70, iteration: 150, loss: 0.83, ranking_loss: 0.73, id_loss: 0.11
+Epoch: 47/70, iteration: 200, loss: 0.59, ranking_loss: 0.57, id_loss: 0.02
+Epoch: 47/70, iteration: 250, loss: 1.49, ranking_loss: 1.40, id_loss: 0.09
+Epoch: 47/70, iteration: 300, loss: 1.83, ranking_loss: 1.65, id_loss: 0.18
+Epoch: 47/70, iteration: 350, loss: 1.19, ranking_loss: 0.98, id_loss: 0.21
+Epoch: 47/70, iteration: 400, loss: 0.53, ranking_loss: 0.53, id_loss: 0.01
+Epoch: 47/70, iteration: 450, loss: 1.22, ranking_loss: 1.11, id_loss: 0.11
+Epoch: 47/70, iteration: 500, loss: 2.24, ranking_loss: 2.11, id_loss: 0.13
+Epoch: 47/70, iteration: 550, loss: 1.55, ranking_loss: 1.35, id_loss: 0.20
+Epoch: 47/70, iteration: 600, loss: 1.06, ranking_loss: 0.96, id_loss: 0.11
+Epoch: 47/70, iteration: 650, loss: 1.06, ranking_loss: 0.80, id_loss: 0.26
+Epoch: 47/70, iteration: 700, loss: 1.53, ranking_loss: 1.34, id_loss: 0.19
+Epoch: 47/70, iteration: 750, loss: 0.65, ranking_loss: 0.54, id_loss: 0.11
+Epoch: 47/70, iteration: 800, loss: 0.43, ranking_loss: 0.25, id_loss: 0.18
+Epoch: 47/70, iteration: 850, loss: 1.14, ranking_loss: 1.13, id_loss: 0.01
+Epoch: 47/70, iteration: 900, loss: 0.44, ranking_loss: 0.39, id_loss: 0.05
+Epoch: 47/70, iteration: 950, loss: 0.85, ranking_loss: 0.83, id_loss: 0.02
+Epoch: 47/70, iteration: 1000, loss: 0.20, ranking_loss: 0.20, id_loss: 0.00
+Epoch: 47/70, iteration: 1050, loss: 0.57, ranking_loss: 0.48, id_loss: 0.09
+Epoch: 47/70, loss: 1.03, ranking_loss: 0.88, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 47
+similarity_glo:--t2i: top1: 63.60%, top5: 82.36%, top10: 88.42%, map: 55.16%
+similarity_loc:--t2i: top1: 62.85%, top5: 81.14%, top10: 87.59%, map: 54.53%
+similarity_all:--t2i: top1: 65.17%, top5: 83.02%, top10: 88.82%, map: 56.57%
+lr:0.0001
+lr:1e-05
+Epoch: 48/70, iteration: 50, loss: 0.38, ranking_loss: 0.23, id_loss: 0.15
+Epoch: 48/70, iteration: 100, loss: 0.99, ranking_loss: 0.93, id_loss: 0.06
+Epoch: 48/70, iteration: 150, loss: 2.17, ranking_loss: 1.97, id_loss: 0.20
+Epoch: 48/70, iteration: 200, loss: 0.22, ranking_loss: 0.16, id_loss: 0.05
+Epoch: 48/70, iteration: 250, loss: 1.36, ranking_loss: 1.35, id_loss: 0.00
+Epoch: 48/70, iteration: 300, loss: 1.28, ranking_loss: 1.17, id_loss: 0.11
+Epoch: 48/70, iteration: 350, loss: 0.82, ranking_loss: 0.80, id_loss: 0.03
+Epoch: 48/70, iteration: 400, loss: 0.49, ranking_loss: 0.46, id_loss: 0.03
+Epoch: 48/70, iteration: 450, loss: 0.90, ranking_loss: 0.71, id_loss: 0.20
+Epoch: 48/70, iteration: 500, loss: 1.56, ranking_loss: 1.36, id_loss: 0.20
+Epoch: 48/70, iteration: 550, loss: 1.97, ranking_loss: 1.28, id_loss: 0.70
+Epoch: 48/70, iteration: 600, loss: 1.41, ranking_loss: 0.95, id_loss: 0.46
+Epoch: 48/70, iteration: 650, loss: 0.90, ranking_loss: 0.84, id_loss: 0.06
+Epoch: 48/70, iteration: 700, loss: 0.69, ranking_loss: 0.42, id_loss: 0.27
+Epoch: 48/70, iteration: 750, loss: 0.56, ranking_loss: 0.39, id_loss: 0.16
+Epoch: 48/70, iteration: 800, loss: 1.85, ranking_loss: 1.74, id_loss: 0.11
+Epoch: 48/70, iteration: 850, loss: 1.25, ranking_loss: 1.02, id_loss: 0.22
+Epoch: 48/70, iteration: 900, loss: 1.96, ranking_loss: 1.87, id_loss: 0.09
+Epoch: 48/70, iteration: 950, loss: 0.48, ranking_loss: 0.36, id_loss: 0.12
+Epoch: 48/70, iteration: 1000, loss: 0.97, ranking_loss: 0.71, id_loss: 0.26
+Epoch: 48/70, iteration: 1050, loss: 0.96, ranking_loss: 0.80, id_loss: 0.16
+Epoch: 48/70, loss: 1.03, ranking_loss: 0.88, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 48
+similarity_glo:--t2i: top1: 63.66%, top5: 82.42%, top10: 88.30%, map: 55.00%
+similarity_loc:--t2i: top1: 63.32%, top5: 81.03%, top10: 87.41%, map: 54.49%
+similarity_all:--t2i: top1: 65.19%, top5: 82.94%, top10: 88.60%, map: 56.49%
+lr:0.0001
+lr:1e-05
+Epoch: 49/70, iteration: 50, loss: 0.87, ranking_loss: 0.79, id_loss: 0.07
+Epoch: 49/70, iteration: 100, loss: 1.42, ranking_loss: 1.24, id_loss: 0.19
+Epoch: 49/70, iteration: 150, loss: 0.48, ranking_loss: 0.44, id_loss: 0.04
+Epoch: 49/70, iteration: 200, loss: 0.52, ranking_loss: 0.34, id_loss: 0.18
+Epoch: 49/70, iteration: 250, loss: 2.17, ranking_loss: 2.09, id_loss: 0.09
+Epoch: 49/70, iteration: 300, loss: 0.79, ranking_loss: 0.53, id_loss: 0.26
+Epoch: 49/70, iteration: 350, loss: 0.83, ranking_loss: 0.51, id_loss: 0.31
+Epoch: 49/70, iteration: 400, loss: 0.25, ranking_loss: 0.25, id_loss: 0.00
+Epoch: 49/70, iteration: 450, loss: 0.32, ranking_loss: 0.17, id_loss: 0.14
+Epoch: 49/70, iteration: 500, loss: 2.18, ranking_loss: 1.93, id_loss: 0.25
+Epoch: 49/70, iteration: 550, loss: 0.78, ranking_loss: 0.51, id_loss: 0.27
+Epoch: 49/70, iteration: 600, loss: 1.16, ranking_loss: 0.97, id_loss: 0.19
+Epoch: 49/70, iteration: 650, loss: 0.50, ranking_loss: 0.45, id_loss: 0.05
+Epoch: 49/70, iteration: 700, loss: 1.05, ranking_loss: 0.86, id_loss: 0.20
+Epoch: 49/70, iteration: 750, loss: 1.00, ranking_loss: 0.84, id_loss: 0.15
+Epoch: 49/70, iteration: 800, loss: 1.06, ranking_loss: 0.84, id_loss: 0.22
+Epoch: 49/70, iteration: 850, loss: 0.48, ranking_loss: 0.41, id_loss: 0.07
+Epoch: 49/70, iteration: 900, loss: 0.64, ranking_loss: 0.47, id_loss: 0.17
+Epoch: 49/70, iteration: 950, loss: 0.83, ranking_loss: 0.62, id_loss: 0.21
+Epoch: 49/70, iteration: 1000, loss: 1.17, ranking_loss: 1.06, id_loss: 0.11
+Epoch: 49/70, iteration: 1050, loss: 0.57, ranking_loss: 0.57, id_loss: 0.00
+Epoch: 49/70, loss: 1.01, ranking_loss: 0.86, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 49
+similarity_glo:--t2i: top1: 63.73%, top5: 82.23%, top10: 88.24%, map: 55.15%
+similarity_loc:--t2i: top1: 62.49%, top5: 81.22%, top10: 87.57%, map: 54.42%
+similarity_all:--t2i: top1: 64.88%, top5: 82.83%, top10: 88.73%, map: 56.57%
+lr:0.0001
+lr:1e-05
+Epoch: 50/70, iteration: 50, loss: 1.06, ranking_loss: 1.03, id_loss: 0.03
+Epoch: 50/70, iteration: 100, loss: 1.02, ranking_loss: 0.99, id_loss: 0.03
+Epoch: 50/70, iteration: 150, loss: 1.07, ranking_loss: 1.06, id_loss: 0.01
+Epoch: 50/70, iteration: 200, loss: 1.35, ranking_loss: 1.09, id_loss: 0.26
+Epoch: 50/70, iteration: 250, loss: 1.19, ranking_loss: 0.82, id_loss: 0.37
+Epoch: 50/70, iteration: 300, loss: 0.59, ranking_loss: 0.58, id_loss: 0.01
+Epoch: 50/70, iteration: 350, loss: 0.43, ranking_loss: 0.36, id_loss: 0.07
+Epoch: 50/70, iteration: 400, loss: 0.98, ranking_loss: 0.91, id_loss: 0.06
+Epoch: 50/70, iteration: 450, loss: 1.31, ranking_loss: 1.22, id_loss: 0.09
+Epoch: 50/70, iteration: 500, loss: 1.67, ranking_loss: 1.60, id_loss: 0.07
+Epoch: 50/70, iteration: 550, loss: 0.65, ranking_loss: 0.64, id_loss: 0.00
+Epoch: 50/70, iteration: 600, loss: 0.78, ranking_loss: 0.56, id_loss: 0.22
+Epoch: 50/70, iteration: 650, loss: 0.56, ranking_loss: 0.25, id_loss: 0.31
+Epoch: 50/70, iteration: 700, loss: 0.18, ranking_loss: 0.16, id_loss: 0.01
+Epoch: 50/70, iteration: 750, loss: 0.49, ranking_loss: 0.36, id_loss: 0.13
+Epoch: 50/70, iteration: 800, loss: 1.07, ranking_loss: 0.99, id_loss: 0.08
+Epoch: 50/70, iteration: 850, loss: 0.21, ranking_loss: 0.20, id_loss: 0.00
+Epoch: 50/70, iteration: 900, loss: 1.00, ranking_loss: 0.80, id_loss: 0.20
+Epoch: 50/70, iteration: 950, loss: 0.49, ranking_loss: 0.42, id_loss: 0.06
+Epoch: 50/70, iteration: 1000, loss: 1.07, ranking_loss: 1.00, id_loss: 0.06
+Epoch: 50/70, iteration: 1050, loss: 2.50, ranking_loss: 2.28, id_loss: 0.23
+Epoch: 50/70, loss: 0.98, ranking_loss: 0.83, id_loss: 0.15
+MIANet-bert
+Testing Epoch: 50
+similarity_glo:--t2i: top1: 63.78%, top5: 82.02%, top10: 88.52%, map: 55.06%
+similarity_loc:--t2i: top1: 62.78%, top5: 81.27%, top10: 87.64%, map: 54.59%
+similarity_all:--t2i: top1: 65.43%, top5: 83.06%, top10: 88.82%, map: 56.64%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 51/70, iteration: 50, loss: 0.67, ranking_loss: 0.57, id_loss: 0.10
+Epoch: 51/70, iteration: 100, loss: 0.49, ranking_loss: 0.26, id_loss: 0.23
+Epoch: 51/70, iteration: 150, loss: 1.88, ranking_loss: 1.84, id_loss: 0.04
+Epoch: 51/70, iteration: 200, loss: 1.53, ranking_loss: 1.37, id_loss: 0.16
+Epoch: 51/70, iteration: 250, loss: 1.53, ranking_loss: 1.30, id_loss: 0.23
+Epoch: 51/70, iteration: 300, loss: 0.79, ranking_loss: 0.70, id_loss: 0.09
+Epoch: 51/70, iteration: 350, loss: 1.66, ranking_loss: 1.58, id_loss: 0.08
+Epoch: 51/70, iteration: 400, loss: 1.14, ranking_loss: 1.11, id_loss: 0.03
+Epoch: 51/70, iteration: 450, loss: 0.62, ranking_loss: 0.55, id_loss: 0.08
+Epoch: 51/70, iteration: 500, loss: 0.82, ranking_loss: 0.80, id_loss: 0.02
+Epoch: 51/70, iteration: 550, loss: 0.49, ranking_loss: 0.41, id_loss: 0.08
+Epoch: 51/70, iteration: 600, loss: 0.64, ranking_loss: 0.45, id_loss: 0.19
+Epoch: 51/70, iteration: 650, loss: 0.99, ranking_loss: 0.99, id_loss: 0.00
+Epoch: 51/70, iteration: 700, loss: 1.44, ranking_loss: 1.35, id_loss: 0.09
+Epoch: 51/70, iteration: 750, loss: 0.56, ranking_loss: 0.53, id_loss: 0.03
+Epoch: 51/70, iteration: 800, loss: 0.78, ranking_loss: 0.77, id_loss: 0.00
+Epoch: 51/70, iteration: 850, loss: 0.95, ranking_loss: 0.85, id_loss: 0.10
+Epoch: 51/70, iteration: 900, loss: 1.08, ranking_loss: 1.03, id_loss: 0.05
+Epoch: 51/70, iteration: 950, loss: 0.72, ranking_loss: 0.66, id_loss: 0.05
+Epoch: 51/70, iteration: 1000, loss: 1.26, ranking_loss: 1.16, id_loss: 0.10
+Epoch: 51/70, iteration: 1050, loss: 0.98, ranking_loss: 0.95, id_loss: 0.03
+Epoch: 51/70, loss: 0.93, ranking_loss: 0.81, id_loss: 0.12
+MIANet-bert
+Testing Epoch: 51
+similarity_glo:--t2i: top1: 64.07%, top5: 82.23%, top10: 88.53%, map: 55.20%
+similarity_loc:--t2i: top1: 62.91%, top5: 81.42%, top10: 87.51%, map: 54.62%
+similarity_all:--t2i: top1: 65.43%, top5: 83.06%, top10: 88.76%, map: 56.71%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 52/70, iteration: 50, loss: 0.36, ranking_loss: 0.34, id_loss: 0.02
+Epoch: 52/70, iteration: 100, loss: 0.75, ranking_loss: 0.75, id_loss: 0.00
+Epoch: 52/70, iteration: 150, loss: 1.45, ranking_loss: 1.39, id_loss: 0.06
+Epoch: 52/70, iteration: 200, loss: 0.80, ranking_loss: 0.69, id_loss: 0.11
+Epoch: 52/70, iteration: 250, loss: 0.85, ranking_loss: 0.63, id_loss: 0.22
+Epoch: 52/70, iteration: 300, loss: 0.76, ranking_loss: 0.66, id_loss: 0.11
+Epoch: 52/70, iteration: 350, loss: 2.10, ranking_loss: 1.86, id_loss: 0.23
+Epoch: 52/70, iteration: 400, loss: 1.31, ranking_loss: 1.15, id_loss: 0.16
+Epoch: 52/70, iteration: 450, loss: 0.68, ranking_loss: 0.63, id_loss: 0.06
+Epoch: 52/70, iteration: 500, loss: 0.67, ranking_loss: 0.67, id_loss: 0.00
+Epoch: 52/70, iteration: 550, loss: 0.33, ranking_loss: 0.33, id_loss: 0.00
+Epoch: 52/70, iteration: 600, loss: 0.55, ranking_loss: 0.48, id_loss: 0.07
+Epoch: 52/70, iteration: 650, loss: 0.52, ranking_loss: 0.42, id_loss: 0.09
+Epoch: 52/70, iteration: 700, loss: 0.44, ranking_loss: 0.35, id_loss: 0.09
+Epoch: 52/70, iteration: 750, loss: 0.44, ranking_loss: 0.37, id_loss: 0.07
+Epoch: 52/70, iteration: 800, loss: 1.82, ranking_loss: 1.59, id_loss: 0.23
+Epoch: 52/70, iteration: 850, loss: 1.13, ranking_loss: 1.13, id_loss: 0.00
+Epoch: 52/70, iteration: 900, loss: 0.49, ranking_loss: 0.43, id_loss: 0.05
+Epoch: 52/70, iteration: 950, loss: 0.38, ranking_loss: 0.28, id_loss: 0.10
+Epoch: 52/70, iteration: 1000, loss: 0.48, ranking_loss: 0.38, id_loss: 0.09
+Epoch: 52/70, iteration: 1050, loss: 0.55, ranking_loss: 0.47, id_loss: 0.08
+Epoch: 52/70, loss: 0.88, ranking_loss: 0.76, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 52
+similarity_glo:--t2i: top1: 64.10%, top5: 82.24%, top10: 88.56%, map: 55.22%
+similarity_loc:--t2i: top1: 63.00%, top5: 81.48%, top10: 87.46%, map: 54.61%
+similarity_all:--t2i: top1: 65.63%, top5: 83.14%, top10: 88.73%, map: 56.74%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 53/70, iteration: 50, loss: 0.98, ranking_loss: 0.81, id_loss: 0.17
+Epoch: 53/70, iteration: 100, loss: 0.52, ranking_loss: 0.41, id_loss: 0.11
+Epoch: 53/70, iteration: 150, loss: 0.98, ranking_loss: 0.95, id_loss: 0.03
+Epoch: 53/70, iteration: 200, loss: 1.72, ranking_loss: 1.48, id_loss: 0.24
+Epoch: 53/70, iteration: 250, loss: 1.16, ranking_loss: 0.88, id_loss: 0.29
+Epoch: 53/70, iteration: 300, loss: 0.22, ranking_loss: 0.21, id_loss: 0.00
+Epoch: 53/70, iteration: 350, loss: 0.54, ranking_loss: 0.43, id_loss: 0.11
+Epoch: 53/70, iteration: 400, loss: 0.31, ranking_loss: 0.22, id_loss: 0.10
+Epoch: 53/70, iteration: 450, loss: 1.15, ranking_loss: 1.00, id_loss: 0.14
+Epoch: 53/70, iteration: 500, loss: 0.91, ranking_loss: 0.76, id_loss: 0.15
+Epoch: 53/70, iteration: 550, loss: 1.12, ranking_loss: 0.94, id_loss: 0.18
+Epoch: 53/70, iteration: 600, loss: 2.53, ranking_loss: 2.19, id_loss: 0.34
+Epoch: 53/70, iteration: 650, loss: 0.98, ranking_loss: 0.77, id_loss: 0.21
+Epoch: 53/70, iteration: 700, loss: 1.00, ranking_loss: 0.89, id_loss: 0.10
+Epoch: 53/70, iteration: 750, loss: 1.03, ranking_loss: 1.01, id_loss: 0.02
+Epoch: 53/70, iteration: 800, loss: 0.95, ranking_loss: 0.93, id_loss: 0.02
+Epoch: 53/70, iteration: 850, loss: 0.67, ranking_loss: 0.67, id_loss: 0.00
+Epoch: 53/70, iteration: 900, loss: 0.27, ranking_loss: 0.25, id_loss: 0.02
+Epoch: 53/70, iteration: 950, loss: 0.81, ranking_loss: 0.81, id_loss: 0.00
+Epoch: 53/70, iteration: 1000, loss: 0.84, ranking_loss: 0.78, id_loss: 0.05
+Epoch: 53/70, iteration: 1050, loss: 0.80, ranking_loss: 0.76, id_loss: 0.04
+Epoch: 53/70, loss: 0.90, ranking_loss: 0.79, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 53
+similarity_glo:--t2i: top1: 63.81%, top5: 82.52%, top10: 88.50%, map: 55.16%
+similarity_loc:--t2i: top1: 62.96%, top5: 81.40%, top10: 87.64%, map: 54.61%
+similarity_all:--t2i: top1: 65.64%, top5: 83.01%, top10: 88.78%, map: 56.76%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 54/70, iteration: 50, loss: 0.61, ranking_loss: 0.47, id_loss: 0.13
+Epoch: 54/70, iteration: 100, loss: 1.80, ranking_loss: 1.75, id_loss: 0.04
+Epoch: 54/70, iteration: 150, loss: 1.29, ranking_loss: 1.06, id_loss: 0.23
+Epoch: 54/70, iteration: 200, loss: 0.60, ranking_loss: 0.46, id_loss: 0.14
+Epoch: 54/70, iteration: 250, loss: 1.21, ranking_loss: 0.85, id_loss: 0.36
+Epoch: 54/70, iteration: 300, loss: 0.86, ranking_loss: 0.66, id_loss: 0.20
+Epoch: 54/70, iteration: 350, loss: 0.48, ranking_loss: 0.33, id_loss: 0.15
+Epoch: 54/70, iteration: 400, loss: 0.66, ranking_loss: 0.44, id_loss: 0.21
+Epoch: 54/70, iteration: 450, loss: 0.44, ranking_loss: 0.32, id_loss: 0.12
+Epoch: 54/70, iteration: 500, loss: 1.08, ranking_loss: 0.94, id_loss: 0.14
+Epoch: 54/70, iteration: 550, loss: 0.36, ranking_loss: 0.20, id_loss: 0.16
+Epoch: 54/70, iteration: 600, loss: 2.11, ranking_loss: 1.94, id_loss: 0.17
+Epoch: 54/70, iteration: 650, loss: 0.33, ranking_loss: 0.28, id_loss: 0.05
+Epoch: 54/70, iteration: 700, loss: 1.11, ranking_loss: 1.07, id_loss: 0.04
+Epoch: 54/70, iteration: 750, loss: 0.59, ranking_loss: 0.36, id_loss: 0.23
+Epoch: 54/70, iteration: 800, loss: 1.03, ranking_loss: 0.91, id_loss: 0.12
+Epoch: 54/70, iteration: 850, loss: 0.43, ranking_loss: 0.43, id_loss: 0.00
+Epoch: 54/70, iteration: 900, loss: 2.02, ranking_loss: 2.02, id_loss: 0.00
+Epoch: 54/70, iteration: 950, loss: 1.56, ranking_loss: 1.54, id_loss: 0.02
+Epoch: 54/70, iteration: 1000, loss: 1.60, ranking_loss: 1.59, id_loss: 0.00
+Epoch: 54/70, iteration: 1050, loss: 0.28, ranking_loss: 0.19, id_loss: 0.09
+Epoch: 54/70, loss: 0.87, ranking_loss: 0.76, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 54
+similarity_glo:--t2i: top1: 63.95%, top5: 82.42%, top10: 88.56%, map: 55.27%
+similarity_loc:--t2i: top1: 62.83%, top5: 81.42%, top10: 87.85%, map: 54.67%
+similarity_all:--t2i: top1: 65.50%, top5: 83.06%, top10: 88.89%, map: 56.79%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 55/70, iteration: 50, loss: 0.80, ranking_loss: 0.64, id_loss: 0.16
+Epoch: 55/70, iteration: 100, loss: 0.99, ranking_loss: 0.85, id_loss: 0.14
+Epoch: 55/70, iteration: 150, loss: 1.83, ranking_loss: 1.76, id_loss: 0.08
+Epoch: 55/70, iteration: 200, loss: 0.62, ranking_loss: 0.62, id_loss: 0.01
+Epoch: 55/70, iteration: 250, loss: 0.80, ranking_loss: 0.72, id_loss: 0.08
+Epoch: 55/70, iteration: 300, loss: 0.27, ranking_loss: 0.24, id_loss: 0.04
+Epoch: 55/70, iteration: 350, loss: 1.22, ranking_loss: 1.05, id_loss: 0.17
+Epoch: 55/70, iteration: 400, loss: 0.74, ranking_loss: 0.74, id_loss: 0.00
+Epoch: 55/70, iteration: 450, loss: 0.96, ranking_loss: 0.90, id_loss: 0.06
+Epoch: 55/70, iteration: 500, loss: 0.74, ranking_loss: 0.56, id_loss: 0.18
+Epoch: 55/70, iteration: 550, loss: 0.30, ranking_loss: 0.26, id_loss: 0.03
+Epoch: 55/70, iteration: 600, loss: 1.74, ranking_loss: 1.72, id_loss: 0.02
+Epoch: 55/70, iteration: 650, loss: 1.07, ranking_loss: 0.98, id_loss: 0.09
+Epoch: 55/70, iteration: 700, loss: 0.44, ranking_loss: 0.44, id_loss: 0.00
+Epoch: 55/70, iteration: 750, loss: 0.42, ranking_loss: 0.30, id_loss: 0.11
+Epoch: 55/70, iteration: 800, loss: 0.89, ranking_loss: 0.62, id_loss: 0.26
+Epoch: 55/70, iteration: 850, loss: 0.61, ranking_loss: 0.44, id_loss: 0.17
+Epoch: 55/70, iteration: 900, loss: 1.13, ranking_loss: 0.94, id_loss: 0.19
+Epoch: 55/70, iteration: 950, loss: 1.25, ranking_loss: 1.10, id_loss: 0.15
+Epoch: 55/70, iteration: 1000, loss: 1.51, ranking_loss: 1.35, id_loss: 0.16
+Epoch: 55/70, iteration: 1050, loss: 1.11, ranking_loss: 1.09, id_loss: 0.02
+Epoch: 55/70, loss: 0.90, ranking_loss: 0.78, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 55
+similarity_glo:--t2i: top1: 64.12%, top5: 82.28%, top10: 88.47%, map: 55.31%
+similarity_loc:--t2i: top1: 63.17%, top5: 81.34%, top10: 87.65%, map: 54.75%
+similarity_all:--t2i: top1: 65.43%, top5: 83.11%, top10: 88.86%, map: 56.78%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 56/70, iteration: 50, loss: 1.21, ranking_loss: 0.77, id_loss: 0.44
+Epoch: 56/70, iteration: 100, loss: 1.36, ranking_loss: 1.22, id_loss: 0.15
+Epoch: 56/70, iteration: 150, loss: 1.41, ranking_loss: 1.36, id_loss: 0.05
+Epoch: 56/70, iteration: 200, loss: 0.74, ranking_loss: 0.62, id_loss: 0.12
+Epoch: 56/70, iteration: 250, loss: 1.47, ranking_loss: 1.40, id_loss: 0.07
+Epoch: 56/70, iteration: 300, loss: 0.74, ranking_loss: 0.65, id_loss: 0.09
+Epoch: 56/70, iteration: 350, loss: 0.55, ranking_loss: 0.46, id_loss: 0.09
+Epoch: 56/70, iteration: 400, loss: 0.83, ranking_loss: 0.80, id_loss: 0.03
+Epoch: 56/70, iteration: 450, loss: 1.16, ranking_loss: 1.11, id_loss: 0.06
+Epoch: 56/70, iteration: 500, loss: 0.98, ranking_loss: 0.92, id_loss: 0.06
+Epoch: 56/70, iteration: 550, loss: 1.03, ranking_loss: 0.90, id_loss: 0.12
+Epoch: 56/70, iteration: 600, loss: 1.83, ranking_loss: 1.73, id_loss: 0.10
+Epoch: 56/70, iteration: 650, loss: 0.36, ranking_loss: 0.32, id_loss: 0.04
+Epoch: 56/70, iteration: 700, loss: 0.47, ranking_loss: 0.34, id_loss: 0.13
+Epoch: 56/70, iteration: 750, loss: 0.34, ranking_loss: 0.25, id_loss: 0.09
+Epoch: 56/70, iteration: 800, loss: 0.52, ranking_loss: 0.42, id_loss: 0.09
+Epoch: 56/70, iteration: 850, loss: 1.24, ranking_loss: 1.14, id_loss: 0.10
+Epoch: 56/70, iteration: 900, loss: 0.49, ranking_loss: 0.36, id_loss: 0.13
+Epoch: 56/70, iteration: 950, loss: 0.45, ranking_loss: 0.41, id_loss: 0.04
+Epoch: 56/70, iteration: 1000, loss: 1.07, ranking_loss: 0.79, id_loss: 0.28
+Epoch: 56/70, iteration: 1050, loss: 0.33, ranking_loss: 0.33, id_loss: 0.00
+Epoch: 56/70, loss: 0.88, ranking_loss: 0.77, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 56
+similarity_glo:--t2i: top1: 64.18%, top5: 82.39%, top10: 88.52%, map: 55.35%
+similarity_loc:--t2i: top1: 63.14%, top5: 81.50%, top10: 87.69%, map: 54.72%
+similarity_all:--t2i: top1: 65.38%, top5: 83.07%, top10: 88.92%, map: 56.76%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 57/70, iteration: 50, loss: 1.07, ranking_loss: 0.92, id_loss: 0.14
+Epoch: 57/70, iteration: 100, loss: 1.62, ranking_loss: 1.35, id_loss: 0.27
+Epoch: 57/70, iteration: 150, loss: 0.91, ranking_loss: 0.84, id_loss: 0.07
+Epoch: 57/70, iteration: 200, loss: 0.55, ranking_loss: 0.31, id_loss: 0.24
+Epoch: 57/70, iteration: 250, loss: 0.69, ranking_loss: 0.63, id_loss: 0.06
+Epoch: 57/70, iteration: 300, loss: 0.45, ranking_loss: 0.31, id_loss: 0.14
+Epoch: 57/70, iteration: 350, loss: 0.42, ranking_loss: 0.28, id_loss: 0.13
+Epoch: 57/70, iteration: 400, loss: 0.66, ranking_loss: 0.50, id_loss: 0.16
+Epoch: 57/70, iteration: 450, loss: 0.27, ranking_loss: 0.27, id_loss: 0.00
+Epoch: 57/70, iteration: 500, loss: 0.92, ranking_loss: 0.73, id_loss: 0.18
+Epoch: 57/70, iteration: 550, loss: 1.01, ranking_loss: 0.48, id_loss: 0.53
+Epoch: 57/70, iteration: 600, loss: 1.55, ranking_loss: 1.47, id_loss: 0.08
+Epoch: 57/70, iteration: 650, loss: 1.61, ranking_loss: 1.57, id_loss: 0.04
+Epoch: 57/70, iteration: 700, loss: 0.70, ranking_loss: 0.66, id_loss: 0.04
+Epoch: 57/70, iteration: 750, loss: 0.51, ranking_loss: 0.28, id_loss: 0.23
+Epoch: 57/70, iteration: 800, loss: 1.63, ranking_loss: 1.52, id_loss: 0.11
+Epoch: 57/70, iteration: 850, loss: 0.36, ranking_loss: 0.28, id_loss: 0.08
+Epoch: 57/70, iteration: 900, loss: 0.76, ranking_loss: 0.61, id_loss: 0.15
+Epoch: 57/70, iteration: 950, loss: 1.00, ranking_loss: 1.00, id_loss: 0.00
+Epoch: 57/70, iteration: 1000, loss: 0.43, ranking_loss: 0.32, id_loss: 0.11
+Epoch: 57/70, iteration: 1050, loss: 0.81, ranking_loss: 0.81, id_loss: 0.00
+Epoch: 57/70, loss: 0.86, ranking_loss: 0.76, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 57
+similarity_glo:--t2i: top1: 64.04%, top5: 82.39%, top10: 88.69%, map: 55.38%
+similarity_loc:--t2i: top1: 62.90%, top5: 81.38%, top10: 87.62%, map: 54.71%
+similarity_all:--t2i: top1: 65.46%, top5: 82.86%, top10: 88.78%, map: 56.79%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 58/70, iteration: 50, loss: 1.07, ranking_loss: 0.88, id_loss: 0.20
+Epoch: 58/70, iteration: 100, loss: 0.32, ranking_loss: 0.17, id_loss: 0.15
+Epoch: 58/70, iteration: 150, loss: 0.82, ranking_loss: 0.54, id_loss: 0.28
+Epoch: 58/70, iteration: 200, loss: 0.50, ranking_loss: 0.39, id_loss: 0.11
+Epoch: 58/70, iteration: 250, loss: 0.69, ranking_loss: 0.62, id_loss: 0.06
+Epoch: 58/70, iteration: 300, loss: 1.02, ranking_loss: 1.00, id_loss: 0.02
+Epoch: 58/70, iteration: 350, loss: 2.04, ranking_loss: 1.75, id_loss: 0.29
+Epoch: 58/70, iteration: 400, loss: 0.66, ranking_loss: 0.53, id_loss: 0.13
+Epoch: 58/70, iteration: 450, loss: 0.87, ranking_loss: 0.77, id_loss: 0.10
+Epoch: 58/70, iteration: 500, loss: 0.36, ranking_loss: 0.28, id_loss: 0.07
+Epoch: 58/70, iteration: 550, loss: 0.32, ranking_loss: 0.32, id_loss: 0.00
+Epoch: 58/70, iteration: 600, loss: 0.99, ranking_loss: 0.93, id_loss: 0.05
+Epoch: 58/70, iteration: 650, loss: 0.66, ranking_loss: 0.53, id_loss: 0.13
+Epoch: 58/70, iteration: 700, loss: 0.55, ranking_loss: 0.33, id_loss: 0.22
+Epoch: 58/70, iteration: 750, loss: 0.54, ranking_loss: 0.54, id_loss: 0.00
+Epoch: 58/70, iteration: 800, loss: 0.63, ranking_loss: 0.63, id_loss: 0.00
+Epoch: 58/70, iteration: 850, loss: 1.19, ranking_loss: 1.07, id_loss: 0.13
+Epoch: 58/70, iteration: 900, loss: 0.19, ranking_loss: 0.19, id_loss: 0.00
+Epoch: 58/70, iteration: 950, loss: 2.00, ranking_loss: 1.87, id_loss: 0.13
+Epoch: 58/70, iteration: 1000, loss: 2.01, ranking_loss: 1.99, id_loss: 0.02
+Epoch: 58/70, iteration: 1050, loss: 0.33, ranking_loss: 0.09, id_loss: 0.25
+Epoch: 58/70, loss: 0.87, ranking_loss: 0.76, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 58
+similarity_glo:--t2i: top1: 64.04%, top5: 82.33%, top10: 88.66%, map: 55.33%
+similarity_loc:--t2i: top1: 63.03%, top5: 81.77%, top10: 87.64%, map: 54.77%
+similarity_all:--t2i: top1: 65.29%, top5: 83.01%, top10: 88.73%, map: 56.80%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 59/70, iteration: 50, loss: 0.32, ranking_loss: 0.20, id_loss: 0.12
+Epoch: 59/70, iteration: 100, loss: 1.15, ranking_loss: 1.02, id_loss: 0.14
+Epoch: 59/70, iteration: 150, loss: 0.60, ranking_loss: 0.48, id_loss: 0.11
+Epoch: 59/70, iteration: 200, loss: 0.44, ranking_loss: 0.42, id_loss: 0.02
+Epoch: 59/70, iteration: 250, loss: 0.52, ranking_loss: 0.51, id_loss: 0.01
+Epoch: 59/70, iteration: 300, loss: 0.53, ranking_loss: 0.50, id_loss: 0.03
+Epoch: 59/70, iteration: 350, loss: 0.17, ranking_loss: 0.16, id_loss: 0.00
+Epoch: 59/70, iteration: 400, loss: 1.14, ranking_loss: 0.83, id_loss: 0.31
+Epoch: 59/70, iteration: 450, loss: 0.36, ranking_loss: 0.36, id_loss: 0.00
+Epoch: 59/70, iteration: 500, loss: 1.20, ranking_loss: 1.07, id_loss: 0.12
+Epoch: 59/70, iteration: 550, loss: 0.34, ranking_loss: 0.33, id_loss: 0.00
+Epoch: 59/70, iteration: 600, loss: 1.13, ranking_loss: 1.02, id_loss: 0.12
+Epoch: 59/70, iteration: 650, loss: 0.38, ranking_loss: 0.38, id_loss: 0.00
+Epoch: 59/70, iteration: 700, loss: 0.42, ranking_loss: 0.25, id_loss: 0.17
+Epoch: 59/70, iteration: 750, loss: 1.00, ranking_loss: 0.96, id_loss: 0.04
+Epoch: 59/70, iteration: 800, loss: 0.98, ranking_loss: 0.94, id_loss: 0.04
+Epoch: 59/70, iteration: 850, loss: 0.83, ranking_loss: 0.83, id_loss: 0.00
+Epoch: 59/70, iteration: 900, loss: 0.97, ranking_loss: 0.95, id_loss: 0.02
+Epoch: 59/70, iteration: 950, loss: 0.34, ranking_loss: 0.29, id_loss: 0.05
+Epoch: 59/70, iteration: 1000, loss: 0.45, ranking_loss: 0.42, id_loss: 0.03
+Epoch: 59/70, iteration: 1050, loss: 1.08, ranking_loss: 0.88, id_loss: 0.20
+Epoch: 59/70, loss: 0.83, ranking_loss: 0.72, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 59
+similarity_glo:--t2i: top1: 64.20%, top5: 82.28%, top10: 88.66%, map: 55.43%
+similarity_loc:--t2i: top1: 63.16%, top5: 81.51%, top10: 87.72%, map: 54.82%
+similarity_all:--t2i: top1: 65.43%, top5: 83.17%, top10: 88.79%, map: 56.82%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 60/70, iteration: 50, loss: 0.56, ranking_loss: 0.49, id_loss: 0.06
+Epoch: 60/70, iteration: 100, loss: 0.83, ranking_loss: 0.73, id_loss: 0.10
+Epoch: 60/70, iteration: 150, loss: 0.54, ranking_loss: 0.45, id_loss: 0.10
+Epoch: 60/70, iteration: 200, loss: 0.88, ranking_loss: 0.76, id_loss: 0.13
+Epoch: 60/70, iteration: 250, loss: 0.47, ranking_loss: 0.25, id_loss: 0.22
+Epoch: 60/70, iteration: 300, loss: 2.35, ranking_loss: 2.22, id_loss: 0.13
+Epoch: 60/70, iteration: 350, loss: 1.02, ranking_loss: 1.00, id_loss: 0.02
+Epoch: 60/70, iteration: 400, loss: 0.72, ranking_loss: 0.52, id_loss: 0.20
+Epoch: 60/70, iteration: 450, loss: 0.46, ranking_loss: 0.41, id_loss: 0.05
+Epoch: 60/70, iteration: 500, loss: 1.22, ranking_loss: 1.10, id_loss: 0.12
+Epoch: 60/70, iteration: 550, loss: 0.60, ranking_loss: 0.46, id_loss: 0.14
+Epoch: 60/70, iteration: 600, loss: 0.95, ranking_loss: 0.94, id_loss: 0.01
+Epoch: 60/70, iteration: 650, loss: 0.95, ranking_loss: 0.84, id_loss: 0.11
+Epoch: 60/70, iteration: 700, loss: 0.60, ranking_loss: 0.59, id_loss: 0.02
+Epoch: 60/70, iteration: 750, loss: 1.05, ranking_loss: 0.86, id_loss: 0.19
+Epoch: 60/70, iteration: 800, loss: 0.39, ranking_loss: 0.23, id_loss: 0.16
+Epoch: 60/70, iteration: 850, loss: 0.67, ranking_loss: 0.44, id_loss: 0.23
+Epoch: 60/70, iteration: 900, loss: 0.78, ranking_loss: 0.67, id_loss: 0.10
+Epoch: 60/70, iteration: 950, loss: 0.67, ranking_loss: 0.63, id_loss: 0.04
+Epoch: 60/70, iteration: 1000, loss: 0.74, ranking_loss: 0.69, id_loss: 0.05
+Epoch: 60/70, iteration: 1050, loss: 0.49, ranking_loss: 0.49, id_loss: 0.00
+Epoch: 60/70, loss: 0.84, ranking_loss: 0.73, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 60
+similarity_glo:--t2i: top1: 64.12%, top5: 82.34%, top10: 88.63%, map: 55.40%
+similarity_loc:--t2i: top1: 63.27%, top5: 81.61%, top10: 87.70%, map: 54.88%
+similarity_all:--t2i: top1: 65.53%, top5: 83.04%, top10: 88.92%, map: 56.89%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 61/70, iteration: 50, loss: 0.48, ranking_loss: 0.46, id_loss: 0.02
+Epoch: 61/70, iteration: 100, loss: 0.40, ranking_loss: 0.23, id_loss: 0.16
+Epoch: 61/70, iteration: 150, loss: 0.84, ranking_loss: 0.83, id_loss: 0.01
+Epoch: 61/70, iteration: 200, loss: 0.83, ranking_loss: 0.83, id_loss: 0.00
+Epoch: 61/70, iteration: 250, loss: 1.78, ranking_loss: 1.54, id_loss: 0.24
+Epoch: 61/70, iteration: 300, loss: 0.71, ranking_loss: 0.45, id_loss: 0.26
+Epoch: 61/70, iteration: 350, loss: 0.78, ranking_loss: 0.55, id_loss: 0.23
+Epoch: 61/70, iteration: 400, loss: 0.67, ranking_loss: 0.54, id_loss: 0.13
+Epoch: 61/70, iteration: 450, loss: 0.76, ranking_loss: 0.68, id_loss: 0.08
+Epoch: 61/70, iteration: 500, loss: 1.05, ranking_loss: 0.87, id_loss: 0.18
+Epoch: 61/70, iteration: 550, loss: 0.69, ranking_loss: 0.53, id_loss: 0.16
+Epoch: 61/70, iteration: 600, loss: 0.40, ranking_loss: 0.33, id_loss: 0.07
+Epoch: 61/70, iteration: 650, loss: 0.52, ranking_loss: 0.34, id_loss: 0.18
+Epoch: 61/70, iteration: 700, loss: 0.58, ranking_loss: 0.45, id_loss: 0.14
+Epoch: 61/70, iteration: 750, loss: 1.19, ranking_loss: 1.01, id_loss: 0.18
+Epoch: 61/70, iteration: 800, loss: 0.76, ranking_loss: 0.70, id_loss: 0.07
+Epoch: 61/70, iteration: 850, loss: 0.18, ranking_loss: 0.18, id_loss: 0.00
+Epoch: 61/70, iteration: 900, loss: 0.83, ranking_loss: 0.78, id_loss: 0.05
+Epoch: 61/70, iteration: 950, loss: 1.64, ranking_loss: 1.45, id_loss: 0.19
+Epoch: 61/70, iteration: 1000, loss: 0.54, ranking_loss: 0.35, id_loss: 0.19
+Epoch: 61/70, iteration: 1050, loss: 0.98, ranking_loss: 0.83, id_loss: 0.15
+Epoch: 61/70, loss: 0.82, ranking_loss: 0.71, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 61
+similarity_glo:--t2i: top1: 64.17%, top5: 82.49%, top10: 88.66%, map: 55.39%
+similarity_loc:--t2i: top1: 62.98%, top5: 81.68%, top10: 87.70%, map: 54.80%
+similarity_all:--t2i: top1: 65.58%, top5: 83.04%, top10: 88.89%, map: 56.90%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 62/70, iteration: 50, loss: 0.53, ranking_loss: 0.43, id_loss: 0.11
+Epoch: 62/70, iteration: 100, loss: 0.84, ranking_loss: 0.70, id_loss: 0.14
+Epoch: 62/70, iteration: 150, loss: 0.86, ranking_loss: 0.80, id_loss: 0.06
+Epoch: 62/70, iteration: 200, loss: 1.37, ranking_loss: 1.19, id_loss: 0.19
+Epoch: 62/70, iteration: 250, loss: 0.66, ranking_loss: 0.57, id_loss: 0.09
+Epoch: 62/70, iteration: 300, loss: 1.23, ranking_loss: 1.13, id_loss: 0.11
+Epoch: 62/70, iteration: 350, loss: 1.74, ranking_loss: 1.69, id_loss: 0.06
+Epoch: 62/70, iteration: 400, loss: 0.57, ranking_loss: 0.48, id_loss: 0.09
+Epoch: 62/70, iteration: 450, loss: 0.64, ranking_loss: 0.46, id_loss: 0.18
+Epoch: 62/70, iteration: 500, loss: 0.46, ranking_loss: 0.42, id_loss: 0.04
+Epoch: 62/70, iteration: 550, loss: 0.44, ranking_loss: 0.44, id_loss: 0.00
+Epoch: 62/70, iteration: 600, loss: 1.17, ranking_loss: 0.98, id_loss: 0.19
+Epoch: 62/70, iteration: 650, loss: 0.78, ranking_loss: 0.74, id_loss: 0.04
+Epoch: 62/70, iteration: 700, loss: 0.68, ranking_loss: 0.55, id_loss: 0.13
+Epoch: 62/70, iteration: 750, loss: 0.95, ranking_loss: 0.75, id_loss: 0.21
+Epoch: 62/70, iteration: 800, loss: 0.45, ranking_loss: 0.28, id_loss: 0.17
+Epoch: 62/70, iteration: 850, loss: 0.68, ranking_loss: 0.68, id_loss: 0.00
+Epoch: 62/70, iteration: 900, loss: 0.31, ranking_loss: 0.31, id_loss: 0.00
+Epoch: 62/70, iteration: 950, loss: 0.69, ranking_loss: 0.53, id_loss: 0.17
+Epoch: 62/70, iteration: 1000, loss: 1.11, ranking_loss: 1.01, id_loss: 0.10
+Epoch: 62/70, iteration: 1050, loss: 0.45, ranking_loss: 0.25, id_loss: 0.20
+Epoch: 62/70, loss: 0.83, ranking_loss: 0.72, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 62
+similarity_glo:--t2i: top1: 64.12%, top5: 82.29%, top10: 88.82%, map: 55.38%
+similarity_loc:--t2i: top1: 63.14%, top5: 81.61%, top10: 87.78%, map: 54.85%
+similarity_all:--t2i: top1: 65.59%, top5: 82.99%, top10: 88.84%, map: 56.94%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 63/70, iteration: 50, loss: 1.51, ranking_loss: 1.42, id_loss: 0.09
+Epoch: 63/70, iteration: 100, loss: 0.63, ranking_loss: 0.53, id_loss: 0.10
+Epoch: 63/70, iteration: 150, loss: 0.54, ranking_loss: 0.54, id_loss: 0.00
+Epoch: 63/70, iteration: 200, loss: 1.67, ranking_loss: 1.45, id_loss: 0.22
+Epoch: 63/70, iteration: 250, loss: 0.59, ranking_loss: 0.39, id_loss: 0.20
+Epoch: 63/70, iteration: 300, loss: 0.64, ranking_loss: 0.43, id_loss: 0.21
+Epoch: 63/70, iteration: 350, loss: 0.30, ranking_loss: 0.19, id_loss: 0.12
+Epoch: 63/70, iteration: 400, loss: 0.51, ranking_loss: 0.41, id_loss: 0.10
+Epoch: 63/70, iteration: 450, loss: 1.92, ranking_loss: 1.85, id_loss: 0.07
+Epoch: 63/70, iteration: 500, loss: 0.64, ranking_loss: 0.56, id_loss: 0.08
+Epoch: 63/70, iteration: 550, loss: 0.60, ranking_loss: 0.58, id_loss: 0.02
+Epoch: 63/70, iteration: 600, loss: 1.01, ranking_loss: 1.01, id_loss: 0.00
+Epoch: 63/70, iteration: 650, loss: 1.02, ranking_loss: 0.84, id_loss: 0.18
+Epoch: 63/70, iteration: 700, loss: 0.59, ranking_loss: 0.53, id_loss: 0.06
+Epoch: 63/70, iteration: 750, loss: 0.49, ranking_loss: 0.42, id_loss: 0.07
+Epoch: 63/70, iteration: 800, loss: 0.51, ranking_loss: 0.42, id_loss: 0.09
+Epoch: 63/70, iteration: 850, loss: 1.05, ranking_loss: 0.92, id_loss: 0.13
+Epoch: 63/70, iteration: 900, loss: 0.66, ranking_loss: 0.44, id_loss: 0.21
+Epoch: 63/70, iteration: 950, loss: 0.92, ranking_loss: 0.82, id_loss: 0.11
+Epoch: 63/70, iteration: 1000, loss: 0.93, ranking_loss: 0.87, id_loss: 0.07
+Epoch: 63/70, iteration: 1050, loss: 1.92, ranking_loss: 1.71, id_loss: 0.21
+Epoch: 63/70, loss: 0.83, ranking_loss: 0.72, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 63
+similarity_glo:--t2i: top1: 64.02%, top5: 82.49%, top10: 88.74%, map: 55.40%
+similarity_loc:--t2i: top1: 63.06%, top5: 81.60%, top10: 87.62%, map: 54.85%
+similarity_all:--t2i: top1: 65.40%, top5: 83.04%, top10: 88.74%, map: 56.85%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 64/70, iteration: 50, loss: 0.83, ranking_loss: 0.67, id_loss: 0.16
+Epoch: 64/70, iteration: 100, loss: 2.19, ranking_loss: 1.91, id_loss: 0.28
+Epoch: 64/70, iteration: 150, loss: 2.61, ranking_loss: 2.61, id_loss: 0.00
+Epoch: 64/70, iteration: 200, loss: 0.53, ranking_loss: 0.50, id_loss: 0.03
+Epoch: 64/70, iteration: 250, loss: 0.74, ranking_loss: 0.73, id_loss: 0.01
+Epoch: 64/70, iteration: 300, loss: 1.41, ranking_loss: 1.29, id_loss: 0.12
+Epoch: 64/70, iteration: 350, loss: 1.15, ranking_loss: 0.96, id_loss: 0.19
+Epoch: 64/70, iteration: 400, loss: 0.65, ranking_loss: 0.52, id_loss: 0.13
+Epoch: 64/70, iteration: 450, loss: 0.45, ranking_loss: 0.39, id_loss: 0.05
+Epoch: 64/70, iteration: 500, loss: 0.44, ranking_loss: 0.28, id_loss: 0.16
+Epoch: 64/70, iteration: 550, loss: 0.82, ranking_loss: 0.71, id_loss: 0.11
+Epoch: 64/70, iteration: 600, loss: 0.64, ranking_loss: 0.41, id_loss: 0.23
+Epoch: 64/70, iteration: 650, loss: 0.51, ranking_loss: 0.40, id_loss: 0.11
+Epoch: 64/70, iteration: 700, loss: 0.80, ranking_loss: 0.77, id_loss: 0.03
+Epoch: 64/70, iteration: 750, loss: 1.74, ranking_loss: 1.33, id_loss: 0.41
+Epoch: 64/70, iteration: 800, loss: 0.57, ranking_loss: 0.45, id_loss: 0.12
+Epoch: 64/70, iteration: 850, loss: 0.29, ranking_loss: 0.29, id_loss: 0.00
+Epoch: 64/70, iteration: 900, loss: 0.55, ranking_loss: 0.34, id_loss: 0.22
+Epoch: 64/70, iteration: 950, loss: 0.95, ranking_loss: 0.75, id_loss: 0.20
+Epoch: 64/70, iteration: 1000, loss: 1.25, ranking_loss: 1.15, id_loss: 0.10
+Epoch: 64/70, iteration: 1050, loss: 0.66, ranking_loss: 0.53, id_loss: 0.13
+Epoch: 64/70, loss: 0.85, ranking_loss: 0.75, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 64
+similarity_glo:--t2i: top1: 64.18%, top5: 82.41%, top10: 88.68%, map: 55.45%
+similarity_loc:--t2i: top1: 63.24%, top5: 81.63%, top10: 87.74%, map: 54.86%
+similarity_all:--t2i: top1: 65.38%, top5: 83.04%, top10: 88.84%, map: 56.85%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 65/70, iteration: 50, loss: 0.43, ranking_loss: 0.35, id_loss: 0.08
+Epoch: 65/70, iteration: 100, loss: 0.74, ranking_loss: 0.67, id_loss: 0.07
+Epoch: 65/70, iteration: 150, loss: 0.84, ranking_loss: 0.74, id_loss: 0.09
+Epoch: 65/70, iteration: 200, loss: 0.55, ranking_loss: 0.31, id_loss: 0.24
+Epoch: 65/70, iteration: 250, loss: 0.52, ranking_loss: 0.45, id_loss: 0.07
+Epoch: 65/70, iteration: 300, loss: 1.99, ranking_loss: 1.87, id_loss: 0.12
+Epoch: 65/70, iteration: 350, loss: 0.59, ranking_loss: 0.41, id_loss: 0.18
+Epoch: 65/70, iteration: 400, loss: 0.87, ranking_loss: 0.70, id_loss: 0.17
+Epoch: 65/70, iteration: 450, loss: 0.69, ranking_loss: 0.64, id_loss: 0.05
+Epoch: 65/70, iteration: 500, loss: 0.50, ranking_loss: 0.46, id_loss: 0.04
+Epoch: 65/70, iteration: 550, loss: 1.34, ranking_loss: 1.27, id_loss: 0.07
+Epoch: 65/70, iteration: 600, loss: 1.19, ranking_loss: 1.10, id_loss: 0.10
+Epoch: 65/70, iteration: 650, loss: 0.50, ranking_loss: 0.39, id_loss: 0.11
+Epoch: 65/70, iteration: 700, loss: 0.36, ranking_loss: 0.29, id_loss: 0.08
+Epoch: 65/70, iteration: 750, loss: 0.99, ranking_loss: 0.87, id_loss: 0.12
+Epoch: 65/70, iteration: 800, loss: 0.67, ranking_loss: 0.57, id_loss: 0.10
+Epoch: 65/70, iteration: 850, loss: 0.58, ranking_loss: 0.47, id_loss: 0.11
+Epoch: 65/70, iteration: 900, loss: 1.37, ranking_loss: 1.28, id_loss: 0.09
+Epoch: 65/70, iteration: 950, loss: 0.22, ranking_loss: 0.22, id_loss: 0.00
+Epoch: 65/70, iteration: 1000, loss: 0.98, ranking_loss: 0.79, id_loss: 0.19
+Epoch: 65/70, iteration: 1050, loss: 0.74, ranking_loss: 0.71, id_loss: 0.03
+Epoch: 65/70, loss: 0.84, ranking_loss: 0.73, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 65
+similarity_glo:--t2i: top1: 63.95%, top5: 82.46%, top10: 88.71%, map: 55.31%
+similarity_loc:--t2i: top1: 63.26%, top5: 81.51%, top10: 87.87%, map: 54.89%
+similarity_all:--t2i: top1: 65.25%, top5: 82.99%, top10: 88.94%, map: 56.80%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 66/70, iteration: 50, loss: 1.06, ranking_loss: 0.84, id_loss: 0.21
+Epoch: 66/70, iteration: 100, loss: 0.47, ranking_loss: 0.29, id_loss: 0.18
+Epoch: 66/70, iteration: 150, loss: 0.62, ranking_loss: 0.59, id_loss: 0.03
+Epoch: 66/70, iteration: 200, loss: 0.88, ranking_loss: 0.73, id_loss: 0.16
+Epoch: 66/70, iteration: 250, loss: 0.24, ranking_loss: 0.16, id_loss: 0.08
+Epoch: 66/70, iteration: 300, loss: 0.52, ranking_loss: 0.39, id_loss: 0.14
+Epoch: 66/70, iteration: 350, loss: 0.96, ranking_loss: 0.90, id_loss: 0.06
+Epoch: 66/70, iteration: 400, loss: 0.42, ranking_loss: 0.24, id_loss: 0.18
+Epoch: 66/70, iteration: 450, loss: 0.47, ranking_loss: 0.35, id_loss: 0.12
+Epoch: 66/70, iteration: 500, loss: 0.68, ranking_loss: 0.54, id_loss: 0.14
+Epoch: 66/70, iteration: 550, loss: 1.19, ranking_loss: 1.10, id_loss: 0.10
+Epoch: 66/70, iteration: 600, loss: 0.90, ranking_loss: 0.90, id_loss: 0.00
+Epoch: 66/70, iteration: 650, loss: 1.28, ranking_loss: 1.05, id_loss: 0.24
+Epoch: 66/70, iteration: 700, loss: 0.82, ranking_loss: 0.74, id_loss: 0.08
+Epoch: 66/70, iteration: 750, loss: 0.79, ranking_loss: 0.58, id_loss: 0.21
+Epoch: 66/70, iteration: 800, loss: 1.99, ranking_loss: 1.76, id_loss: 0.23
+Epoch: 66/70, iteration: 850, loss: 0.55, ranking_loss: 0.55, id_loss: 0.00
+Epoch: 66/70, iteration: 900, loss: 0.67, ranking_loss: 0.62, id_loss: 0.06
+Epoch: 66/70, iteration: 950, loss: 0.31, ranking_loss: 0.22, id_loss: 0.08
+Epoch: 66/70, iteration: 1000, loss: 1.55, ranking_loss: 1.40, id_loss: 0.15
+Epoch: 66/70, iteration: 1050, loss: 0.29, ranking_loss: 0.14, id_loss: 0.15
+Epoch: 66/70, loss: 0.84, ranking_loss: 0.73, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 66
+similarity_glo:--t2i: top1: 64.28%, top5: 82.52%, top10: 88.65%, map: 55.47%
+similarity_loc:--t2i: top1: 63.22%, top5: 81.37%, top10: 87.69%, map: 54.85%
+similarity_all:--t2i: top1: 65.51%, top5: 83.06%, top10: 88.94%, map: 56.88%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 67/70, iteration: 50, loss: 0.60, ranking_loss: 0.52, id_loss: 0.08
+Epoch: 67/70, iteration: 100, loss: 0.61, ranking_loss: 0.25, id_loss: 0.36
+Epoch: 67/70, iteration: 150, loss: 0.40, ranking_loss: 0.22, id_loss: 0.18
+Epoch: 67/70, iteration: 200, loss: 0.79, ranking_loss: 0.74, id_loss: 0.05
+Epoch: 67/70, iteration: 250, loss: 0.78, ranking_loss: 0.51, id_loss: 0.27
+Epoch: 67/70, iteration: 300, loss: 0.46, ranking_loss: 0.37, id_loss: 0.10
+Epoch: 67/70, iteration: 350, loss: 0.56, ranking_loss: 0.31, id_loss: 0.24
+Epoch: 67/70, iteration: 400, loss: 1.90, ranking_loss: 1.69, id_loss: 0.20
+Epoch: 67/70, iteration: 450, loss: 1.29, ranking_loss: 1.29, id_loss: 0.00
+Epoch: 67/70, iteration: 500, loss: 0.76, ranking_loss: 0.76, id_loss: 0.00
+Epoch: 67/70, iteration: 550, loss: 1.34, ranking_loss: 1.34, id_loss: 0.00
+Epoch: 67/70, iteration: 600, loss: 1.47, ranking_loss: 1.27, id_loss: 0.20
+Epoch: 67/70, iteration: 650, loss: 0.69, ranking_loss: 0.64, id_loss: 0.05
+Epoch: 67/70, iteration: 700, loss: 0.49, ranking_loss: 0.45, id_loss: 0.04
+Epoch: 67/70, iteration: 750, loss: 1.11, ranking_loss: 1.04, id_loss: 0.07
+Epoch: 67/70, iteration: 800, loss: 0.43, ranking_loss: 0.31, id_loss: 0.12
+Epoch: 67/70, iteration: 850, loss: 0.86, ranking_loss: 0.85, id_loss: 0.01
+Epoch: 67/70, iteration: 900, loss: 0.36, ranking_loss: 0.22, id_loss: 0.14
+Epoch: 67/70, iteration: 950, loss: 0.57, ranking_loss: 0.51, id_loss: 0.06
+Epoch: 67/70, iteration: 1000, loss: 1.06, ranking_loss: 0.99, id_loss: 0.07
+Epoch: 67/70, iteration: 1050, loss: 0.80, ranking_loss: 0.76, id_loss: 0.04
+Epoch: 67/70, loss: 0.84, ranking_loss: 0.73, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 67
+similarity_glo:--t2i: top1: 64.23%, top5: 82.36%, top10: 88.71%, map: 55.52%
+similarity_loc:--t2i: top1: 63.50%, top5: 81.60%, top10: 87.70%, map: 54.97%
+similarity_all:--t2i: top1: 65.59%, top5: 82.88%, top10: 88.79%, map: 56.94%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 68/70, iteration: 50, loss: 0.93, ranking_loss: 0.88, id_loss: 0.05
+Epoch: 68/70, iteration: 100, loss: 0.99, ranking_loss: 0.99, id_loss: 0.00
+Epoch: 68/70, iteration: 150, loss: 1.43, ranking_loss: 1.22, id_loss: 0.21
+Epoch: 68/70, iteration: 200, loss: 0.99, ranking_loss: 0.72, id_loss: 0.27
+Epoch: 68/70, iteration: 250, loss: 0.84, ranking_loss: 0.76, id_loss: 0.07
+Epoch: 68/70, iteration: 300, loss: 0.43, ranking_loss: 0.17, id_loss: 0.26
+Epoch: 68/70, iteration: 350, loss: 0.38, ranking_loss: 0.32, id_loss: 0.06
+Epoch: 68/70, iteration: 400, loss: 0.74, ranking_loss: 0.49, id_loss: 0.24
+Epoch: 68/70, iteration: 450, loss: 0.60, ranking_loss: 0.48, id_loss: 0.13
+Epoch: 68/70, iteration: 500, loss: 0.53, ranking_loss: 0.42, id_loss: 0.11
+Epoch: 68/70, iteration: 550, loss: 0.40, ranking_loss: 0.33, id_loss: 0.08
+Epoch: 68/70, iteration: 600, loss: 1.14, ranking_loss: 1.13, id_loss: 0.01
+Epoch: 68/70, iteration: 650, loss: 0.58, ranking_loss: 0.42, id_loss: 0.16
+Epoch: 68/70, iteration: 700, loss: 0.56, ranking_loss: 0.45, id_loss: 0.11
+Epoch: 68/70, iteration: 750, loss: 0.75, ranking_loss: 0.46, id_loss: 0.29
+Epoch: 68/70, iteration: 800, loss: 0.69, ranking_loss: 0.56, id_loss: 0.13
+Epoch: 68/70, iteration: 850, loss: 0.86, ranking_loss: 0.75, id_loss: 0.11
+Epoch: 68/70, iteration: 900, loss: 0.53, ranking_loss: 0.39, id_loss: 0.14
+Epoch: 68/70, iteration: 950, loss: 0.68, ranking_loss: 0.64, id_loss: 0.04
+Epoch: 68/70, iteration: 1000, loss: 0.95, ranking_loss: 0.82, id_loss: 0.13
+Epoch: 68/70, iteration: 1050, loss: 1.76, ranking_loss: 1.69, id_loss: 0.07
+Epoch: 68/70, loss: 0.81, ranking_loss: 0.70, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 68
+similarity_glo:--t2i: top1: 64.15%, top5: 82.50%, top10: 88.79%, map: 55.44%
+similarity_loc:--t2i: top1: 63.30%, top5: 81.48%, top10: 87.67%, map: 54.93%
+similarity_all:--t2i: top1: 65.51%, top5: 83.02%, top10: 88.92%, map: 56.93%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 69/70, iteration: 50, loss: 0.40, ranking_loss: 0.37, id_loss: 0.03
+Epoch: 69/70, iteration: 100, loss: 0.90, ranking_loss: 0.88, id_loss: 0.02
+Epoch: 69/70, iteration: 150, loss: 0.54, ranking_loss: 0.46, id_loss: 0.08
+Epoch: 69/70, iteration: 200, loss: 0.66, ranking_loss: 0.60, id_loss: 0.07
+Epoch: 69/70, iteration: 250, loss: 0.98, ranking_loss: 0.78, id_loss: 0.19
+Epoch: 69/70, iteration: 300, loss: 1.36, ranking_loss: 1.02, id_loss: 0.34
+Epoch: 69/70, iteration: 350, loss: 1.25, ranking_loss: 1.04, id_loss: 0.21
+Epoch: 69/70, iteration: 400, loss: 1.57, ranking_loss: 1.35, id_loss: 0.22
+Epoch: 69/70, iteration: 450, loss: 1.18, ranking_loss: 0.92, id_loss: 0.27
+Epoch: 69/70, iteration: 500, loss: 0.18, ranking_loss: 0.14, id_loss: 0.04
+Epoch: 69/70, iteration: 550, loss: 0.53, ranking_loss: 0.50, id_loss: 0.03
+Epoch: 69/70, iteration: 600, loss: 0.64, ranking_loss: 0.63, id_loss: 0.01
+Epoch: 69/70, iteration: 650, loss: 0.34, ranking_loss: 0.22, id_loss: 0.12
+Epoch: 69/70, iteration: 700, loss: 0.57, ranking_loss: 0.42, id_loss: 0.16
+Epoch: 69/70, iteration: 750, loss: 2.13, ranking_loss: 1.94, id_loss: 0.19
+Epoch: 69/70, iteration: 800, loss: 0.45, ranking_loss: 0.32, id_loss: 0.13
+Epoch: 69/70, iteration: 850, loss: 0.92, ranking_loss: 0.87, id_loss: 0.05
+Epoch: 69/70, iteration: 900, loss: 1.25, ranking_loss: 1.06, id_loss: 0.20
+Epoch: 69/70, iteration: 950, loss: 0.59, ranking_loss: 0.45, id_loss: 0.14
+Epoch: 69/70, iteration: 1000, loss: 1.26, ranking_loss: 1.10, id_loss: 0.17
+Epoch: 69/70, iteration: 1050, loss: 0.75, ranking_loss: 0.75, id_loss: 0.00
+Epoch: 69/70, loss: 0.84, ranking_loss: 0.73, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 69
+similarity_glo:--t2i: top1: 64.13%, top5: 82.50%, top10: 88.58%, map: 55.47%
+similarity_loc:--t2i: top1: 63.30%, top5: 81.50%, top10: 87.74%, map: 54.94%
+similarity_all:--t2i: top1: 65.55%, top5: 83.17%, top10: 88.79%, map: 56.90%
+lr:1.0000000000000003e-05
+lr:1.0000000000000002e-06
+Epoch: 70/70, iteration: 50, loss: 0.33, ranking_loss: 0.23, id_loss: 0.11
+Epoch: 70/70, iteration: 100, loss: 1.21, ranking_loss: 1.09, id_loss: 0.12
+Epoch: 70/70, iteration: 150, loss: 1.30, ranking_loss: 1.26, id_loss: 0.04
+Epoch: 70/70, iteration: 200, loss: 1.78, ranking_loss: 1.50, id_loss: 0.28
+Epoch: 70/70, iteration: 250, loss: 0.91, ranking_loss: 0.81, id_loss: 0.11
+Epoch: 70/70, iteration: 300, loss: 1.16, ranking_loss: 0.85, id_loss: 0.30
+Epoch: 70/70, iteration: 350, loss: 1.22, ranking_loss: 1.12, id_loss: 0.11
+Epoch: 70/70, iteration: 400, loss: 0.34, ranking_loss: 0.34, id_loss: 0.00
+Epoch: 70/70, iteration: 450, loss: 0.62, ranking_loss: 0.50, id_loss: 0.12
+Epoch: 70/70, iteration: 500, loss: 1.28, ranking_loss: 1.20, id_loss: 0.08
+Epoch: 70/70, iteration: 550, loss: 0.96, ranking_loss: 0.73, id_loss: 0.23
+Epoch: 70/70, iteration: 600, loss: 0.51, ranking_loss: 0.41, id_loss: 0.09
+Epoch: 70/70, iteration: 650, loss: 1.35, ranking_loss: 1.14, id_loss: 0.21
+Epoch: 70/70, iteration: 700, loss: 1.10, ranking_loss: 1.01, id_loss: 0.10
+Epoch: 70/70, iteration: 750, loss: 1.16, ranking_loss: 1.01, id_loss: 0.15
+Epoch: 70/70, iteration: 800, loss: 0.70, ranking_loss: 0.70, id_loss: 0.00
+Epoch: 70/70, iteration: 850, loss: 1.26, ranking_loss: 1.21, id_loss: 0.05
+Epoch: 70/70, iteration: 900, loss: 0.33, ranking_loss: 0.17, id_loss: 0.16
+Epoch: 70/70, iteration: 950, loss: 0.87, ranking_loss: 0.81, id_loss: 0.06
+Epoch: 70/70, iteration: 1000, loss: 0.55, ranking_loss: 0.50, id_loss: 0.05
+Epoch: 70/70, iteration: 1050, loss: 1.26, ranking_loss: 1.05, id_loss: 0.21
+Epoch: 70/70, loss: 0.84, ranking_loss: 0.73, id_loss: 0.11
+MIANet-bert
+Testing Epoch: 70
+similarity_glo:--t2i: top1: 64.21%, top5: 82.55%, top10: 88.50%, map: 55.45%
+similarity_loc:--t2i: top1: 63.39%, top5: 81.43%, top10: 87.78%, map: 54.95%
+similarity_all:--t2i: top1: 65.63%, top5: 83.07%, top10: 88.74%, map: 56.93%
+Training Done
+***************************
+Num of centers: 6
+Best Epoch: 53
+Best Top1: 65.64%

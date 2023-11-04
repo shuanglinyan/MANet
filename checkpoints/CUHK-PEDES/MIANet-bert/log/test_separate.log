@@ -1,0 +1,700 @@
+Testing Epoch: 1
+similarity_glo:
+similarity_glo:--t2i: top1: 0.18%, top5: 1.56%, top10: 3.04%, map: 0.59%
+similarity_glo:--t2i: top1: 0.18%, top5: 1.56%, top10: 3.04%, map: 0.59%
+similarity_loc:
+similarity_loc:--t2i: top1: 1.64%, top5: 4.99%, top10: 8.11%, map: 1.74%
+similarity_loc:--t2i: top1: 1.64%, top5: 4.99%, top10: 8.11%, map: 1.74%
+similarity_all:
+similarity_all:--t2i: top1: 0.84%, top5: 3.61%, top10: 6.51%, map: 1.21%
+similarity_all:--t2i: top1: 0.84%, top5: 3.61%, top10: 6.51%, map: 1.21%
+Testing Epoch: 2
+similarity_glo:
+similarity_glo:--t2i: top1: 22.47%, top5: 45.29%, top10: 57.65%, map: 20.02%
+similarity_glo:--t2i: top1: 22.47%, top5: 45.29%, top10: 57.65%, map: 20.02%
+similarity_loc:
+similarity_loc:--t2i: top1: 21.65%, top5: 43.66%, top10: 55.41%, map: 19.44%
+similarity_loc:--t2i: top1: 21.65%, top5: 43.66%, top10: 55.41%, map: 19.44%
+similarity_all:
+similarity_all:--t2i: top1: 23.26%, top5: 46.93%, top10: 58.85%, map: 21.22%
+similarity_all:--t2i: top1: 23.26%, top5: 46.93%, top10: 58.85%, map: 21.22%
+Testing Epoch: 3
+similarity_glo:
+similarity_glo:--t2i: top1: 37.25%, top5: 61.53%, top10: 71.67%, map: 32.47%
+similarity_glo:--t2i: top1: 37.25%, top5: 61.53%, top10: 71.67%, map: 32.47%
+similarity_loc:
+similarity_loc:--t2i: top1: 36.06%, top5: 59.89%, top10: 70.26%, map: 31.74%
+similarity_loc:--t2i: top1: 36.06%, top5: 59.89%, top10: 70.26%, map: 31.74%
+similarity_all:
+similarity_all:--t2i: top1: 39.17%, top5: 62.18%, top10: 72.66%, map: 33.90%
+similarity_all:--t2i: top1: 39.17%, top5: 62.18%, top10: 72.66%, map: 33.90%
+Testing Epoch: 4
+similarity_glo:
+similarity_glo:--t2i: top1: 43.81%, top5: 67.06%, top10: 76.46%, map: 37.88%
+similarity_glo:--t2i: top1: 43.81%, top5: 67.06%, top10: 76.46%, map: 37.88%
+similarity_loc:
+similarity_loc:--t2i: top1: 43.11%, top5: 66.20%, top10: 75.45%, map: 37.47%
+similarity_loc:--t2i: top1: 43.11%, top5: 66.20%, top10: 75.45%, map: 37.47%
+similarity_all:
+similarity_all:--t2i: top1: 44.75%, top5: 67.85%, top10: 76.77%, map: 39.14%
+similarity_all:--t2i: top1: 44.75%, top5: 67.85%, top10: 76.77%, map: 39.14%
+Testing Epoch: 5
+similarity_glo:
+similarity_glo:--t2i: top1: 47.64%, top5: 70.37%, top10: 79.65%, map: 41.13%
+similarity_glo:--t2i: top1: 47.64%, top5: 70.37%, top10: 79.65%, map: 41.13%
+similarity_loc:
+similarity_loc:--t2i: top1: 47.77%, top5: 69.92%, top10: 78.83%, map: 40.83%
+similarity_loc:--t2i: top1: 47.77%, top5: 69.92%, top10: 78.83%, map: 40.83%
+similarity_all:
+similarity_all:--t2i: top1: 49.51%, top5: 71.56%, top10: 80.20%, map: 42.64%
+similarity_all:--t2i: top1: 49.51%, top5: 71.56%, top10: 80.20%, map: 42.64%
+Testing Epoch: 6
+similarity_glo:
+similarity_glo:--t2i: top1: 51.36%, top5: 72.27%, top10: 80.47%, map: 43.66%
+similarity_glo:--t2i: top1: 51.36%, top5: 72.27%, top10: 80.47%, map: 43.66%
+similarity_loc:
+similarity_loc:--t2i: top1: 49.46%, top5: 71.73%, top10: 79.91%, map: 42.68%
+similarity_loc:--t2i: top1: 49.46%, top5: 71.73%, top10: 79.91%, map: 42.68%
+similarity_all:
+similarity_all:--t2i: top1: 51.80%, top5: 73.42%, top10: 81.01%, map: 44.73%
+similarity_all:--t2i: top1: 51.80%, top5: 73.42%, top10: 81.01%, map: 44.73%
+Testing Epoch: 7
+similarity_glo:
+similarity_glo:--t2i: top1: 52.10%, top5: 75.00%, top10: 82.76%, map: 45.02%
+similarity_glo:--t2i: top1: 52.10%, top5: 75.00%, top10: 82.76%, map: 45.02%
+similarity_loc:
+similarity_loc:--t2i: top1: 51.95%, top5: 73.49%, top10: 81.77%, map: 44.75%
+similarity_loc:--t2i: top1: 51.95%, top5: 73.49%, top10: 81.77%, map: 44.75%
+similarity_all:
+similarity_all:--t2i: top1: 53.91%, top5: 75.23%, top10: 83.14%, map: 46.64%
+similarity_all:--t2i: top1: 53.91%, top5: 75.23%, top10: 83.14%, map: 46.64%
+Testing Epoch: 8
+similarity_glo:
+similarity_glo:--t2i: top1: 53.85%, top5: 75.47%, top10: 83.28%, map: 46.13%
+similarity_glo:--t2i: top1: 53.85%, top5: 75.47%, top10: 83.28%, map: 46.13%
+similarity_loc:
+similarity_loc:--t2i: top1: 52.62%, top5: 73.91%, top10: 82.23%, map: 45.16%
+similarity_loc:--t2i: top1: 52.62%, top5: 73.91%, top10: 82.23%, map: 45.16%
+similarity_all:
+similarity_all:--t2i: top1: 54.56%, top5: 75.89%, top10: 83.59%, map: 47.20%
+similarity_all:--t2i: top1: 54.56%, top5: 75.89%, top10: 83.59%, map: 47.20%
+Testing Epoch: 9
+similarity_glo:
+similarity_glo:--t2i: top1: 54.82%, top5: 77.16%, top10: 83.89%, map: 46.91%
+similarity_glo:--t2i: top1: 54.82%, top5: 77.16%, top10: 83.89%, map: 46.91%
+similarity_loc:
+similarity_loc:--t2i: top1: 54.45%, top5: 76.23%, top10: 84.00%, map: 46.75%
+similarity_loc:--t2i: top1: 54.45%, top5: 76.23%, top10: 84.00%, map: 46.75%
+similarity_all:
+similarity_all:--t2i: top1: 56.60%, top5: 77.66%, top10: 85.01%, map: 48.64%
+similarity_all:--t2i: top1: 56.60%, top5: 77.66%, top10: 85.01%, map: 48.64%
+Testing Epoch: 10
+similarity_glo:
+similarity_glo:--t2i: top1: 55.91%, top5: 77.31%, top10: 84.78%, map: 47.45%
+similarity_glo:--t2i: top1: 55.91%, top5: 77.31%, top10: 84.78%, map: 47.45%
+similarity_loc:
+similarity_loc:--t2i: top1: 54.89%, top5: 76.54%, top10: 84.13%, map: 47.28%
+similarity_loc:--t2i: top1: 54.89%, top5: 76.54%, top10: 84.13%, map: 47.28%
+similarity_all:
+similarity_all:--t2i: top1: 57.31%, top5: 78.22%, top10: 85.51%, map: 49.25%
+similarity_all:--t2i: top1: 57.31%, top5: 78.22%, top10: 85.51%, map: 49.25%
+Testing Epoch: 11
+similarity_glo:
+similarity_glo:--t2i: top1: 56.14%, top5: 77.31%, top10: 84.19%, map: 47.92%
+similarity_glo:--t2i: top1: 56.14%, top5: 77.31%, top10: 84.19%, map: 47.92%
+similarity_loc:
+similarity_loc:--t2i: top1: 54.91%, top5: 76.95%, top10: 83.89%, map: 47.46%
+similarity_loc:--t2i: top1: 54.91%, top5: 76.95%, top10: 83.89%, map: 47.46%
+similarity_all:
+similarity_all:--t2i: top1: 57.33%, top5: 78.09%, top10: 85.14%, map: 49.50%
+similarity_all:--t2i: top1: 57.33%, top5: 78.09%, top10: 85.14%, map: 49.50%
+Testing Epoch: 12
+similarity_glo:
+similarity_glo:--t2i: top1: 57.70%, top5: 77.81%, top10: 85.62%, map: 49.32%
+similarity_glo:--t2i: top1: 57.70%, top5: 77.81%, top10: 85.62%, map: 49.32%
+similarity_loc:
+similarity_loc:--t2i: top1: 56.04%, top5: 76.77%, top10: 84.49%, map: 48.32%
+similarity_loc:--t2i: top1: 56.04%, top5: 76.77%, top10: 84.49%, map: 48.32%
+similarity_all:
+similarity_all:--t2i: top1: 59.05%, top5: 78.05%, top10: 86.11%, map: 50.60%
+similarity_all:--t2i: top1: 59.05%, top5: 78.05%, top10: 86.11%, map: 50.60%
+Testing Epoch: 13
+similarity_glo:
+similarity_glo:--t2i: top1: 57.68%, top5: 79.09%, top10: 85.92%, map: 49.47%
+similarity_glo:--t2i: top1: 57.68%, top5: 79.09%, top10: 85.92%, map: 49.47%
+similarity_loc:
+similarity_loc:--t2i: top1: 57.59%, top5: 77.97%, top10: 85.07%, map: 49.20%
+similarity_loc:--t2i: top1: 57.59%, top5: 77.97%, top10: 85.07%, map: 49.20%
+similarity_all:
+similarity_all:--t2i: top1: 59.31%, top5: 80.07%, top10: 86.40%, map: 51.11%
+similarity_all:--t2i: top1: 59.31%, top5: 80.07%, top10: 86.40%, map: 51.11%
+Testing Epoch: 14
+similarity_glo:
+similarity_glo:--t2i: top1: 58.90%, top5: 79.29%, top10: 86.13%, map: 50.08%
+similarity_glo:--t2i: top1: 58.90%, top5: 79.29%, top10: 86.13%, map: 50.08%
+similarity_loc:
+similarity_loc:--t2i: top1: 56.92%, top5: 78.02%, top10: 85.46%, map: 49.14%
+similarity_loc:--t2i: top1: 56.92%, top5: 78.02%, top10: 85.46%, map: 49.14%
+similarity_all:
+similarity_all:--t2i: top1: 60.01%, top5: 79.58%, top10: 86.78%, map: 51.43%
+similarity_all:--t2i: top1: 60.01%, top5: 79.58%, top10: 86.78%, map: 51.43%
+Testing Epoch: 15
+similarity_glo:
+similarity_glo:--t2i: top1: 58.80%, top5: 78.70%, top10: 85.75%, map: 50.25%
+similarity_glo:--t2i: top1: 58.80%, top5: 78.70%, top10: 85.75%, map: 50.25%
+similarity_loc:
+similarity_loc:--t2i: top1: 57.39%, top5: 77.97%, top10: 85.07%, map: 49.46%
+similarity_loc:--t2i: top1: 57.39%, top5: 77.97%, top10: 85.07%, map: 49.46%
+similarity_all:
+similarity_all:--t2i: top1: 59.99%, top5: 79.47%, top10: 86.71%, map: 51.71%
+similarity_all:--t2i: top1: 59.99%, top5: 79.47%, top10: 86.71%, map: 51.71%
+Testing Epoch: 16
+similarity_glo:
+similarity_glo:--t2i: top1: 59.29%, top5: 79.81%, top10: 86.55%, map: 50.86%
+similarity_glo:--t2i: top1: 59.29%, top5: 79.81%, top10: 86.55%, map: 50.86%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.24%, top5: 78.64%, top10: 85.53%, map: 50.10%
+similarity_loc:--t2i: top1: 58.24%, top5: 78.64%, top10: 85.53%, map: 50.10%
+similarity_all:
+similarity_all:--t2i: top1: 60.45%, top5: 80.73%, top10: 86.73%, map: 52.32%
+similarity_all:--t2i: top1: 60.45%, top5: 80.73%, top10: 86.73%, map: 52.32%
+Testing Epoch: 17
+similarity_glo:
+similarity_glo:--t2i: top1: 59.99%, top5: 79.73%, top10: 86.18%, map: 51.16%
+similarity_glo:--t2i: top1: 59.99%, top5: 79.73%, top10: 86.18%, map: 51.16%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.85%, top5: 78.22%, top10: 85.01%, map: 50.25%
+similarity_loc:--t2i: top1: 58.85%, top5: 78.22%, top10: 85.01%, map: 50.25%
+similarity_all:
+similarity_all:--t2i: top1: 60.88%, top5: 79.91%, top10: 86.47%, map: 52.44%
+similarity_all:--t2i: top1: 60.88%, top5: 79.91%, top10: 86.47%, map: 52.44%
+Testing Epoch: 18
+similarity_glo:
+similarity_glo:--t2i: top1: 59.75%, top5: 80.18%, top10: 86.74%, map: 50.64%
+similarity_glo:--t2i: top1: 59.75%, top5: 80.18%, top10: 86.74%, map: 50.64%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.19%, top5: 78.23%, top10: 85.69%, map: 50.07%
+similarity_loc:--t2i: top1: 58.19%, top5: 78.23%, top10: 85.69%, map: 50.07%
+similarity_all:
+similarity_all:--t2i: top1: 61.26%, top5: 80.70%, top10: 87.17%, map: 52.45%
+similarity_all:--t2i: top1: 61.26%, top5: 80.70%, top10: 87.17%, map: 52.45%
+Testing Epoch: 19
+similarity_glo:
+similarity_glo:--t2i: top1: 60.17%, top5: 80.15%, top10: 87.00%, map: 51.14%
+similarity_glo:--t2i: top1: 60.17%, top5: 80.15%, top10: 87.00%, map: 51.14%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.50%, top5: 79.09%, top10: 85.71%, map: 50.26%
+similarity_loc:--t2i: top1: 58.50%, top5: 79.09%, top10: 85.71%, map: 50.26%
+similarity_all:
+similarity_all:--t2i: top1: 61.52%, top5: 80.52%, top10: 87.26%, map: 52.66%
+similarity_all:--t2i: top1: 61.52%, top5: 80.52%, top10: 87.26%, map: 52.66%
+Testing Epoch: 20
+similarity_glo:
+similarity_glo:--t2i: top1: 59.75%, top5: 80.54%, top10: 86.61%, map: 51.22%
+similarity_glo:--t2i: top1: 59.75%, top5: 80.54%, top10: 86.61%, map: 51.22%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.51%, top5: 78.28%, top10: 85.51%, map: 50.41%
+similarity_loc:--t2i: top1: 58.51%, top5: 78.28%, top10: 85.51%, map: 50.41%
+similarity_all:
+similarity_all:--t2i: top1: 61.05%, top5: 80.64%, top10: 87.20%, map: 52.77%
+similarity_all:--t2i: top1: 61.05%, top5: 80.64%, top10: 87.20%, map: 52.77%
+Testing Epoch: 21
+similarity_glo:
+similarity_glo:--t2i: top1: 60.17%, top5: 79.73%, top10: 86.09%, map: 51.31%
+similarity_glo:--t2i: top1: 60.17%, top5: 79.73%, top10: 86.09%, map: 51.31%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.92%, top5: 79.82%, top10: 86.31%, map: 50.86%
+similarity_loc:--t2i: top1: 58.92%, top5: 79.82%, top10: 86.31%, map: 50.86%
+similarity_all:
+similarity_all:--t2i: top1: 61.57%, top5: 80.56%, top10: 87.33%, map: 53.15%
+similarity_all:--t2i: top1: 61.57%, top5: 80.56%, top10: 87.33%, map: 53.15%
+Testing Epoch: 22
+similarity_glo:
+similarity_glo:--t2i: top1: 60.43%, top5: 80.34%, top10: 86.92%, map: 51.60%
+similarity_glo:--t2i: top1: 60.43%, top5: 80.34%, top10: 86.92%, map: 51.60%
+similarity_loc:
+similarity_loc:--t2i: top1: 59.62%, top5: 79.56%, top10: 86.32%, map: 51.15%
+similarity_loc:--t2i: top1: 59.62%, top5: 79.56%, top10: 86.32%, map: 51.15%
+similarity_all:
+similarity_all:--t2i: top1: 62.13%, top5: 81.06%, top10: 87.30%, map: 53.39%
+similarity_all:--t2i: top1: 62.13%, top5: 81.06%, top10: 87.30%, map: 53.39%
+Testing Epoch: 23
+similarity_glo:
+similarity_glo:--t2i: top1: 59.81%, top5: 80.18%, top10: 86.79%, map: 51.48%
+similarity_glo:--t2i: top1: 59.81%, top5: 80.18%, top10: 86.79%, map: 51.48%
+similarity_loc:
+similarity_loc:--t2i: top1: 59.10%, top5: 78.62%, top10: 85.92%, map: 51.10%
+similarity_loc:--t2i: top1: 59.10%, top5: 78.62%, top10: 85.92%, map: 51.10%
+similarity_all:
+similarity_all:--t2i: top1: 61.47%, top5: 80.86%, top10: 87.49%, map: 53.28%
+similarity_all:--t2i: top1: 61.47%, top5: 80.86%, top10: 87.49%, map: 53.28%
+Testing Epoch: 24
+similarity_glo:
+similarity_glo:--t2i: top1: 60.69%, top5: 80.15%, top10: 86.74%, map: 51.50%
+similarity_glo:--t2i: top1: 60.69%, top5: 80.15%, top10: 86.74%, map: 51.50%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.90%, top5: 78.85%, top10: 86.24%, map: 50.62%
+similarity_loc:--t2i: top1: 58.90%, top5: 78.85%, top10: 86.24%, map: 50.62%
+similarity_all:
+similarity_all:--t2i: top1: 61.52%, top5: 80.52%, top10: 87.39%, map: 52.88%
+similarity_all:--t2i: top1: 61.52%, top5: 80.52%, top10: 87.39%, map: 52.88%
+Testing Epoch: 25
+similarity_glo:
+similarity_glo:--t2i: top1: 60.56%, top5: 79.78%, top10: 86.60%, map: 51.41%
+similarity_glo:--t2i: top1: 60.56%, top5: 79.78%, top10: 86.60%, map: 51.41%
+similarity_loc:
+similarity_loc:--t2i: top1: 59.19%, top5: 79.00%, top10: 85.71%, map: 51.04%
+similarity_loc:--t2i: top1: 59.19%, top5: 79.00%, top10: 85.71%, map: 51.04%
+similarity_all:
+similarity_all:--t2i: top1: 61.29%, top5: 80.96%, top10: 87.18%, map: 53.03%
+similarity_all:--t2i: top1: 61.29%, top5: 80.96%, top10: 87.18%, map: 53.03%
+Testing Epoch: 26
+similarity_glo:
+similarity_glo:--t2i: top1: 60.90%, top5: 80.41%, top10: 87.05%, map: 51.73%
+similarity_glo:--t2i: top1: 60.90%, top5: 80.41%, top10: 87.05%, map: 51.73%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.87%, top5: 79.19%, top10: 86.05%, map: 50.97%
+similarity_loc:--t2i: top1: 58.87%, top5: 79.19%, top10: 86.05%, map: 50.97%
+similarity_all:
+similarity_all:--t2i: top1: 61.99%, top5: 81.09%, top10: 87.69%, map: 53.46%
+similarity_all:--t2i: top1: 61.99%, top5: 81.09%, top10: 87.69%, map: 53.46%
+Testing Epoch: 27
+similarity_glo:
+similarity_glo:--t2i: top1: 60.90%, top5: 79.58%, top10: 86.01%, map: 51.71%
+similarity_glo:--t2i: top1: 60.90%, top5: 79.58%, top10: 86.01%, map: 51.71%
+similarity_loc:
+similarity_loc:--t2i: top1: 58.76%, top5: 78.88%, top10: 85.72%, map: 50.64%
+similarity_loc:--t2i: top1: 58.76%, top5: 78.88%, top10: 85.72%, map: 50.64%
+similarity_all:
+similarity_all:--t2i: top1: 61.31%, top5: 80.23%, top10: 86.71%, map: 52.94%
+similarity_all:--t2i: top1: 61.31%, top5: 80.23%, top10: 86.71%, map: 52.94%
+Testing Epoch: 28
+similarity_glo:
+similarity_glo:--t2i: top1: 60.72%, top5: 80.18%, top10: 86.66%, map: 51.87%
+similarity_glo:--t2i: top1: 60.72%, top5: 80.18%, top10: 86.66%, map: 51.87%
+similarity_loc:
+similarity_loc:--t2i: top1: 59.16%, top5: 79.26%, top10: 85.96%, map: 50.95%
+similarity_loc:--t2i: top1: 59.16%, top5: 79.26%, top10: 85.96%, map: 50.95%
+similarity_all:
+similarity_all:--t2i: top1: 61.99%, top5: 81.03%, top10: 87.48%, map: 53.43%
+similarity_all:--t2i: top1: 61.99%, top5: 81.03%, top10: 87.48%, map: 53.43%
+Testing Epoch: 29
+similarity_glo:
+similarity_glo:--t2i: top1: 60.72%, top5: 80.25%, top10: 86.87%, map: 52.06%
+similarity_glo:--t2i: top1: 60.72%, top5: 80.25%, top10: 86.87%, map: 52.06%
+similarity_loc:
+similarity_loc:--t2i: top1: 59.44%, top5: 79.30%, top10: 85.74%, map: 51.17%
+similarity_loc:--t2i: top1: 59.44%, top5: 79.30%, top10: 85.74%, map: 51.17%
+similarity_all:
+similarity_all:--t2i: top1: 62.17%, top5: 81.03%, top10: 87.56%, map: 53.64%
+similarity_all:--t2i: top1: 62.17%, top5: 81.03%, top10: 87.56%, map: 53.64%
+Testing Epoch: 30
+similarity_glo:
+similarity_glo:--t2i: top1: 60.06%, top5: 80.18%, top10: 86.66%, map: 51.67%
+similarity_glo:--t2i: top1: 60.06%, top5: 80.18%, top10: 86.66%, map: 51.67%
+similarity_loc:
+similarity_loc:--t2i: top1: 59.15%, top5: 79.47%, top10: 86.40%, map: 51.23%
+similarity_loc:--t2i: top1: 59.15%, top5: 79.47%, top10: 86.40%, map: 51.23%
+similarity_all:
+similarity_all:--t2i: top1: 62.18%, top5: 80.99%, top10: 87.57%, map: 53.46%
+similarity_all:--t2i: top1: 62.18%, top5: 80.99%, top10: 87.57%, map: 53.46%
+Testing Epoch: 31
+similarity_glo:
+similarity_glo:--t2i: top1: 63.06%, top5: 81.81%, top10: 87.93%, map: 54.26%
+similarity_glo:--t2i: top1: 63.06%, top5: 81.81%, top10: 87.93%, map: 54.26%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.10%, top5: 81.16%, top10: 87.59%, map: 54.07%
+similarity_loc:--t2i: top1: 62.10%, top5: 81.16%, top10: 87.59%, map: 54.07%
+similarity_all:
+similarity_all:--t2i: top1: 64.18%, top5: 82.55%, top10: 88.43%, map: 55.97%
+similarity_all:--t2i: top1: 64.18%, top5: 82.55%, top10: 88.43%, map: 55.97%
+Testing Epoch: 32
+similarity_glo:
+similarity_glo:--t2i: top1: 63.45%, top5: 82.16%, top10: 88.30%, map: 54.85%
+similarity_glo:--t2i: top1: 63.45%, top5: 82.16%, top10: 88.30%, map: 54.85%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.54%, top5: 81.35%, top10: 87.95%, map: 54.38%
+similarity_loc:--t2i: top1: 62.54%, top5: 81.35%, top10: 87.95%, map: 54.38%
+similarity_all:
+similarity_all:--t2i: top1: 64.86%, top5: 82.91%, top10: 88.92%, map: 56.37%
+similarity_all:--t2i: top1: 64.86%, top5: 82.91%, top10: 88.92%, map: 56.37%
+Testing Epoch: 33
+similarity_glo:
+similarity_glo:--t2i: top1: 63.17%, top5: 82.52%, top10: 88.27%, map: 54.83%
+similarity_glo:--t2i: top1: 63.17%, top5: 82.52%, top10: 88.27%, map: 54.83%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.43%, top5: 81.24%, top10: 87.87%, map: 54.52%
+similarity_loc:--t2i: top1: 62.43%, top5: 81.24%, top10: 87.87%, map: 54.52%
+similarity_all:
+similarity_all:--t2i: top1: 64.73%, top5: 82.78%, top10: 88.71%, map: 56.48%
+similarity_all:--t2i: top1: 64.73%, top5: 82.78%, top10: 88.71%, map: 56.48%
+Testing Epoch: 34
+similarity_glo:
+similarity_glo:--t2i: top1: 63.48%, top5: 82.67%, top10: 88.45%, map: 55.08%
+similarity_glo:--t2i: top1: 63.48%, top5: 82.67%, top10: 88.45%, map: 55.08%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.44%, top5: 81.43%, top10: 87.74%, map: 54.56%
+similarity_loc:--t2i: top1: 62.44%, top5: 81.43%, top10: 87.74%, map: 54.56%
+similarity_all:
+similarity_all:--t2i: top1: 64.72%, top5: 83.12%, top10: 89.00%, map: 56.56%
+similarity_all:--t2i: top1: 64.72%, top5: 83.12%, top10: 89.00%, map: 56.56%
+Testing Epoch: 35
+similarity_glo:
+similarity_glo:--t2i: top1: 63.86%, top5: 82.78%, top10: 88.47%, map: 55.21%
+similarity_glo:--t2i: top1: 63.86%, top5: 82.78%, top10: 88.47%, map: 55.21%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.93%, top5: 81.71%, top10: 87.72%, map: 54.67%
+similarity_loc:--t2i: top1: 62.93%, top5: 81.71%, top10: 87.72%, map: 54.67%
+similarity_all:
+similarity_all:--t2i: top1: 64.85%, top5: 83.15%, top10: 89.04%, map: 56.64%
+similarity_all:--t2i: top1: 64.85%, top5: 83.15%, top10: 89.04%, map: 56.64%
+Testing Epoch: 36
+similarity_glo:
+similarity_glo:--t2i: top1: 63.82%, top5: 82.68%, top10: 88.66%, map: 55.20%
+similarity_glo:--t2i: top1: 63.82%, top5: 82.68%, top10: 88.66%, map: 55.20%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.82%, top5: 81.56%, top10: 87.74%, map: 54.68%
+similarity_loc:--t2i: top1: 62.82%, top5: 81.56%, top10: 87.74%, map: 54.68%
+similarity_all:
+similarity_all:--t2i: top1: 64.55%, top5: 83.17%, top10: 88.94%, map: 56.49%
+similarity_all:--t2i: top1: 64.55%, top5: 83.17%, top10: 88.94%, map: 56.49%
+Testing Epoch: 37
+similarity_glo:
+similarity_glo:--t2i: top1: 63.82%, top5: 82.65%, top10: 88.65%, map: 55.34%
+similarity_glo:--t2i: top1: 63.82%, top5: 82.65%, top10: 88.65%, map: 55.34%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.96%, top5: 81.60%, top10: 87.56%, map: 54.72%
+similarity_loc:--t2i: top1: 62.96%, top5: 81.60%, top10: 87.56%, map: 54.72%
+similarity_all:
+similarity_all:--t2i: top1: 64.86%, top5: 83.04%, top10: 89.00%, map: 56.67%
+similarity_all:--t2i: top1: 64.86%, top5: 83.04%, top10: 89.00%, map: 56.67%
+Testing Epoch: 38
+similarity_glo:
+similarity_glo:--t2i: top1: 64.12%, top5: 82.55%, top10: 88.34%, map: 55.44%
+similarity_glo:--t2i: top1: 64.12%, top5: 82.55%, top10: 88.34%, map: 55.44%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.62%, top5: 81.50%, top10: 88.04%, map: 54.84%
+similarity_loc:--t2i: top1: 62.62%, top5: 81.50%, top10: 88.04%, map: 54.84%
+similarity_all:
+similarity_all:--t2i: top1: 64.94%, top5: 83.04%, top10: 88.87%, map: 56.73%
+similarity_all:--t2i: top1: 64.94%, top5: 83.04%, top10: 88.87%, map: 56.73%
+Testing Epoch: 39
+similarity_glo:
+similarity_glo:--t2i: top1: 63.94%, top5: 82.57%, top10: 88.42%, map: 55.23%
+similarity_glo:--t2i: top1: 63.94%, top5: 82.57%, top10: 88.42%, map: 55.23%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.87%, top5: 81.50%, top10: 87.59%, map: 54.75%
+similarity_loc:--t2i: top1: 62.87%, top5: 81.50%, top10: 87.59%, map: 54.75%
+similarity_all:
+similarity_all:--t2i: top1: 65.24%, top5: 82.88%, top10: 88.86%, map: 56.73%
+similarity_all:--t2i: top1: 65.24%, top5: 82.88%, top10: 88.86%, map: 56.73%
+Testing Epoch: 40
+similarity_glo:
+similarity_glo:--t2i: top1: 63.95%, top5: 82.59%, top10: 88.60%, map: 55.30%
+similarity_glo:--t2i: top1: 63.95%, top5: 82.59%, top10: 88.60%, map: 55.30%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.09%, top5: 81.48%, top10: 87.75%, map: 54.74%
+similarity_loc:--t2i: top1: 63.09%, top5: 81.48%, top10: 87.75%, map: 54.74%
+similarity_all:
+similarity_all:--t2i: top1: 65.20%, top5: 83.11%, top10: 88.69%, map: 56.68%
+similarity_all:--t2i: top1: 65.20%, top5: 83.11%, top10: 88.69%, map: 56.68%
+Testing Epoch: 41
+similarity_glo:
+similarity_glo:--t2i: top1: 63.89%, top5: 82.52%, top10: 88.40%, map: 55.27%
+similarity_glo:--t2i: top1: 63.89%, top5: 82.52%, top10: 88.40%, map: 55.27%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.67%, top5: 81.38%, top10: 87.48%, map: 54.63%
+similarity_loc:--t2i: top1: 62.67%, top5: 81.38%, top10: 87.48%, map: 54.63%
+similarity_all:
+similarity_all:--t2i: top1: 65.38%, top5: 82.59%, top10: 88.94%, map: 56.77%
+similarity_all:--t2i: top1: 65.38%, top5: 82.59%, top10: 88.94%, map: 56.77%
+Testing Epoch: 42
+similarity_glo:
+similarity_glo:--t2i: top1: 63.79%, top5: 82.50%, top10: 88.50%, map: 55.20%
+similarity_glo:--t2i: top1: 63.79%, top5: 82.50%, top10: 88.50%, map: 55.20%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.17%, top5: 81.19%, top10: 87.56%, map: 54.63%
+similarity_loc:--t2i: top1: 63.17%, top5: 81.19%, top10: 87.56%, map: 54.63%
+similarity_all:
+similarity_all:--t2i: top1: 65.11%, top5: 82.81%, top10: 88.66%, map: 56.63%
+similarity_all:--t2i: top1: 65.11%, top5: 82.81%, top10: 88.66%, map: 56.63%
+Testing Epoch: 43
+similarity_glo:
+similarity_glo:--t2i: top1: 63.99%, top5: 82.62%, top10: 88.26%, map: 55.36%
+similarity_glo:--t2i: top1: 63.99%, top5: 82.62%, top10: 88.26%, map: 55.36%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.72%, top5: 81.17%, top10: 87.80%, map: 54.60%
+similarity_loc:--t2i: top1: 62.72%, top5: 81.17%, top10: 87.80%, map: 54.60%
+similarity_all:
+similarity_all:--t2i: top1: 65.07%, top5: 83.06%, top10: 88.79%, map: 56.63%
+similarity_all:--t2i: top1: 65.07%, top5: 83.06%, top10: 88.79%, map: 56.63%
+Testing Epoch: 44
+similarity_glo:
+similarity_glo:--t2i: top1: 63.82%, top5: 82.31%, top10: 88.22%, map: 55.13%
+similarity_glo:--t2i: top1: 63.82%, top5: 82.31%, top10: 88.22%, map: 55.13%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.95%, top5: 81.42%, top10: 87.36%, map: 54.53%
+similarity_loc:--t2i: top1: 62.95%, top5: 81.42%, top10: 87.36%, map: 54.53%
+similarity_all:
+similarity_all:--t2i: top1: 65.09%, top5: 82.94%, top10: 88.63%, map: 56.58%
+similarity_all:--t2i: top1: 65.09%, top5: 82.94%, top10: 88.63%, map: 56.58%
+Testing Epoch: 45
+similarity_glo:
+similarity_glo:--t2i: top1: 64.07%, top5: 82.41%, top10: 88.16%, map: 55.45%
+similarity_glo:--t2i: top1: 64.07%, top5: 82.41%, top10: 88.16%, map: 55.45%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.90%, top5: 81.08%, top10: 87.74%, map: 54.70%
+similarity_loc:--t2i: top1: 62.90%, top5: 81.08%, top10: 87.74%, map: 54.70%
+similarity_all:
+similarity_all:--t2i: top1: 65.46%, top5: 82.99%, top10: 88.79%, map: 56.78%
+similarity_all:--t2i: top1: 65.46%, top5: 82.99%, top10: 88.79%, map: 56.78%
+Testing Epoch: 46
+similarity_glo:
+similarity_glo:--t2i: top1: 63.48%, top5: 82.24%, top10: 88.29%, map: 55.11%
+similarity_glo:--t2i: top1: 63.48%, top5: 82.24%, top10: 88.29%, map: 55.11%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.90%, top5: 81.34%, top10: 87.59%, map: 54.51%
+similarity_loc:--t2i: top1: 62.90%, top5: 81.34%, top10: 87.59%, map: 54.51%
+similarity_all:
+similarity_all:--t2i: top1: 64.99%, top5: 83.02%, top10: 88.68%, map: 56.55%
+similarity_all:--t2i: top1: 64.99%, top5: 83.02%, top10: 88.68%, map: 56.55%
+Testing Epoch: 47
+similarity_glo:
+similarity_glo:--t2i: top1: 63.60%, top5: 82.36%, top10: 88.42%, map: 55.16%
+similarity_glo:--t2i: top1: 63.60%, top5: 82.36%, top10: 88.42%, map: 55.16%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.85%, top5: 81.14%, top10: 87.59%, map: 54.53%
+similarity_loc:--t2i: top1: 62.85%, top5: 81.14%, top10: 87.59%, map: 54.53%
+similarity_all:
+similarity_all:--t2i: top1: 65.17%, top5: 83.02%, top10: 88.82%, map: 56.57%
+similarity_all:--t2i: top1: 65.17%, top5: 83.02%, top10: 88.82%, map: 56.57%
+Testing Epoch: 48
+similarity_glo:
+similarity_glo:--t2i: top1: 63.66%, top5: 82.42%, top10: 88.30%, map: 55.00%
+similarity_glo:--t2i: top1: 63.66%, top5: 82.42%, top10: 88.30%, map: 55.00%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.32%, top5: 81.03%, top10: 87.41%, map: 54.49%
+similarity_loc:--t2i: top1: 63.32%, top5: 81.03%, top10: 87.41%, map: 54.49%
+similarity_all:
+similarity_all:--t2i: top1: 65.19%, top5: 82.94%, top10: 88.60%, map: 56.49%
+similarity_all:--t2i: top1: 65.19%, top5: 82.94%, top10: 88.60%, map: 56.49%
+Testing Epoch: 49
+similarity_glo:
+similarity_glo:--t2i: top1: 63.73%, top5: 82.23%, top10: 88.24%, map: 55.15%
+similarity_glo:--t2i: top1: 63.73%, top5: 82.23%, top10: 88.24%, map: 55.15%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.49%, top5: 81.22%, top10: 87.57%, map: 54.42%
+similarity_loc:--t2i: top1: 62.49%, top5: 81.22%, top10: 87.57%, map: 54.42%
+similarity_all:
+similarity_all:--t2i: top1: 64.88%, top5: 82.83%, top10: 88.73%, map: 56.57%
+similarity_all:--t2i: top1: 64.88%, top5: 82.83%, top10: 88.73%, map: 56.57%
+Testing Epoch: 50
+similarity_glo:
+similarity_glo:--t2i: top1: 63.78%, top5: 82.02%, top10: 88.52%, map: 55.06%
+similarity_glo:--t2i: top1: 63.78%, top5: 82.02%, top10: 88.52%, map: 55.06%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.78%, top5: 81.27%, top10: 87.64%, map: 54.59%
+similarity_loc:--t2i: top1: 62.78%, top5: 81.27%, top10: 87.64%, map: 54.59%
+similarity_all:
+similarity_all:--t2i: top1: 65.43%, top5: 83.06%, top10: 88.82%, map: 56.64%
+similarity_all:--t2i: top1: 65.43%, top5: 83.06%, top10: 88.82%, map: 56.64%
+Testing Epoch: 51
+similarity_glo:
+similarity_glo:--t2i: top1: 64.07%, top5: 82.23%, top10: 88.53%, map: 55.20%
+similarity_glo:--t2i: top1: 64.07%, top5: 82.23%, top10: 88.53%, map: 55.20%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.91%, top5: 81.42%, top10: 87.51%, map: 54.62%
+similarity_loc:--t2i: top1: 62.91%, top5: 81.42%, top10: 87.51%, map: 54.62%
+similarity_all:
+similarity_all:--t2i: top1: 65.43%, top5: 83.06%, top10: 88.76%, map: 56.71%
+similarity_all:--t2i: top1: 65.43%, top5: 83.06%, top10: 88.76%, map: 56.71%
+Testing Epoch: 52
+similarity_glo:
+similarity_glo:--t2i: top1: 64.10%, top5: 82.24%, top10: 88.56%, map: 55.22%
+similarity_glo:--t2i: top1: 64.10%, top5: 82.24%, top10: 88.56%, map: 55.22%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.00%, top5: 81.48%, top10: 87.46%, map: 54.61%
+similarity_loc:--t2i: top1: 63.00%, top5: 81.48%, top10: 87.46%, map: 54.61%
+similarity_all:
+similarity_all:--t2i: top1: 65.63%, top5: 83.14%, top10: 88.73%, map: 56.74%
+similarity_all:--t2i: top1: 65.63%, top5: 83.14%, top10: 88.73%, map: 56.74%
+Testing Epoch: 53
+similarity_glo:
+similarity_glo:--t2i: top1: 63.81%, top5: 82.52%, top10: 88.50%, map: 55.16%
+similarity_glo:--t2i: top1: 63.81%, top5: 82.52%, top10: 88.50%, map: 55.16%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.96%, top5: 81.40%, top10: 87.64%, map: 54.61%
+similarity_loc:--t2i: top1: 62.96%, top5: 81.40%, top10: 87.64%, map: 54.61%
+similarity_all:
+similarity_all:--t2i: top1: 65.64%, top5: 83.01%, top10: 88.78%, map: 56.76%
+similarity_all:--t2i: top1: 65.64%, top5: 83.01%, top10: 88.78%, map: 56.76%
+Testing Epoch: 54
+similarity_glo:
+similarity_glo:--t2i: top1: 63.95%, top5: 82.42%, top10: 88.56%, map: 55.27%
+similarity_glo:--t2i: top1: 63.95%, top5: 82.42%, top10: 88.56%, map: 55.27%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.83%, top5: 81.42%, top10: 87.85%, map: 54.67%
+similarity_loc:--t2i: top1: 62.83%, top5: 81.42%, top10: 87.85%, map: 54.67%
+similarity_all:
+similarity_all:--t2i: top1: 65.50%, top5: 83.06%, top10: 88.89%, map: 56.79%
+similarity_all:--t2i: top1: 65.50%, top5: 83.06%, top10: 88.89%, map: 56.79%
+Testing Epoch: 55
+similarity_glo:
+similarity_glo:--t2i: top1: 64.12%, top5: 82.28%, top10: 88.47%, map: 55.31%
+similarity_glo:--t2i: top1: 64.12%, top5: 82.28%, top10: 88.47%, map: 55.31%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.17%, top5: 81.34%, top10: 87.65%, map: 54.75%
+similarity_loc:--t2i: top1: 63.17%, top5: 81.34%, top10: 87.65%, map: 54.75%
+similarity_all:
+similarity_all:--t2i: top1: 65.43%, top5: 83.11%, top10: 88.86%, map: 56.78%
+similarity_all:--t2i: top1: 65.43%, top5: 83.11%, top10: 88.86%, map: 56.78%
+Testing Epoch: 56
+similarity_glo:
+similarity_glo:--t2i: top1: 64.18%, top5: 82.39%, top10: 88.52%, map: 55.35%
+similarity_glo:--t2i: top1: 64.18%, top5: 82.39%, top10: 88.52%, map: 55.35%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.14%, top5: 81.50%, top10: 87.69%, map: 54.72%
+similarity_loc:--t2i: top1: 63.14%, top5: 81.50%, top10: 87.69%, map: 54.72%
+similarity_all:
+similarity_all:--t2i: top1: 65.38%, top5: 83.07%, top10: 88.92%, map: 56.76%
+similarity_all:--t2i: top1: 65.38%, top5: 83.07%, top10: 88.92%, map: 56.76%
+Testing Epoch: 57
+similarity_glo:
+similarity_glo:--t2i: top1: 64.04%, top5: 82.39%, top10: 88.69%, map: 55.38%
+similarity_glo:--t2i: top1: 64.04%, top5: 82.39%, top10: 88.69%, map: 55.38%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.90%, top5: 81.38%, top10: 87.62%, map: 54.71%
+similarity_loc:--t2i: top1: 62.90%, top5: 81.38%, top10: 87.62%, map: 54.71%
+similarity_all:
+similarity_all:--t2i: top1: 65.46%, top5: 82.86%, top10: 88.78%, map: 56.79%
+similarity_all:--t2i: top1: 65.46%, top5: 82.86%, top10: 88.78%, map: 56.79%
+Testing Epoch: 58
+similarity_glo:
+similarity_glo:--t2i: top1: 64.04%, top5: 82.33%, top10: 88.66%, map: 55.33%
+similarity_glo:--t2i: top1: 64.04%, top5: 82.33%, top10: 88.66%, map: 55.33%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.03%, top5: 81.77%, top10: 87.64%, map: 54.77%
+similarity_loc:--t2i: top1: 63.03%, top5: 81.77%, top10: 87.64%, map: 54.77%
+similarity_all:
+similarity_all:--t2i: top1: 65.29%, top5: 83.01%, top10: 88.73%, map: 56.80%
+similarity_all:--t2i: top1: 65.29%, top5: 83.01%, top10: 88.73%, map: 56.80%
+Testing Epoch: 59
+similarity_glo:
+similarity_glo:--t2i: top1: 64.20%, top5: 82.28%, top10: 88.66%, map: 55.43%
+similarity_glo:--t2i: top1: 64.20%, top5: 82.28%, top10: 88.66%, map: 55.43%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.16%, top5: 81.51%, top10: 87.72%, map: 54.82%
+similarity_loc:--t2i: top1: 63.16%, top5: 81.51%, top10: 87.72%, map: 54.82%
+similarity_all:
+similarity_all:--t2i: top1: 65.43%, top5: 83.17%, top10: 88.79%, map: 56.82%
+similarity_all:--t2i: top1: 65.43%, top5: 83.17%, top10: 88.79%, map: 56.82%
+Testing Epoch: 60
+similarity_glo:
+similarity_glo:--t2i: top1: 64.12%, top5: 82.34%, top10: 88.63%, map: 55.40%
+similarity_glo:--t2i: top1: 64.12%, top5: 82.34%, top10: 88.63%, map: 55.40%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.27%, top5: 81.61%, top10: 87.70%, map: 54.88%
+similarity_loc:--t2i: top1: 63.27%, top5: 81.61%, top10: 87.70%, map: 54.88%
+similarity_all:
+similarity_all:--t2i: top1: 65.53%, top5: 83.04%, top10: 88.92%, map: 56.89%
+similarity_all:--t2i: top1: 65.53%, top5: 83.04%, top10: 88.92%, map: 56.89%
+Testing Epoch: 61
+similarity_glo:
+similarity_glo:--t2i: top1: 64.17%, top5: 82.49%, top10: 88.66%, map: 55.39%
+similarity_glo:--t2i: top1: 64.17%, top5: 82.49%, top10: 88.66%, map: 55.39%
+similarity_loc:
+similarity_loc:--t2i: top1: 62.98%, top5: 81.68%, top10: 87.70%, map: 54.80%
+similarity_loc:--t2i: top1: 62.98%, top5: 81.68%, top10: 87.70%, map: 54.80%
+similarity_all:
+similarity_all:--t2i: top1: 65.58%, top5: 83.04%, top10: 88.89%, map: 56.90%
+similarity_all:--t2i: top1: 65.58%, top5: 83.04%, top10: 88.89%, map: 56.90%
+Testing Epoch: 62
+similarity_glo:
+similarity_glo:--t2i: top1: 64.12%, top5: 82.29%, top10: 88.82%, map: 55.38%
+similarity_glo:--t2i: top1: 64.12%, top5: 82.29%, top10: 88.82%, map: 55.38%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.14%, top5: 81.61%, top10: 87.78%, map: 54.85%
+similarity_loc:--t2i: top1: 63.14%, top5: 81.61%, top10: 87.78%, map: 54.85%
+similarity_all:
+similarity_all:--t2i: top1: 65.59%, top5: 82.99%, top10: 88.84%, map: 56.94%
+similarity_all:--t2i: top1: 65.59%, top5: 82.99%, top10: 88.84%, map: 56.94%
+Testing Epoch: 63
+similarity_glo:
+similarity_glo:--t2i: top1: 64.02%, top5: 82.49%, top10: 88.74%, map: 55.40%
+similarity_glo:--t2i: top1: 64.02%, top5: 82.49%, top10: 88.74%, map: 55.40%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.06%, top5: 81.60%, top10: 87.62%, map: 54.85%
+similarity_loc:--t2i: top1: 63.06%, top5: 81.60%, top10: 87.62%, map: 54.85%
+similarity_all:
+similarity_all:--t2i: top1: 65.40%, top5: 83.04%, top10: 88.74%, map: 56.85%
+similarity_all:--t2i: top1: 65.40%, top5: 83.04%, top10: 88.74%, map: 56.85%
+Testing Epoch: 64
+similarity_glo:
+similarity_glo:--t2i: top1: 64.18%, top5: 82.41%, top10: 88.68%, map: 55.45%
+similarity_glo:--t2i: top1: 64.18%, top5: 82.41%, top10: 88.68%, map: 55.45%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.24%, top5: 81.63%, top10: 87.74%, map: 54.86%
+similarity_loc:--t2i: top1: 63.24%, top5: 81.63%, top10: 87.74%, map: 54.86%
+similarity_all:
+similarity_all:--t2i: top1: 65.38%, top5: 83.04%, top10: 88.84%, map: 56.85%
+similarity_all:--t2i: top1: 65.38%, top5: 83.04%, top10: 88.84%, map: 56.85%
+Testing Epoch: 65
+similarity_glo:
+similarity_glo:--t2i: top1: 63.95%, top5: 82.46%, top10: 88.71%, map: 55.31%
+similarity_glo:--t2i: top1: 63.95%, top5: 82.46%, top10: 88.71%, map: 55.31%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.26%, top5: 81.51%, top10: 87.87%, map: 54.89%
+similarity_loc:--t2i: top1: 63.26%, top5: 81.51%, top10: 87.87%, map: 54.89%
+similarity_all:
+similarity_all:--t2i: top1: 65.25%, top5: 82.99%, top10: 88.94%, map: 56.80%
+similarity_all:--t2i: top1: 65.25%, top5: 82.99%, top10: 88.94%, map: 56.80%
+Testing Epoch: 66
+similarity_glo:
+similarity_glo:--t2i: top1: 64.28%, top5: 82.52%, top10: 88.65%, map: 55.47%
+similarity_glo:--t2i: top1: 64.28%, top5: 82.52%, top10: 88.65%, map: 55.47%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.22%, top5: 81.37%, top10: 87.69%, map: 54.85%
+similarity_loc:--t2i: top1: 63.22%, top5: 81.37%, top10: 87.69%, map: 54.85%
+similarity_all:
+similarity_all:--t2i: top1: 65.51%, top5: 83.06%, top10: 88.94%, map: 56.88%
+similarity_all:--t2i: top1: 65.51%, top5: 83.06%, top10: 88.94%, map: 56.88%
+Testing Epoch: 67
+similarity_glo:
+similarity_glo:--t2i: top1: 64.23%, top5: 82.36%, top10: 88.71%, map: 55.52%
+similarity_glo:--t2i: top1: 64.23%, top5: 82.36%, top10: 88.71%, map: 55.52%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.50%, top5: 81.60%, top10: 87.70%, map: 54.97%
+similarity_loc:--t2i: top1: 63.50%, top5: 81.60%, top10: 87.70%, map: 54.97%
+similarity_all:
+similarity_all:--t2i: top1: 65.59%, top5: 82.88%, top10: 88.79%, map: 56.94%
+similarity_all:--t2i: top1: 65.59%, top5: 82.88%, top10: 88.79%, map: 56.94%
+Testing Epoch: 68
+similarity_glo:
+similarity_glo:--t2i: top1: 64.15%, top5: 82.50%, top10: 88.79%, map: 55.44%
+similarity_glo:--t2i: top1: 64.15%, top5: 82.50%, top10: 88.79%, map: 55.44%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.30%, top5: 81.48%, top10: 87.67%, map: 54.93%
+similarity_loc:--t2i: top1: 63.30%, top5: 81.48%, top10: 87.67%, map: 54.93%
+similarity_all:
+similarity_all:--t2i: top1: 65.51%, top5: 83.02%, top10: 88.92%, map: 56.93%
+similarity_all:--t2i: top1: 65.51%, top5: 83.02%, top10: 88.92%, map: 56.93%
+Testing Epoch: 69
+similarity_glo:
+similarity_glo:--t2i: top1: 64.13%, top5: 82.50%, top10: 88.58%, map: 55.47%
+similarity_glo:--t2i: top1: 64.13%, top5: 82.50%, top10: 88.58%, map: 55.47%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.30%, top5: 81.50%, top10: 87.74%, map: 54.94%
+similarity_loc:--t2i: top1: 63.30%, top5: 81.50%, top10: 87.74%, map: 54.94%
+similarity_all:
+similarity_all:--t2i: top1: 65.55%, top5: 83.17%, top10: 88.79%, map: 56.90%
+similarity_all:--t2i: top1: 65.55%, top5: 83.17%, top10: 88.79%, map: 56.90%
+Testing Epoch: 70
+similarity_glo:
+similarity_glo:--t2i: top1: 64.21%, top5: 82.55%, top10: 88.50%, map: 55.45%
+similarity_glo:--t2i: top1: 64.21%, top5: 82.55%, top10: 88.50%, map: 55.45%
+similarity_loc:
+similarity_loc:--t2i: top1: 63.39%, top5: 81.43%, top10: 87.78%, map: 54.95%
+similarity_loc:--t2i: top1: 63.39%, top5: 81.43%, top10: 87.78%, map: 54.95%
+similarity_all:
+similarity_all:--t2i: top1: 65.63%, top5: 83.07%, top10: 88.74%, map: 56.93%
+similarity_all:--t2i: top1: 65.63%, top5: 83.07%, top10: 88.74%, map: 56.93%
